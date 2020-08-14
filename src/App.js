@@ -2,6 +2,23 @@ import React, { useEffect, useState } from "react";
 
 //components
 import Hero from "./components/Hero";
+import Tabs from "./components/Tabs";
+import Details from "./components/Details";
+
+const tabs = [
+    {
+        text: "Search",
+        href: "#",
+    },
+    {
+        text: "Library",
+        href: "#",
+    },
+    {
+        text: "Settings",
+        href: "#",
+    },
+];
 
 export default () => {
     // Define our initial state
@@ -32,5 +49,5 @@ export default () => {
     };
     // Pass state management object as a prop to all descendents
     // that need to access app state
-    return <Hero />;
+    return <Hero header={<Tabs tabs={tabs} />} children={<Details />} />;
 };
