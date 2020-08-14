@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 
+//components
+import Hero from "./components/Hero";
+
 export default () => {
     // Define our initial state
     const initialState = {
@@ -29,5 +32,5 @@ export default () => {
     };
     // Pass state management object as a prop to all descendents
     // that need to access app state
-    return <></>;
+    return <Hero />;
 };
