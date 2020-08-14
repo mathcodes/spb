@@ -2,8 +2,6 @@
 
 ![badge](https://img.shields.io/badge/TYPEHERE1-TYPEHERE2-orange)   
 
---- [![GitHub commits](https://img.shields.io/github/commits-since/mathcodes/Project3/v1.0.0.svg)](https://GitHub.com/mathcodes/Super-Pantry-Buddy/spb/commit/) ---
-
 ## Table of Contents
   - [Link](#link) 
   - [Licenses](#licenses)
