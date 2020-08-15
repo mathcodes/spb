@@ -1,9 +1,12 @@
 import React from "react";
 import { findRenderedComponentWithType } from "react-dom/test-utils";
-import "./App.css";
+import "../App.css";
 
 const css = {
-    margin: "0.5em", background: "#222222", color: "var(--dgreen)", padding: "1px",
+    margin: "0.5em",
+    background: "#222222",
+    color: "var(--dgreen)",
+    padding: "1px",
 };
 
 const Card = ({ src, alt, title, prepTime }) => (
@@ -11,17 +14,17 @@ const Card = ({ src, alt, title, prepTime }) => (
         <header className="card-header">
             <p className="card-header-title is-centered">{title}</p>
         </header>
-        
+
         <div className="card-image">
             <figure className="image">
                 <img src={src} alt={alt} />
             </figure>
         </div>
-        
+
         <div className="card-content">
             <div className="content">{prepTime}</div>
         </div>
-        
+
         <footer className="card-footer">
             <a href="placeholder" className="card-footer-item">
                 Save
