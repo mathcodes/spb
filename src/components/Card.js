@@ -11,15 +11,15 @@ const css = {
 
 const Card = ({ src, alt, title, prepTime }) => (
     <div className="card" style={css}>
-        <header className="card-header">
-            <p className="card-header-title is-centered">{title}</p>
-        </header>
-
         <div className="card-image">
             <figure className="image">
                 <img src={src} alt={alt} />
             </figure>
         </div>
+
+<header className="card-header">
+            <p className="card-header-title is-centered">{title}</p>
+        </header>
 
         <div className="card-content">
             <div className="content">{prepTime}</div>
