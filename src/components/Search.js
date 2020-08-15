@@ -5,9 +5,6 @@ import InputForm from "./InputForm";
 import Pantry from "./Pantry";
 import RecipeContainer from "./RecipeContainer";
 
-// need to write on submit handler for input form
-// in search context
-
 export default ({ state }) => {
     const methods = {
         onSubmitHandler: (event) => {
@@ -22,14 +19,13 @@ export default ({ state }) => {
                     ]),
                 ],
             });
-            console.log(state.get.includedIngredients);
         },
     };
 
     return (
         <>
             <InputForm state={state} methods={methods} />
-            <Pantry />
+            <Pantry items={state.get.includedIngredients} />
             <RecipeContainer />
         </>
     );

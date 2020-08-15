@@ -2,8 +2,6 @@ import React from "react";
 import FlexContainer from "./FlexContainer";
 import { v4 as uuid } from "uuid";
 
-// items should be a list of strings
-// representing pantry ingredients
 const Pantry = ({ items }) => (
     <FlexContainer
         children={
