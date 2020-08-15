@@ -5,23 +5,32 @@ import InputForm from "./InputForm";
 import Pantry from "./Pantry";
 import RecipeContainer from "./RecipeContainer";
 
-//just for testing; delete later
-const items = [
-    "ham",
-    "potato",
-    "eggs",
-    "bacon",
-    "orangutans",
-    "fruit bats",
-    "breakfast cereal",
-];
+// need to write on submit handler for input form
+// in search context
 
-const Search = (props) => (
-    <>
-        <InputForm />
-        <Pantry items={items} />
-        <RecipeContainer recipes={items} />
-    </>
-);
+export default ({ state }) => {
+    const methods = {
+        onSubmitHandler: (event) => {
+            event.preventDefault();
+            state.set({
+                includedIngredients: [
+                    ...new Set([
+                        ...state.get.includedIngredients,
+                        ...event.target.firstChild.value
+                            .split(",")
+                            .map((item) => item.trim()),
+                    ]),
+                ],
+            });
+            console.log(state.get.includedIngredients);
+        },
+    };
 
-export default Search;
+    return (
+        <>
+            <InputForm state={state} methods={methods} />
+            <Pantry />
+            <RecipeContainer />
+        </>
+    );
+};
