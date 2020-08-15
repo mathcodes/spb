@@ -15,7 +15,8 @@ export default ({ state }) => {
                     ...state.get.includedIngredients,
                     ...event.target.firstChild.value
                         .split(",")
-                        .map((item) => item.trim()),
+                        .map((item) => item.trim())
+                        .filter((item) => item !== ""),
                 ]),
             ],
         });
@@ -29,12 +30,13 @@ export default ({ state }) => {
                 (item) => item !== event.target.innerText
             ),
         });
+
     return (
         <>
-            <InputForm state={state} onSubmitHandler={onSubmitHandler} />
+            <InputForm onSubmitHandler={onSubmitHandler} />
             <Pantry
                 items={state.get.includedIngredients}
-                methods={onClickHandler}
+                onClickHandler={onClickHandler}
             />
             <RecipeContainer />
         </>
