@@ -9,26 +9,24 @@ import { v4 as uuid } from "uuid";
 const Settings = (props) => (
     <>
         <label className="label has-text-centered">Food Intolerances</label>
-        <FlexContainer
+        <FlexContainer> 
             children={intolerances.map((item) => (
                 <CheckBox key={uuid()} text={item} />
             ))}
-        />
+        </FlexContainer>  <FlexContainer> 
         <label className="label has-text-centered">Diets</label>
-        <FlexContainer
             children={diets.map((item) => (
                 <CheckBox key={uuid()} text={item} />
             ))}
-        />
-        <label className="label has-text-centered">Excluded Cuisines</label>
-        <FlexContainer
+    </FlexContainer> <FlexContainer> 
+    <label className="label has-text-centered">Excluded Cuisines</label>
             children={cuisines.map((item) => (
                 <CheckBox key={uuid()} text={item} />
             ))}
-        />
         <label className="label has-text-centered">Excluded Ingredients</label>
         <InputForm placeholder="Ingredients" />
         <Pantry items={["meekrob", "sun dried tomatos"]} />
+    </FlexContainer>
     </>
 );
 
