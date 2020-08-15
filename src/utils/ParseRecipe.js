@@ -48,3 +48,13 @@ export const getInformation = (recipe) => ({
     url: recipe.sourceUrl,
     image: recipe.image,
 });
+
+export const pruneRecipe = (recipe) => ({
+    information: getInformation(recipe),
+    instructions: getInstructions(recipe),
+    nutrients: getNutrients(recipe),
+    missedIngredients: getMissedIngredients(recipe),
+    usedIngredients: getUsedIngredients(recipe),
+    unusedIngredients: getUnusedIngredients(recipe),
+    allIngredients: getAllIngredients(recipe),
+});
