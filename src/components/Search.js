@@ -6,26 +6,36 @@ import Pantry from "./Pantry";
 import RecipeContainer from "./RecipeContainer";
 
 export default ({ state }) => {
-    const methods = {
-        onSubmitHandler: (event) => {
-            event.preventDefault();
-            state.set({
-                includedIngredients: [
-                    ...new Set([
-                        ...state.get.includedIngredients,
-                        ...event.target.firstChild.value
-                            .split(",")
-                            .map((item) => item.trim()),
-                    ]),
-                ],
-            });
-        },
+    // Input form submit event handler
+    const onSubmitHandler = (event) => {
+        event.preventDefault();
+        state.set({
+            includedIngredients: [
+                ...new Set([
+                    ...state.get.includedIngredients,
+                    ...event.target.firstChild.value
+                        .split(",")
+                        .map((item) => item.trim()),
+                ]),
+            ],
+        });
+        event.target.firstChild.value = "";
     };
 
+    // Pantry on click event handler
+    const onClickHandler = (event) =>
+        state.set({
+            includedIngredients: state.get.includedIngredients.filter(
+                (item) => item !== event.target.innerText
+            ),
+        });
     return (
         <>
-            <InputForm state={state} methods={methods} />
-            <Pantry items={state.get.includedIngredients} />
+            <InputForm state={state} onSubmitHandler={onSubmitHandler} />
+            <Pantry
+                items={state.get.includedIngredients}
+                methods={onClickHandler}
+            />
             <RecipeContainer />
         </>
     );
