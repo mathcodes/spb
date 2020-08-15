@@ -75,7 +75,7 @@ export default () => {
                         <Route
                             exact
                             path="/Details"
-                            render={<Details state={state} />}
+                            render={() => <Details state={state} />}
                         />
                     </>
                 }

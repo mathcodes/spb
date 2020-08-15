@@ -1,5 +1,4 @@
 import React from "react";
-import { findRenderedComponentWithType } from "react-dom/test-utils";
 import "../App.css";
 
 const css = {
@@ -17,7 +16,7 @@ const Card = ({ src, alt, title, prepTime }) => (
             </figure>
         </div>
 
-<header className="card-header">
+        <header className="card-header">
             <p className="card-header-title is-centered">{title}</p>
         </header>
 
