@@ -2,9 +2,9 @@ import React from "react";
 
 const css = { margin: "0.4em" };
 
-const CheckBox = ({ text }) => (
-    <label className="checkbox" style={css}>
-        <input type="checkbox" />
+const CheckBox = ({ text, onClickHandler, checked }) => (
+    <label className="checkbox" style={css} onClick={onClickHandler}>
+        <input type="checkbox" value={text} checked={checked} />
         {text}
     </label>
 );

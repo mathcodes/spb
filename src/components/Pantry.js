@@ -2,13 +2,13 @@ import React from "react";
 import FlexContainer from "./FlexContainer";
 import { v4 as uuid } from "uuid";
 
-const Pantry = ({ items, methods }) => (
+const Pantry = ({ items, onClickHandler }) => (
     <FlexContainer
         children={
             items
                 ? items.map((item) => (
                       <button
-                          onClick={methods}
+                          onClick={onClickHandler}
                           key={uuid()}
                           className="button"
                           style={{ margin: "0.2em" }}>

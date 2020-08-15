@@ -18,9 +18,9 @@ import Library from "./components/Library";
 export default () => {
     // Define our initial state
     const initialState = {
-        cuisine: [],
-        excludeCuisine: [],
-        diet: [],
+        cuisines: [],
+        excludedCuisines: [],
+        diets: [],
         intolerances: [],
         includedIngredients: [],
         excludedIngredients: [],
