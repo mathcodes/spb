@@ -1,6 +1,6 @@
 import React from "react";
 import { findRenderedComponentWithType } from "react-dom/test-utils";
-import "./App.css";
+import "../App.css";
 
 const css = {
     margin: "0.5em", background: "#222222", color: "var(--dgreen)", padding: "1px",
@@ -27,8 +27,8 @@ const Card = ({ src, alt, title, prepTime }) => (
                 Save
             </a>
 
-            <a href="placeholder" className="card-footer-item">
-                Delete
+            <a href="/details" className="card-footer-item">
+                Details
             </a>
         </footer>
     </div>
