@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react";
-
-//components
-import Hero from "./components/Hero";
-import Tabs from "./components/Tabs";
-import Details from "./components/Details";
-
-const tabs = [
-    {
-        text: "Search",
-        href: "#",
-    },
-    {
-        text: "Library",
-        href: "#",
-    },
-    {
-        text: "Settings",
-        href: "#",
-    },
-];
-=======
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
@@ -37,20 +14,13 @@ import "./App.css";
 // Other Stuff
 import MenuTabs from "./assets/js/MenuTabs";
 import Library from "./components/Library";
->>>>>>> origin/master
 
 export default () => {
     // Define our initial state
     const initialState = {
-<<<<<<< HEAD
-        cuisine: [],
-        excludeCuisine: [],
-        diet: [],
-=======
         cuisines: [],
         excludedCuisines: [],
         diets: [],
->>>>>>> origin/master
         intolerances: [],
         includedIngredients: [],
         excludedIngredients: [],
@@ -72,11 +42,6 @@ export default () => {
         get: getState,
         set: (payload) => setState({ ...getState, ...payload }),
     };
-<<<<<<< HEAD
-    // Pass state management object as a prop to all descendents
-    // that need to access app state
-    return <Hero header={<Tabs tabs={tabs} />} children={<Details />} />;
-=======
 
     return (
         <BrowserRouter>
@@ -117,5 +82,4 @@ export default () => {
             />
         </BrowserRouter>
     );
->>>>>>> origin/master
 };
