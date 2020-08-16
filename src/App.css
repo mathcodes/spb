@@ -1,0 +1,182 @@
+/* ------------------------------------- */
+/* ---------  Table of Contents  ------- */
+/* ------------- *Global Variables------ */
+/* ------------- *App ------------------ */
+/* ------------- *Hero ----------------- */
+/* ------------- *Header + NavBar ------ */
+/* ------------- *Cards ---------------- */
+/* ------------- *Buttons + Tabs ------- */
+/* ------------- *Dropdowns      ------- */
+/* ------------- *Keyframes ------------ */
+/* ------------- *Font ----------------- */
+/* ------------------------------------- */
+
+
+
+:root {
+  --lgreen: #85B135;
+  --dgreen: #284d1d;
+  --lorange: #EE9922;
+  --dorange: #EE662E;
+  --yellow: #E4C800;
+  --light: #f5f5f5;
+}
+/* ------------------------------------- */
+/* ------------     App     ------------ */
+/* ------------------------------------- */
+ .App {
+  text-align: center;
+}
+
+.App-logo {  
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: ppvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* ------------------------------------- */
+/* ------------     Hero     ----------- */
+/* ------------------------------------- */
+.hero.is-success .tabs.is-boxed a:hover, .hero.is-success .tabs.is-toggle a:hover {
+    background-color: rgba(10,10,10,.5);
+}
+.hero-body, .hero-foot, .hero-head {
+ background-color: var(--lgreen);   
+}
+
+.hero-body {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 2.25rem;
+}
+.hero.is-success {
+    background-color: #48c774;}
+
+.hero-head{
+  padding: 1%;
+  margin-bottom: 3%;
+}
+
+
+/* ------------------------------------- */
+/* -------    Header + NavBar     ------ */
+/* ------------------------------------- */
+
+.headerImage{
+      height: 50%;
+    width: 50%;
+padding: 2.25rem;
+}
+
+.navbar, .navbar-end, .navbar-menu, .navbar-start {
+    align-items: stretch;
+    display: unset;
+}
+.navbar{
+  min-height: 2.25rem;
+}
+
+
+/* ------------------------------------- */
+/* ------------- *Cards ---------------- */
+/* ------------------------------------- */
+.card-header-title {
+    align-items: center;
+    background-color: var(--dgreen);
+    color: var(--light);
+    display: flex;
+    flex-grow: 1;
+    font-weight: 700;
+    padding: .1rem .3rem 0.5rem 0.5rem;
+}
+
+.card{
+  overflow: hidden;
+  content: '\f70e';
+}
+
+/* ------------------------------------- */
+/* -------    Buttons + Tabs      ------ */
+/* ------------------------------------- */
+.button.is-warning {
+    background-color: var(--yellow);
+    border-color: transparent;
+    color: rgba(0,0,0,.7);
+}
+.tabs{
+    background-color: var(--dgreen);
+    /* width: 100%; */
+    margin: 0;
+    /* width: fit-content; */
+
+}
+/* ------------------------------------- */
+/* -------    Misc Components     ------ */
+/* ------------------------------------- */
+
+
+.label, .has-text-centered{
+  text-align: left;
+}
+
+
+
+/* ------------------------------------- */
+/* -------       Keyframes        ------ */
+/* ------------------------------------- */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------------------------------------- */
+/* -------         Font           ------ */
+/* ------------------------------------- */
+h1{
+    font-size:24px;
+  color: var(--dgreen);
+  font-weight: 700;
+
+}
+h2{
+  font-size:16px;
+  color: var(--dgreen);
+  font-weight: 700;
+}
+
+.has-text-centered {
+    text-align: 478843;
+}
+
+.input, .select select, .textarea {
+    background-color: #fff;
+    border-color: #EE662E;
+    border-width: 3px;
+    color: #478843;
+    -webkit-text-stroke-width: medium;
+}
