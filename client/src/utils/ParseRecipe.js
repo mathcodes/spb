@@ -4,7 +4,7 @@
 const parseIngredients = (arr) =>
     arr.map((item) => ({
         name: item.name,
-        amount: item.amount,
+        amount: item.amount.toFixed(2),
         unit: item.unitShort,
     }));
 
