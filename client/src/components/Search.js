@@ -55,13 +55,6 @@ export default ({ state }) => {
             .catch((err) => console.log(err));
     };
 
-    // Card footer to use on the search page
-    const SearchFooter = (
-        <footer className="card-footer">
-            <button className="button is-warning is-fullwidth">Details</button>
-            <button className="button is-warning is-fullwidth">Save</button>
-        </footer>
-    );
     return (
         <>
             <InputForm onSubmitHandler={onSubmitHandler} />
@@ -75,8 +68,9 @@ export default ({ state }) => {
                 onClickHandler={onClickHandler}
             />
             <RecipeContainer
-                recipes={state.get.recipes}
-                cardFooter={SearchFooter}
+                state={state}
+                renderRecipes={state.get.recipes}
+                footer="search"
             />
         </>
     );

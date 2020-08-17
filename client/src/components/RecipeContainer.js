@@ -1,23 +1,25 @@
 import React, { useEffect } from "react";
 import Card from "./Card";
 import FlexContainer from "./FlexContainer";
-import { v4 as uuid } from "uuid";
 
 // recipes should be a list of recipe objects
-export default ({ recipes, savedRecipes, cardFooter }) => {
-    console.log(recipes, savedRecipes);
+// footer is either "search" or "library" and
+// determines which buttons are rendered in
+// the card footer.
+export default ({ footer, renderRecipes }) => {
     return (
         <FlexContainer
             children={
-                recipes
-                    ? recipes.map((recipe) => (
+                renderRecipes
+                    ? renderRecipes.map((recipe) => (
                           <Card
-                              key={uuid()}
+                              key={recipe.id}
                               src={recipe.image}
                               alt={recipe.title}
                               title={recipe.title.slice(0, 32)} // to maintain card spacing
-                              prepTime="60 minutes"
-                              footer={cardFooter}
+                              prepTime={recipe.preparationMinutes}
+                              cookTime={recipe.cookingMinutes}
+                              footer={footer}
                           />
                       ))
                     : null
