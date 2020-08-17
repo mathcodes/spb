@@ -26,6 +26,7 @@ export default () => {
         excludeIngredients: [],
         recipes: [],
         savedRecipes: [],
+        activeRecipe: 0,
     };
     // Create state object and setter function
     const [getState, setState] = useState(initialState);
@@ -76,7 +77,21 @@ export default () => {
                         <Route
                             exact
                             path="/Details"
-                            render={() => <Details state={state} />}
+                            render={() => (
+                                <Details
+                                    state={state}
+                                    recipe={
+                                        [
+                                            ...getState.recipes,
+                                            ...getState.savedRecipes,
+                                        ].filter(
+                                            (recipe) =>
+                                                recipe.id ===
+                                                getState.activeRecipe
+                                        )[0]
+                                    }
+                                />
+                            )}
                         />
                     </>
                 }

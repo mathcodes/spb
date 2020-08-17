@@ -4,7 +4,7 @@
 const parseIngredients = (arr) =>
     arr.map((item) => ({
         name: item.name,
-        amount: item.amount,
+        amount: item.amount.toFixed(1),
         unit: item.unitShort,
     }));
 
@@ -30,9 +30,9 @@ export const getUnusedIngredients = (recipe) =>
 export const getNutrients = (recipe) =>
     recipe.nutrition.nutrients.map((item) => ({
         name: item.title,
-        amount: item.amount,
+        amount: item.amount.toFixed(0),
         unit: item.unit,
-        dv: item.percentOfDailyNeeds,
+        dv: item.percentOfDailyNeeds.toFixed(0),
     }));
 
 // Returns step by step instructions from recipe as an array of strings

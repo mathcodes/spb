@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Card from "./Card";
 import FlexContainer from "./FlexContainer";
 
