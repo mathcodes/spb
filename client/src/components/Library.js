@@ -7,7 +7,8 @@ export default ({ state }) => {
             <h1 style={{ textAlign: "center" }}>Saved Recipes</h1>
             <br />
             <RecipeContainer
-                renderRecipes={state.get.recipes} //change this to savedRecipes
+                state={state}
+                renderRecipes={state.get.savedRecipes} //change this to savedRecipes
                 footer="library"
             />
         </>
