@@ -24,12 +24,13 @@ export default ({ state }) => {
     };
 
     // Pantry click event handler
-    const pantryOnClickHandler = (event) =>
+    const pantryOnClickHandler = (event) => {
         state.set({
             excludedIngredients: state.get.excludedIngredients.filter(
                 (item) => item !== event.target.innerText
             ),
         });
+    };
 
     // Intolerances click event handler
     const intolerancesOnClickHandler = (event) => {

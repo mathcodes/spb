@@ -14,7 +14,6 @@ import "./App.css";
 // Other Stuff
 import MenuTabs from "./assets/js/MenuTabs";
 import Library from "./components/Library";
-import { get } from "mongoose"; //we don't need this
 
 export default () => {
     // Define our initial state
@@ -37,17 +36,6 @@ export default () => {
     // Save state to local storage when it's updated
     useEffect(() => {
         localStorage.setItem("state", JSON.stringify(getState));
-        /*******************************************************/
-        //Need to post to /api/search route
-        /*******************************************************/
-        fetch("/api/search", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ foo: "bar" }),
-        })
-            .then((response) => response.json())
-            .then((data) => console.log(data))
-            .catch((err) => console.log(err));
     }, [getState]);
     // Package it all up into an elegantly named object
     const state = {
