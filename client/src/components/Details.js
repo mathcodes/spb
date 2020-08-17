@@ -1,11 +1,4 @@
 import React from "react";
-//need to delete these components later
-// import DetailsTS from "./DetailTS";
-// import DetailsTitle from "./DetailsTitle";
-// import DetailsMidRow1 from "./DetailsMidRow1";
-// import Ingredients from "./Ingredients";
-// import BasicNutrition from "./BasicNutrition";
-// import Instructions from "./Instructions";
 import { pruneRecipe } from "../utils/ParseRecipe";
 import { v4 as uuid } from "uuid";
 
@@ -45,8 +38,17 @@ export default ({ recipe }) => {
                             <div className="tile is-parent is-vertical">
                                 <article className="tile is-child notification">
                                     <ul>
-                                        <li>Prep Time: 36 min</li>
-                                        <li>Servings: 7</li>
+                                        <li>
+                                            Time:{" "}
+                                            {rec ? rec.information.time : null}{" "}
+                                            minutes
+                                        </li>
+                                        <li>
+                                            Servings:{" "}
+                                            {rec
+                                                ? rec.information.servings
+                                                : null}
+                                        </li>
                                     </ul>
                                 </article>
                             </div>
