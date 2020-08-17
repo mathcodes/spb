@@ -51,7 +51,10 @@ export default ({ state }) => {
             })(),
         })
             .then((response) => response.json())
-            .then((data) => console.log(data))
+            .then((data) => {
+                console.log(data);
+                state.set({ recipes: data });
+            })
             .catch((err) => console.log(err));
     };
     return (

@@ -24,10 +24,10 @@ const getRecipes = (params) => {
     return fetch(url_).then((response) => response.json());
 };
 app.post("/api/search", (req, res) => {
-    res.json(req.body);
-    // getRecipes({ ...req.body, apiKey: process.env.apiKey }).then((recipes) =>
-    //     res.json(recipes)
-    // );
+    getRecipes({ ...req.body, apiKey: process.env.apiKey }).then((recipes) => {
+        console.log(recipes);
+        res.json(recipes);
+    });
 });
 
 // Connect to the Mongo DB
