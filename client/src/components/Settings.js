@@ -3,7 +3,7 @@ import FlexContainer from "./FlexContainer";
 import CheckBox from "./CheckBox";
 import InputForm from "./InputForm";
 import Pantry from "./Pantry";
-import { intolerances, diets, cuisines } from "../assets/js/Lists";
+import { intolerances, diet, cuisine } from "../assets/js/Lists";
 import { v4 as uuid } from "uuid";
 
 export default ({ state }) => {
@@ -11,9 +11,9 @@ export default ({ state }) => {
     const inputformOnSubmitHandler = (event) => {
         event.preventDefault();
         state.set({
-            excludedIngredients: [
+            excludeIngredients: [
                 ...new Set([
-                    ...state.get.excludedIngredients,
+                    ...state.get.excludeIngredients,
                     ...event.target.firstChild.value
                         .split(",")
                         .map((item) => item.trim()),
@@ -24,12 +24,13 @@ export default ({ state }) => {
     };
 
     // Pantry click event handler
-    const pantryOnClickHandler = (event) =>
+    const pantryOnClickHandler = (event) => {
         state.set({
-            excludedIngredients: state.get.excludedIngredients.filter(
+            excludeIngredients: state.get.excludeIngredients.filter(
                 (item) => item !== event.target.innerText
             ),
         });
+    };
 
     // Intolerances click event handler
     const intolerancesOnClickHandler = (event) => {
@@ -48,35 +49,35 @@ export default ({ state }) => {
         }
     };
 
-    // Diets click event handler
-    const dietsOnClickHandler = (event) => {
+    // diet click event handler
+    const dietOnClickHandler = (event) => {
         if (event.target.checked) {
             state.set({
-                diets: [...new Set([...state.get.diets, event.target.value])],
+                diet: [...new Set([...state.get.diet, event.target.value])],
             });
         } else {
             state.set({
-                diets: state.get.diets.filter(
+                diet: state.get.diet.filter(
                     (item) => item !== event.target.value
                 ),
             });
         }
     };
 
-    // Excluded cuisines click event handler
-    const excludedCuisinesOnClickHandler = (event) => {
+    // exclude Cuisine click event handler
+    const excludeCuisineOnClickHandler = (event) => {
         if (event.target.checked) {
             state.set({
-                excludedCuisines: [
+                excludeCuisine: [
                     ...new Set([
-                        ...state.get.excludedCuisines,
+                        ...state.get.excludeCuisine,
                         event.target.value,
                     ]),
                 ],
             });
         } else {
             state.set({
-                excludedCuisines: state.get.excludedCuisines.filter(
+                excludeCuisine: state.get.excludeCuisine.filter(
                     (item) => item !== event.target.value
                 ),
             });
@@ -99,27 +100,27 @@ export default ({ state }) => {
                 ))}
             </FlexContainer>{" "}
             <label className="label has-text-centered">
-                Must Fit These Diets
+                Must Fit These diet
             </label>
             <FlexContainer>
-                {diets.map((item) => (
+                {diet.map((item) => (
                     <CheckBox
                         key={uuid()}
                         text={item}
-                        onClickHandler={dietsOnClickHandler}
-                        checked={state.get.diets.includes(item) ? true : false}
+                        onClickHandler={dietOnClickHandler}
+                        checked={state.get.diet.includes(item) ? true : false}
                     />
                 ))}
             </FlexContainer>{" "}
-            <label className="label has-text-centered">Excluded Cuisines</label>
+            <label className="label has-text-centered">exclude Cuisine</label>
             <FlexContainer>
-                {cuisines.map((item) => (
+                {cuisine.map((item) => (
                     <CheckBox
                         key={uuid()}
                         text={item}
-                        onClickHandler={excludedCuisinesOnClickHandler}
+                        onClickHandler={excludeCuisineOnClickHandler}
                         checked={
-                            state.get.excludedCuisines.includes(item)
+                            state.get.excludeCuisine.includes(item)
                                 ? true
                                 : false
                         }
@@ -127,11 +128,11 @@ export default ({ state }) => {
                 ))}
             </FlexContainer>
             <label className="label has-text-centered">
-                Excluded Ingredients
+                exclude Ingredients
             </label>
             <InputForm onSubmitHandler={inputformOnSubmitHandler} />
             <Pantry
-                items={state.get.excludedIngredients}
+                items={state.get.excludeIngredients}
                 onClickHandler={pantryOnClickHandler}
             />
         </>

@@ -18,13 +18,14 @@ import Library from "./components/Library";
 export default () => {
     // Define our initial state
     const initialState = {
-        cuisines: [],
-        excludedCuisines: [],
-        diets: [],
+        cuisine: [],
+        excludeCuisine: [],
+        diet: [],
         intolerances: [],
-        includedIngredients: [],
-        excludedIngredients: [],
+        includeIngredients: [],
+        excludeIngredients: [],
         recipes: [],
+        savedRecipes: [],
     };
     // Create state object and setter function
     const [getState, setState] = useState(initialState);
@@ -34,9 +35,9 @@ export default () => {
         if (loadedState) setState(loadedState);
     }, []);
     // Save state to local storage when it's updated
-    useEffect(() => localStorage.setItem("state", JSON.stringify(getState)), [
-        getState,
-    ]);
+    useEffect(() => {
+        localStorage.setItem("state", JSON.stringify(getState));
+    }, [getState]);
     // Package it all up into an elegantly named object
     const state = {
         get: getState,
