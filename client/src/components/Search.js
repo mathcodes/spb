@@ -54,6 +54,14 @@ export default ({ state }) => {
             .then(() => console.log(state.get)) //for debugging
             .catch((err) => console.log(err));
     };
+
+    // Card footer to use on the search page
+    const SearchFooter = (
+        <footer className="card-footer">
+            <button className="button is-warning is-fullwidth">Details</button>
+            <button className="button is-warning is-fullwidth">Save</button>
+        </footer>
+    );
     return (
         <>
             <InputForm onSubmitHandler={onSubmitHandler} />
@@ -66,7 +74,10 @@ export default ({ state }) => {
                 items={state.get.includeIngredients}
                 onClickHandler={onClickHandler}
             />
-            <RecipeContainer recipes={state.get.recipes} />
+            <RecipeContainer
+                recipes={state.get.recipes}
+                cardFooter={SearchFooter}
+            />
         </>
     );
 };

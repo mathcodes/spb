@@ -25,6 +25,7 @@ export default () => {
         includeIngredients: [],
         excludeIngredients: [],
         recipes: [],
+        savedRecipes: [],
     };
     // Create state object and setter function
     const [getState, setState] = useState(initialState);

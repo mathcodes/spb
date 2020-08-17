@@ -23,9 +23,19 @@ const getRecipes = (params) => {
     );
     return fetch(url_).then((response) => response.json());
 };
+
+// These search params are set server side as there
+// is no reason for users to set them
+const params = {
+    apiKey: process.env.apiKey,
+    instructionsRequired: true,
+    fillIngredients: true,
+    addRecipeInformation: true,
+    addRecipeNutrition: true,
+};
+
 app.post("/api/search", (req, res) => {
-    getRecipes({ ...req.body, apiKey: process.env.apiKey }).then((recipes) => {
-        console.log(recipes);
+    getRecipes({ ...req.body, ...params }).then((recipes) => {
         res.json(recipes);
     });
 });

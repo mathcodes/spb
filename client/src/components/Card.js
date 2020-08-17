@@ -8,7 +8,7 @@ const css = {
     padding: "1px",
 };
 
-const Card = ({ src, alt, title, prepTime }) => (
+const Card = ({ src, alt, title, prepTime, saveEventHandler, footer }) => (
     <div className="card" style={css}>
         <div className="card-image">
             <figure className="image">
@@ -23,16 +23,18 @@ const Card = ({ src, alt, title, prepTime }) => (
         <div className="card-content">
             <div className="content">{prepTime}</div>
         </div>
-
-        <footer className="card-footer">
-            <a href="placeholder" className="card-footer-item">
+        {footer}
+        {/* <footer className="card-footer">
+            <button
+                className="is-warning card-footer-item"
+                onClick={saveEventHandler}>
                 Save
-            </a>
+            </button>
 
             <a href="/details" className="card-footer-item">
                 Details
             </a>
-        </footer>
+        </footer> */}
     </div>
 );
 
