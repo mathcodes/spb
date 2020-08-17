@@ -13,7 +13,7 @@ export const intolerances = [
     "Wheat",
 ];
 
-export const diets = [
+export const diet = [
     "Gluten Free",
     "Ketogenic",
     "Vegetarian",
@@ -26,7 +26,7 @@ export const diets = [
     "Whole30",
 ];
 
-export const cuisines = [
+export const cuisine = [
     "African",
     "American",
     "British",

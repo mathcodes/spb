@@ -18,12 +18,12 @@ import Library from "./components/Library";
 export default () => {
     // Define our initial state
     const initialState = {
-        cuisines: [],
-        excludedCuisines: [],
-        diets: [],
+        cuisine: [],
+        excludeCuisine: [],
+        diet: [],
         intolerances: [],
-        includedIngredients: [],
-        excludedIngredients: [],
+        includeIngredients: [],
+        excludeIngredients: [],
         recipes: [],
     };
     // Create state object and setter function

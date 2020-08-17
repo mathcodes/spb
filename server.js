@@ -24,8 +24,6 @@ const getRecipes = (params) => {
     return fetch(url_).then((response) => response.json());
 };
 app.post("/api/search", (req, res) => {
-    // I commented the real code out so I didnt' burn through my daily
-    // alotted api calls while debugging.  Need to undo this later.
     res.json(req.body);
     // getRecipes({ ...req.body, apiKey: process.env.apiKey }).then((recipes) =>
     //     res.json(recipes)

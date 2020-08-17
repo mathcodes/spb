@@ -10,9 +10,9 @@ export default ({ state }) => {
     const onSubmitHandler = (event) => {
         event.preventDefault();
         state.set({
-            includedIngredients: [
+            includeIngredients: [
                 ...new Set([
-                    ...state.get.includedIngredients,
+                    ...state.get.includeIngredients,
                     ...event.target.firstChild.value
                         .split(",")
                         .map((item) => item.trim())
@@ -26,7 +26,7 @@ export default ({ state }) => {
     // Pantry on click event handler
     const onClickHandler = (event) => {
         state.set({
-            includedIngredients: state.get.includedIngredients.filter(
+            includeIngredients: state.get.includeIngredients.filter(
                 (item) => item !== event.target.innerText
             ),
         });
@@ -38,22 +38,17 @@ export default ({ state }) => {
         fetch("/api/search", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                cuisine: state.get.cuisines.toString(),
-                excludeCuisine: state.get.excludedCuisines.toString(),
-                diet: state.get.diets.toString(),
-                intolerances: state.get.intolerances.toString(),
-                includeIngredients: state.get.includedIngredients.toString(),
-                excludeIngredients: state.get.excludedIngredients.toString(),
-                //These query params are not user settable
-                instructionsRequired: true,
-                fillIngredients: true,
-                addRecipeInformation: true,
-                addRecipeNutrtition: true,
-                ignorePantry: true,
-                number: 10,
-                sort: "max-used-ingredients", //min-missing-ingredients
-            }),
+            // Convert all the props represented as
+            // arrays in the state to strings
+            body: (() => {
+                console.log(state.get);
+                let obj = {};
+                for (const [key, value] of Object.entries(state.get)) {
+                    if (value.length > 0)
+                        obj = { ...obj, [key]: value.toString() };
+                }
+                return JSON.stringify(obj);
+            })(),
         })
             .then((response) => response.json())
             .then((data) => console.log(data))
@@ -68,7 +63,7 @@ export default ({ state }) => {
                 Get Recipes
             </button>
             <Pantry
-                items={state.get.includedIngredients}
+                items={state.get.includeIngredients}
                 onClickHandler={onClickHandler}
             />
             <RecipeContainer />
