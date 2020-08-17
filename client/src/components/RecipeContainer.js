@@ -11,9 +11,9 @@ const RecipeContainer = ({ recipes }) => (
                 ? recipes.map((recipe) => (
                       <Card
                           key={uuid()}
-                          src="https://via.placeholder.com/150"
-                          alt="placeholder image"
-                          title="Longpig Stew"
+                          src={recipe.image}
+                          alt={recipe.title}
+                          title={recipe.title.slice(0, 32)} // to maintain card spacing
                           prepTime="60 minutes"
                       />
                   ))

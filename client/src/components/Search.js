@@ -41,7 +41,6 @@ export default ({ state }) => {
             // Convert all the props represented as
             // arrays in the state to strings
             body: (() => {
-                console.log(state.get);
                 let obj = {};
                 for (const [key, value] of Object.entries(state.get)) {
                     if (value.length > 0)
@@ -51,10 +50,8 @@ export default ({ state }) => {
             })(),
         })
             .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                state.set({ recipes: data });
-            })
+            .then(({ results }) => state.set({ recipes: results }))
+            .then(() => console.log(state.get)) //for debugging
             .catch((err) => console.log(err));
     };
     return (
@@ -69,7 +66,7 @@ export default ({ state }) => {
                 items={state.get.includeIngredients}
                 onClickHandler={onClickHandler}
             />
-            <RecipeContainer />
+            <RecipeContainer recipes={state.get.recipes} />
         </>
     );
 };
