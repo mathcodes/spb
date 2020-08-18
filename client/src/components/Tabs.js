@@ -32,7 +32,7 @@ export default () => {
                                 aria-hidden="true"></i>
                         </a>
                     ) : (
-                        <a onClick={() => loginWithRedirect()}>
+                        <a onClick={() => loginWithPopup()}>
                             <i
                                 className="fas fa-sign-in-alt"
                                 aria-hidden="true"></i>
