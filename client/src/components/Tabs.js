@@ -2,7 +2,7 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
 export default () => {
-    const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+    const { loginWithPopup, isAuthenticated, logout } = useAuth0();
     return (
         <div className="tabs is-boxed is-fullwidth">
             <ul>
