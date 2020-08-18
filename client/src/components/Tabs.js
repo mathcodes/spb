@@ -1,38 +1,34 @@
 import React from "react";
-import { v4 as uuid } from "uuid";
+import { useAuth0 } from "@auth0/auth0-react";
 
-const Tabs = ({ tabs }) => (
-    <div className="tabs is-boxed is-fullwidth">
-        <ul>
-            {/* {tabs
-                ? tabs.map((tab) => (
-                      <li key={uuid()}>
-                          <a href={tab.href}>{tab.text}</a>
-                      </li>
-                  ))
-                : null} */}
-            <li>
-                <a href="/search">
-                    <i className="fa fa-search" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li>
-                <a href="/library">
-                    <i className="fa fa-list" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li>
-                <a href="/settings">
-                    <i className="fa fa-cog" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li>
-                <a href="/logout">
-                    <i className="fas fa-sign-out-alt" aria-hidden="true"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-);
-
-export default Tabs;
+export default () => {
+    const { loginWithRedirect } = useAuth0();
+    return (
+        <div className="tabs is-boxed is-fullwidth">
+            <ul>
+                <li>
+                    <a href="/search">
+                        <i className="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/library">
+                        <i className="fa fa-list" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/settings">
+                        <i className="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a onClick={() => loginWithRedirect()}>
+                        <i
+                            className="fas fa-sign-out-alt"
+                            aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    );
+};

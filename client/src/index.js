@@ -3,10 +3,16 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+// Auth0 stuff
+import { Auth0Provider } from "@auth0/auth0-react";
+
 ReactDOM.render(
-    <React.StrictMode>
+    <Auth0Provider
+        domain="dev-4ud-jigw.us.auth0.com"
+        clientId="p9lkgV3Ohh7V1lowuxsE96nQTSJt8hGz"
+        redirectUri="https://superpantrybuddy.herokuapp.com/">
         <App />
-    </React.StrictMode>,
+    </Auth0Provider>,
     document.getElementById("root")
 );
 
