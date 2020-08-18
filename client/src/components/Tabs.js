@@ -28,7 +28,7 @@ const Tabs = ({ tabs }) => (
             </li>
             <li>
                 <a href="/logout">
-                    <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+                    <i className="fas fa-sign-out-alt" aria-hidden="true"></i>
                 </a>
             </li>
         </ul>
