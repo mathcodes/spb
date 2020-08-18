@@ -51,8 +51,8 @@ export default ({ state, id, src, alt, title, prepTime, cookTime, footer }) => {
 
             <div className="card-content">
                 <div className="content">
-                    <p>prep time: {prepTime} minutes</p>
-                    <p>cook time: {cookTime} minutes</p>
+                    <p>prep time: {prepTime} min</p>
+                    <p>cook time: {cookTime} min</p>
                 </div>
             </div>
             <footer className="card-footer">

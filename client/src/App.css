@@ -104,7 +104,8 @@ padding: 2.25rem;
 .card-content {
     background-color: transparent;
     padding: .5rem;
-}
+    color: var(--light);
+    }
 
 .card-header-title {
     align-items: center;
