@@ -2,7 +2,7 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
 export default () => {
-    const { loginWithRedirect } = useAuth0();
+    const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
     return (
         <div className="tabs is-boxed is-fullwidth">
             <ul>
@@ -22,11 +22,22 @@ export default () => {
                     </a>
                 </li>
                 <li>
-                    <a onClick={() => loginWithRedirect()}>
-                        <i
-                            className="fas fa-sign-out-alt"
-                            aria-hidden="true"></i>
-                    </a>
+                    {isAuthenticated ? (
+                        <a
+                            onClick={() =>
+                                logout({ returnTo: window.location.origin })
+                            }>
+                            <i
+                                className="fas fa-sign-out-alt"
+                                aria-hidden="true"></i>
+                        </a>
+                    ) : (
+                        <a onClick={() => loginWithRedirect()}>
+                            <i
+                                className="fas fa-sign-in-alt"
+                                aria-hidden="true"></i>
+                        </a>
+                    )}
                 </li>
             </ul>
         </div>
