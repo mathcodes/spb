@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import InputForm from "./InputForm";
 import Pantry from "./Pantry";
 import RecipeContainer from "./RecipeContainer";
+import Logo from "./Logo";
 
 export default ({ state }) => {
     const [offset, setOffset] = useState([6]);
@@ -110,6 +111,7 @@ export default ({ state }) => {
 
     return (
         <>
+            <Logo />
             <InputForm onSubmitHandler={onSubmitHandler} />
             <button
                 className="button is-fullwidth is-warning"
@@ -125,7 +127,7 @@ export default ({ state }) => {
                 renderRecipes={state.get.recipes}
                 footer="search"
             />
-            {state.get.recipes.length > 0 ? (
+            {state && state.get.recipes.length > 0 ? (
                 <button
                     className="button is-fullwidth is-warning"
                     onClick={moreRecipes}>
