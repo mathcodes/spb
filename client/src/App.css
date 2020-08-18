@@ -70,7 +70,7 @@
     padding: 2.25rem;
 }
 .hero.is-success {
-    background-color: #48c774;}
+    background-color: var(--lgreen);}
 
 .hero-head{
   padding: 1%;
@@ -100,19 +100,27 @@ padding: 2.25rem;
 /* ------------------------------------- */
 /* ------------- *Cards ---------------- */
 /* ------------------------------------- */
+
+.Instructionscard{
+  background-color: var(--lgreen);
+  color:var(--dgreen);
+}
+
 .card-header-title {
     align-items: center;
-    background-color: var(--dgreen);
-    color: var(--light);
+    background-color: var(--lgreen);
+    color: var(--dgreen);
     display: flex;
     flex-grow: 1;
-    font-weight: 700;
-    padding: .1rem .3rem 0.5rem 0.5rem;
-}
+    font-weight: bold;
+    font-size:24px;
+    line-height: 36px;
+    padding: .1rem .3rem 0.5rem 0.5rem;}
 
 .card{
   overflow: hidden;
   content: '\f70e';
+  margin-bottom: 2%;
 }
 
 /* ------------------------------------- */
@@ -136,7 +144,7 @@ padding: 2.25rem;
 
 
 .label, .has-text-centered{
-  text-align: left;
+  /* text-align: left; */
 }
 
 
@@ -170,7 +178,7 @@ h2{
 }
 
 .has-text-centered {
-    text-align: 478843;
+    /* text-align: 478843; */
 }
 
 .input, .select select, .textarea {
