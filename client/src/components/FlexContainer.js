@@ -4,6 +4,7 @@ const css = {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
+    flexDirection: "row",
 };
 
 const FlexContainer = ({ children }) => (

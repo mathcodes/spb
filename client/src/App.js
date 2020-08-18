@@ -8,7 +8,7 @@ import Logo from "./components/Logo";
 import Tabs from "./components/Tabs";
 import Search from "./components/Search";
 import Settings from "./components/Settings";
-import Details from "./components/Details";
+import NewDetails from "./components/NewDetails";
 import { v4 as uuid } from "uuid";
 import "./App.css";
 
@@ -33,8 +33,8 @@ export default () => {
     const [getState, setState] = useState(initialState);
     // Load state from local storage on startup
     useEffect(() => {
-        // const loadedState = JSON.parse(localStorage.getItem("state"));
-        // if (loadedState) setState(loadedState);
+        const loadedState = JSON.parse(localStorage.getItem("state"));
+        if (loadedState) setState(loadedState);
     }, []);
     // Save state to local storage when it's updated
     useEffect(() => {
@@ -79,7 +79,7 @@ export default () => {
                             exact
                             path="/Details"
                             render={() => (
-                                <Details
+                                <NewDetails
                                     state={state}
                                     recipe={
                                         [

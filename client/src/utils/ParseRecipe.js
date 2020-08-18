@@ -43,8 +43,8 @@ export const getInstructions = (recipe) =>
 export const getInformation = (recipe) => ({
     id: recipe.id,
     name: recipe.title,
-    time: recipe.readyInMinutes,
-    servings: recipe.servings,
+    prepTime: recipe.preparationMinutes,
+    cookTime: recipe.cookingMinutes,
     url: recipe.sourceUrl,
     image: recipe.image,
 });

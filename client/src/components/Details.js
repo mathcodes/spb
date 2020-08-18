@@ -1,6 +1,7 @@
 import React from "react";
 import { pruneRecipe } from "../utils/ParseRecipe";
 import { v4 as uuid } from "uuid";
+import FlexContainer from "./FlexContainer";
 
 const detailsCSS = {
     margin: "0.5em",
@@ -12,7 +13,7 @@ export default ({ recipe }) => {
     const rec = recipe ? pruneRecipe(recipe) : null;
     console.log(rec);
     return (
-        <>
+        <FlexContainer>
             <div className="tile is-ancestor" style={detailsCSS}>
                 <div className="tile is-vertical is-12">
                     <div className="tile is-parent" style={detailsCSS}>
@@ -177,6 +178,6 @@ export default ({ recipe }) => {
                     </div>
                 </div>
             </div>
-        </>
+        </FlexContainer>
     );
 };
