@@ -41,8 +41,20 @@ export default ({ state }) => {
             // Convert all the props represented as
             // arrays in the state to strings
             body: (() => {
+                // Because we didn't seperate out the data in the state
+                // that is used for API queries and the rest, we have
+                // to do it here
+                let stateSlice = {
+                    cuisine: state.get.cuisine,
+                    excludeCuisine: state.get.excludeCuisine,
+                    diet: state.get.diet,
+                    intolerances: state.get.intolerances,
+                    includeIngredients: state.get.includeIngredients,
+                    excludeIngredients: state.get.excludeIngredients,
+                };
                 let obj = {};
-                for (const [key, value] of Object.entries(state.get)) {
+
+                for (const [key, value] of Object.entries(stateSlice)) {
                     if (value.length > 0)
                         obj = { ...obj, [key]: value.toString() };
                 }
@@ -72,6 +84,11 @@ export default ({ state }) => {
                 renderRecipes={state.get.recipes}
                 footer="search"
             />
+            {state.get.recipes.length > 0 ? (
+                <button className="button is-fullwidth is-warning">
+                    Load More Recipes
+                </button>
+            ) : null}
         </>
     );
 };
