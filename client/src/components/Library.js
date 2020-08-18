@@ -1,9 +1,11 @@
 import React from "react";
 import RecipeContainer from "./RecipeContainer";
+import Logo from "./Logo";
 
 export default ({ state }) => {
     return (
         <>
+            <Logo />
             <h1 style={{ textAlign: "center" }}>Saved Recipes</h1>
             <br />
             <RecipeContainer

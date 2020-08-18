@@ -5,6 +5,7 @@ import InputForm from "./InputForm";
 import Pantry from "./Pantry";
 import { intolerances, diet, cuisine } from "../assets/js/Lists";
 import { v4 as uuid } from "uuid";
+import Logo from "./Logo";
 
 export default ({ state }) => {
     // Input form submit event handler
@@ -100,7 +101,7 @@ export default ({ state }) => {
                 ))}
             </FlexContainer>{" "}
             <label className="label has-text-centered">
-                Must Fit These diet
+                Must Fit These Diets
             </label>
             <FlexContainer>
                 {diet.map((item) => (

@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "./Logo";
 
 const Hero = ({ header, body, footer }) => (
     <section className="hero is-success is-fullheight">

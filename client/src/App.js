@@ -49,15 +49,14 @@ export default () => {
     return (
         <BrowserRouter>
             <Hero
-                header={[
-                    <Logo key={uuid()} />,
+                header={
                     <div
                         key={uuid()}
-                        className="navbar is-fixed-top"
+                        className="navbar is-fixed-bottom"
                         style={{ backgroundColor: "#48c774" }}>
                         <Tabs tabs={MenuTabs} />
-                    </div>,
-                ]}
+                    </div>
+                }
                 body={
                     <>
                         <Route

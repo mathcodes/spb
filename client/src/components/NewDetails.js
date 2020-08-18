@@ -81,6 +81,7 @@ export default ({ recipe }) => {
                     </table>
                 ) : null}
             </FlexContainer>
+
             <FlexContainer>
                 {/* Missing ingredients table */}
                 {rec && rec.missedIngredients.length > 0 ? (
@@ -116,13 +117,20 @@ export default ({ recipe }) => {
                 ) : null}
             </FlexContainer>
             <FlexContainer>
-                {rec && rec.instructions.length > 0 ? (
-                    <ol>
-                        {rec.instructions.map((step) => (
-                            <li key={uuid()}>{step}</li>
-                        ))}
-                    </ol>
-                ) : null}
+                <div className="card">
+                    <div className="card-header">
+                        <div className="card-header-title">Instructions</div>
+                    </div>
+                    <div className="card-content">
+                        {rec && rec.instructions.length > 0 ? (
+                            <ol>
+                                {rec.instructions.map((step) => (
+                                    <li key={uuid()}>{step}</li>
+                                ))}
+                            </ol>
+                        ) : null}
+                    </div>
+                </div>
             </FlexContainer>
         </>
     );
