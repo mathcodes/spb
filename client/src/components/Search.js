@@ -127,12 +127,13 @@ export default ({ state }) => {
                 renderRecipes={state.get.recipes}
                 footer="search"
             />
-
-            <button
-                className="button is-fullwidth is-warning"
-                onClick={moreRecipes}>
-                Load More Recipes
-            </button>
+            {state.get.recipes.length > 0 ? (
+                <button
+                    className="button is-fullwidth is-warning"
+                    onClick={moreRecipes}>
+                    Load More Recipes
+                </button>
+            ) : null}
         </>
     );
 };
