@@ -11,6 +11,10 @@ const menuTabs = [
         text: "Settings",
         href: "/settings",
     },
+    {
+        text: "Logout",
+        href: "/logout",
+    },
 ];
 
 export default menuTabs;
