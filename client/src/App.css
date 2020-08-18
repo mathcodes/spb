@@ -72,10 +72,7 @@
 .hero.is-success {
     background-color: #48c774;}
 
-.hero-head{
-  padding: 1%;
-  margin-bottom: 3%;
-}
+
 
 
 /* ------------------------------------- */
@@ -104,6 +101,11 @@ padding: 2.25rem;
 /* ------------------------------------- */
 /* ------------- *Cards ---------------- */
 /* ------------------------------------- */
+.card-content {
+    background-color: transparent;
+    padding: .5rem;
+}
+
 .card-header-title {
     align-items: center;
     background-color: var(--dgreen);
@@ -114,26 +116,44 @@ padding: 2.25rem;
     padding: .1rem .3rem 0.5rem 0.5rem;
 }
 
-.card{
-  overflow: hidden;
-  content: '\f70e';
+
+
+.delete-button{
+background-color: var(--dorange);
+color:black;
+    border-color: var(--dgreen);
+
+}
+.details-button{
+background-color: var(--lorange);
+    border-color: var(--dgreen);
+
 }
 
 /* ------------------------------------- */
 /* -------    Buttons + Tabs      ------ */
 /* ------------------------------------- */
-.button.is-warning {
-    background-color: var(--yellow);
-    border-color: transparent;
+.button.is-warning, button.is-warning.is-active {
+    background-color: var(--lorange);
+    border-color: var(--dgreen);
     color: rgba(0,0,0,.7);
+}
+
+.save-button{
+  background-color: var(--dgreen);
+  color:white;
+      border-color: var(--dgreen);
+
 }
 .tabs{
     background-color: var(--dgreen);
     /* width: 100%; */
     margin: 0;
     /* width: fit-content; */
-
 }
+
+
+
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
 /* ------------------------------------- */
@@ -183,4 +203,9 @@ h2{
     border-width: 3px;
     color: #478843;
     -webkit-text-stroke-width: medium;
+}
+
+.content{
+      border-color: var(--dgreen);
+
 }

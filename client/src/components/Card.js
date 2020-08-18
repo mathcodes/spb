@@ -4,9 +4,8 @@ import "../App.css";
 const css = {
     margin: "0.5em",
     background: "#222222",
-    color: "var(--light)",
+    color: "var(--dgreen)",
     padding: "1px",
-     radius: "5%",
 };
 
 
@@ -51,12 +50,11 @@ export default ({ state, id, src, alt, title, prepTime, cookTime, footer }) => {
             </header>
 
             <div className="card-content">
-                <div>
-                    <p><i class="fas fa-clock"></i> Prep Time: {prepTime} minutes</p>
-                    <p><i class="fas fa-clock"></i> Cook Time: {cookTime} minutes</p>
-                </div> 
+                <div className="content">
+                    <p>prep time: {prepTime} minutes</p>
+                    <p>cook time: {cookTime} minutes</p>
+                </div>
             </div>
-
             <footer className="card-footer">
                 <a
                     href="/Details"
@@ -66,19 +64,15 @@ export default ({ state, id, src, alt, title, prepTime, cookTime, footer }) => {
                 </a>
                 {/* Render save or delete button depending on which page 
                 it's on */}
-
-
-
-
                 {footer === "search" ? (
                     <button
-                        className="button is-bottom is-warning is-fullwidth"
+                        className="save-button button is-fullwidth"
                         onClick={saveHandler}>
                         Save
                     </button>
                 ) : footer === "library" ? (
                     <button
-                        className="button is-bottom is-warning is-fullwidth"
+                        className="delete-button button is-warning is-fullwidth"
                         onClick={deleteHandler}>
                         Delete
                     </button>
