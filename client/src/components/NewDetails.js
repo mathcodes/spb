@@ -2,6 +2,7 @@ import React from "react";
 import { pruneRecipe } from "../utils/ParseRecipe";
 import { v4 as uuid } from "uuid";
 import FlexContainer from "./FlexContainer";
+import Logo from "./Logo";
 
 const detailsCSS = {
     margin: "0.5em",
@@ -14,6 +15,7 @@ export default ({ recipe }) => {
     console.log(rec);
     return (
         <>
+            <Logo/>
             {/* Nutrition table */}
             {rec && rec.nutrients.length > 0 ? (
                 <table className="table is-fullwidth">
@@ -117,8 +119,8 @@ export default ({ recipe }) => {
                 ) : null}
             </FlexContainer>
             <FlexContainer>
-                <div className="card">
-                    <div className="card-header">
+                <div className="card ">
+                    <div className="card-header Instructionscard">
                         <div className="card-header-title">Instructions</div>
                     </div>
                     <div className="card-content">
