@@ -1,20 +1,15 @@
-/*          Table of Contents            */
-/* ------------- Global Variables------  */
-/* ------------- App ------------------  */
-/* ------------- Hero -----------------  */
-/* ------------- Header + NavBar ------  */
-/* ------------- Tables ---------------  */
-/* ------------- Cards ----------------  */
-/* ------------- Buttons + Tabs -------  */
-/* ------------- Dropdowns      -------  */
-/* ------------- Keyframes ------------  */
-/* ------------- Font -----------------  */
-/* ------------- Images ---------------  */
-
-tbody {
-    margin: 0;
-    padding: 20px;
-}
+/* ------------------------------------- */
+/* ---------  Table of Contents  ------- */
+/* ------------- *Global Variables------ */
+/* ------------- *App ------------------ */
+/* ------------- *Hero ----------------- */
+/* ------------- *Header + NavBar ------ */
+/* ------------- *Cards ---------------- */
+/* ------------- *Buttons + Tabs ------- */
+/* ------------- *Dropdowns      ------- */
+/* ------------- *Keyframes ------------ */
+/* ------------- *Font ----------------- */
+/* ------------------------------------- */
 
 :root {
     --lgreen: #85b135;
@@ -76,7 +71,12 @@ tbody {
     padding: 2.25rem;
 }
 .hero.is-success {
-    background-color: var(--lgreen);
+    background-color: #48c774;
+}
+
+.hero-head {
+    padding: 1%;
+    margin-bottom: 3%;
 }
 
 .hero-head {
@@ -87,6 +87,10 @@ tbody {
 /* ------------------------------------- */
 /* -------    Header + NavBar     ------ */
 /* ------------------------------------- */
+
+.hero.is-success {
+    background-color: var(--lgreen);
+}
 
 .headerImage {
     height: 50%;
@@ -106,50 +110,21 @@ tbody {
 }
 
 /* ------------------------------------- */
-/* ------------- Tables ----------------- */
+/* ------------- *Cards ---------------- */
 /* ------------------------------------- */
-
-.tbody,
-.li {
-    padding-left: 15px;
-}
-
-/* ------------------------------------- */
-/* ------------- Cards ----------------- */
-/* ------------------------------------- */
-
-.Instructionscard {
-    background-color: var(--lgreen);
-    color: var(--dgreen);
-}
-
 .card-header-title {
-    text-align: justify;
-    height: 45.48px;
     align-items: center;
-    background-color: var(--lgreen);
-    color: var(--dgreen);
+    background-color: var(--dgreen);
+    color: var(--light);
     display: flex;
-    /* flex-grow: 1; */
-    font-weight: bold;
-    font-size: 24px;
-    /* line-height: 36px; */
+    flex-grow: 1;
+    font-weight: 700;
     padding: 0.1rem 0.3rem 0.5rem 0.5rem;
 }
 
 .card {
     overflow: hidden;
     content: "\f70e";
-    margin-bottom: 2%;
-    height: 418.25px;
-    width: 20%;
-}
-
-.card-header {
-    background-color: transparent;
-    align-items: stretch;
-    box-shadow: 0 0.125em 0.25em rgba(10, 10, 10, 0.1);
-    display: flex;
 }
 
 /* ------------------------------------- */
@@ -172,7 +147,7 @@ tbody {
 
 .label,
 .has-text-centered {
-    /* text-align: left; */
+    text-align: left;
 }
 
 /* ------------------------------------- */
@@ -203,7 +178,7 @@ h2 {
 }
 
 .has-text-centered {
-    /* text-align: 478843; */
+    text-align: 478843;
 }
 
 .input,
@@ -214,12 +189,4 @@ h2 {
     border-width: 3px;
     color: #478843;
     -webkit-text-stroke-width: medium;
-}
-
-/* ------------------------------------- */
-/* -------         Images         ------ */
-/* ------------------------------------- */
-.image {
-    height: 231px;
-    width: 312px;
 }
