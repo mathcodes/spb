@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // Components
 import InputForm from "./InputForm";
@@ -6,6 +6,8 @@ import Pantry from "./Pantry";
 import RecipeContainer from "./RecipeContainer";
 
 export default ({ state }) => {
+    const [offset, setOffset] = useState([6]);
+
     // Input form submit event handler
     const onSubmitHandler = (event) => {
         event.preventDefault();
@@ -41,8 +43,21 @@ export default ({ state }) => {
             // Convert all the props represented as
             // arrays in the state to strings
             body: (() => {
+                // Because we didn't seperate out the data in the state
+                // that is used for API queries and the rest, we have
+                // to do it here
+                let stateSlice = {
+                    cuisine: state.get.cuisine,
+                    excludeCuisine: state.get.excludeCuisine,
+                    diet: state.get.diet,
+                    intolerances: state.get.intolerances,
+                    includeIngredients: state.get.includeIngredients,
+                    excludeIngredients: state.get.excludeIngredients,
+                    number: [6],
+                };
                 let obj = {};
-                for (const [key, value] of Object.entries(state.get)) {
+
+                for (const [key, value] of Object.entries(stateSlice)) {
                     if (value.length > 0)
                         obj = { ...obj, [key]: value.toString() };
                 }
@@ -51,7 +66,45 @@ export default ({ state }) => {
         })
             .then((response) => response.json())
             .then(({ results }) => state.set({ recipes: results }))
-            .then(() => console.log(state.get)) //for debugging
+            .then(() => console.log(offset)) //for debugging
+            .catch((err) => console.log(err));
+    };
+
+    const moreRecipes = () => {
+        setOffset([offset[0] + 6]);
+        fetch("/api/search", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            // Convert all the props represented as
+            // arrays in the state to strings
+            body: (() => {
+                // Because we didn't seperate out the data in the state
+                // that is used for API queries and the rest, we have
+                // to do it here
+                let stateSlice = {
+                    cuisine: state.get.cuisine,
+                    excludeCuisine: state.get.excludeCuisine,
+                    diet: state.get.diet,
+                    intolerances: state.get.intolerances,
+                    includeIngredients: state.get.includeIngredients,
+                    excludeIngredients: state.get.excludeIngredients,
+                    offset: offset,
+                    number: [6],
+                };
+                let obj = {};
+
+                for (const [key, value] of Object.entries(stateSlice)) {
+                    if (value.length > 0)
+                        obj = { ...obj, [key]: value.toString() };
+                }
+                return JSON.stringify(obj);
+            })(),
+        })
+            .then((response) => response.json())
+            .then(({ results }) =>
+                state.set({ recipes: [...state.get.recipes, ...results] })
+            )
+            .then(() => console.log(offset)) //for debugging
             .catch((err) => console.log(err));
     };
 
@@ -72,6 +125,13 @@ export default ({ state }) => {
                 renderRecipes={state.get.recipes}
                 footer="search"
             />
+            {state.get.recipes.length > 0 ? (
+                <button
+                    className="button is-fullwidth is-warning"
+                    onClick={moreRecipes}>
+                    Load More Recipes
+                </button>
+            ) : null}
         </>
     );
 };
