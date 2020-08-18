@@ -118,22 +118,31 @@ export default ({ recipe }) => {
                     </table>
                 ) : null}
             </FlexContainer>
+
             <FlexContainer>
-                <div className="card ">
-                    <div className="card-header Instructionscard">
-                        <div className="card-header-title">Instructions</div>
-                    </div>
-                    <div className="card-content">
-                        {rec && rec.instructions.length > 0 ? (
-                            <ol>
-                                {rec.instructions.map((step) => (
-                                    <li key={uuid()}>{step}</li>
-                                ))}
-                            </ol>
-                        ) : null}
-                    </div>
-                </div>
+                {/* Missing ingredients table */}
+                {rec && rec.instructions.length > 0 ? (
+                        <table className="table is-fullwidth">
+                            <caption>
+                                <h1>
+                                    <b>Instructions</b>
+                                </h1>
+                            </caption>
+                        
+                            <tbody>
+                                {rec && rec.instructions.length > 0 ? (
+                                <ol>
+                                    {rec.instructions.map((step) => (
+                                        <li key={uuid()}>{step}</li>
+                                    ))}
+                                </ol>
+                            ) : null}
+                            </tbody>
+                        </table>
+                    ) : null}
             </FlexContainer>
+
+
         </>
     );
 };
