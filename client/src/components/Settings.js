@@ -5,7 +5,7 @@ import InputForm from "./InputForm";
 import Pantry from "./Pantry";
 import { intolerances, diet, cuisine } from "../assets/js/Lists";
 import { v4 as uuid } from "uuid";
-import Logo from "./Logo";
+import Profile from "./Profile";
 
 export default ({ state }) => {
     // Input form submit event handler
@@ -87,6 +87,7 @@ export default ({ state }) => {
 
     return (
         <>
+            <Profile />
             <label className="label has-text-centered">Food Intolerances</label>
             <FlexContainer>
                 {intolerances.map((item) => (
