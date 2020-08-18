@@ -32,6 +32,7 @@ const params = {
     fillIngredients: true,
     addRecipeInformation: true,
     addRecipeNutrition: true,
+    sort: "min-missing-ingredients",
 };
 
 app.post("/api/search", (req, res) => {
