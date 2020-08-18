@@ -35,6 +35,7 @@ const params = {
 };
 
 app.post("/api/search", (req, res) => {
+    console.log(req.body);
     getRecipes({ ...req.body, ...params }).then((recipes) => {
         res.json(recipes);
     });

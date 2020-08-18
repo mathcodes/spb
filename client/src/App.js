@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
+// import { getItem, setItem } from "localforage";
 
 // Components
 import Hero from "./components/Hero";
@@ -32,8 +33,8 @@ export default () => {
     const [getState, setState] = useState(initialState);
     // Load state from local storage on startup
     useEffect(() => {
-        const loadedState = JSON.parse(localStorage.getItem("state"));
-        if (loadedState) setState(loadedState);
+        // const loadedState = JSON.parse(localStorage.getItem("state"));
+        // if (loadedState) setState(loadedState);
     }, []);
     // Save state to local storage when it's updated
     useEffect(() => {
