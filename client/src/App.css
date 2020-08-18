@@ -74,10 +74,6 @@
     background-color: #48c774;
 }
 
-.hero-head {
-    padding: 1%;
-    margin-bottom: 3%;
-}
 
 .hero-head {
     /* padding: 1%; */
@@ -112,6 +108,12 @@
 /* ------------------------------------- */
 /* ------------- *Cards ---------------- */
 /* ------------------------------------- */
+.card-content {
+    background-color: transparent;
+    padding: .5rem;
+    color: var(--light);
+    }
+
 .card-header-title {
     align-items: center;
     background-color: var(--dgreen);
@@ -122,25 +124,59 @@
     padding: 0.1rem 0.3rem 0.5rem 0.5rem;
 }
 
+<<<<<<< HEAD
+
+
+.delete-button{
+background-color: var(--dorange);
+color:black;
+    border-color: var(--dgreen);
+
+}
+.details-button{
+background-color: var(--lorange);
+    border-color: var(--dgreen);
+
+=======
 .card {
     overflow: hidden;
     content: "\f70e";
+>>>>>>> 45f7225ca2596b5141999ae42f211976700b3d24
 }
 
 /* ------------------------------------- */
 /* -------    Buttons + Tabs      ------ */
 /* ------------------------------------- */
+<<<<<<< HEAD
+.button.is-warning, button.is-warning.is-active {
+    background-color: var(--lorange);
+    border-color: var(--dgreen);
+    color: rgba(0,0,0,.7);
+}
+
+.save-button{
+  background-color: var(--dgreen);
+  color:white;
+      border-color: var(--dgreen);
+
+}
+.tabs{
+=======
 .button.is-warning {
     background-color: var(--yellow);
     border-color: transparent;
     color: rgba(0, 0, 0, 0.7);
 }
 .tabs {
+>>>>>>> 45f7225ca2596b5141999ae42f211976700b3d24
     background-color: var(--dgreen);
     /* width: 100%; */
     margin: 0;
     /* width: fit-content; */
 }
+
+
+
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
 /* ------------------------------------- */
@@ -190,3 +226,11 @@ h2 {
     color: #478843;
     -webkit-text-stroke-width: medium;
 }
+<<<<<<< HEAD
+
+.content{
+      border-color: var(--dgreen);
+
+}
+=======
+>>>>>>> 45f7225ca2596b5141999ae42f211976700b3d24

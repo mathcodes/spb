@@ -110,8 +110,9 @@ export default ({ state }) => {
     };
 
     return (
-        <>
-            <Logo />
+        <> <Logo /><br></br>
+            <h1>Type the ingredients you have on hand to find recipes that work for you! Use the Save and Details buttons to take a closer look, or save the recipe to your library!</h1>
+           <br></br>
             <InputForm onSubmitHandler={onSubmitHandler} />
             <button
                 className="button is-fullwidth is-warning"
