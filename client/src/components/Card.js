@@ -66,15 +66,19 @@ export default ({ state, id, src, alt, title, prepTime, cookTime, footer }) => {
                 </a>
                 {/* Render save or delete button depending on which page 
                 it's on */}
+
+
+
+
                 {footer === "search" ? (
                     <button
-                        className="button is-warning is-fullwidth"
+                        className="button is-bottom is-warning is-fullwidth"
                         onClick={saveHandler}>
                         Save
                     </button>
                 ) : footer === "library" ? (
                     <button
-                        className="button is-warning is-fullwidth"
+                        className="button is-bottom is-warning is-fullwidth"
                         onClick={deleteHandler}>
                         Delete
                     </button>

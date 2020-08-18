@@ -1,16 +1,15 @@
-/* ------------------------------------- */
-/* ---------  Table of Contents  ------- */
-/* ------------- *Global Variables------ */
-/* ------------- *App ------------------ */
-/* ------------- *Hero ----------------- */
-/* ------------- *Header + NavBar ------ */
-/* ------------- *Cards ---------------- */
-/* ------------- *Buttons + Tabs ------- */
-/* ------------- *Dropdowns      ------- */
-/* ------------- *Keyframes ------------ */
-/* ------------- *Font ----------------- */
-/* ------------------------------------- */
-
+             
+/*          Table of Contents             */
+/* ------------- Global Variables------  */
+/* ------------- App ------------------  */
+/* ------------- Hero -----------------  */
+/* ------------- Header + NavBar ------  */
+/* ------------- Cards ----------------   */
+/* ------------- Buttons + Tabs -------  */
+/* ------------- Dropdowns      -------  */
+/* ------------- Keyframes ------------  */
+/* ------------- Font -----------------  */
+/* ------------- Images ---------------  */
 
 
 :root {
@@ -98,8 +97,9 @@ padding: 2.25rem;
 
 
 /* ------------------------------------- */
-/* ------------- *Cards ---------------- */
+/* ------------- Cards ----------------- */
 /* ------------------------------------- */
+
 
 .Instructionscard{
   background-color: var(--lgreen);
@@ -107,20 +107,31 @@ padding: 2.25rem;
 }
 
 .card-header-title {
+    text-align: justify;
+    height:45.48px;
     align-items: center;
     background-color: var(--lgreen);
     color: var(--dgreen);
     display: flex;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     font-weight: bold;
     font-size:24px;
-    line-height: 36px;
+    /* line-height: 36px; */
     padding: .1rem .3rem 0.5rem 0.5rem;}
 
 .card{
   overflow: hidden;
   content: '\f70e';
   margin-bottom: 2%;
+  height: 418.25px;
+  width:20%;
+}
+
+.card-header {
+    background-color: transparent;
+    align-items: stretch;
+    box-shadow: 0 0.125em 0.25em rgba(10,10,10,.1);
+    display: flex;
 }
 
 /* ------------------------------------- */
@@ -187,4 +198,12 @@ h2{
     border-width: 3px;
     color: #478843;
     -webkit-text-stroke-width: medium;
+}
+
+/* ------------------------------------- */
+/* -------         Images         ------ */
+/* ------------------------------------- */
+.image{
+  height: 231px;
+  width: 312px;
 }
