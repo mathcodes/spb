@@ -79,7 +79,6 @@ body{
     background-color: #48c774;
 }
 
-
 .hero-head {
     /* padding: 1%; */
     /* margin-bottom: 3%; */
@@ -130,74 +129,25 @@ body{
     padding: 0.5rem 0.3rem 0.5rem 0.5rem;
 }
 
-
-
-.delete-button{
-background-color: var(--dorange);
-color:black;
-    border-color: var(--dgreen);
-
-}
-.details-button{
-background-color: var(--lorange);
-    border-color: var(--dgreen);
-
+.card {
+    overflow: hidden;
+    content: "\f70e";
 }
 
 /* ------------------------------------- */
 /* -------    Buttons + Tabs      ------ */
 /* ------------------------------------- */
-
-.hero.is-success .tabs.is-boxed a, .hero.is-success .tabs.is-toggle a {
-    color: #fff;
+.button.is-warning {
+    background-color: var(--yellow);
+    border-color: transparent;
+    color: rgba(0, 0, 0, 0.7);
 }
-.hero.is-success .tabs a {
-    color: #fff;
-    opacity: .9;
-}
-
-.tabs.is-boxed a {
-    border: 0.2px solid;
-    border-radius: 4px 4px 0 0;
-    height: 5rem;
-}
-.tabs a {
-    align-items: center;
-    border-bottom-color: #dbdbdb;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    color: #4a4a4a;
-    display: flex;
-    justify-content: center;
-    padding: .5em 1em;
-    vertical-align: top;
-}
-
-
-.button.is-warning, button.is-warning.is-active {
-    background-color: black;
-    border-color: var(--dgreen);
-    color: white;
-}
-
-.moreButton{
-  margin-bottom: 3%;
-}
-
-.save-button{
-  background-color: var(--dgreen);
-  color:white;
-      border-color: var(--dgreen);
-
-}
-.tabs{
+.tabs {
     background-color: var(--dgreen);
     /* width: 100%; */
     margin: 0;
     /* width: fit-content; */
 }
-
-
 
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */

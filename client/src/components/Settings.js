@@ -5,9 +5,12 @@ import InputForm from "./InputForm";
 import Pantry from "./Pantry";
 import { intolerances, diet, cuisine } from "../assets/js/Lists";
 import { v4 as uuid } from "uuid";
-import Profile from "./Profile";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default ({ state }) => {
+    const { isAuthenticated, user } = useAuth0;
+    console.log("isAuthenticated:", isAuthenticated);
+    console.log("user:", user);
     // Input form submit event handler
     const inputformOnSubmitHandler = (event) => {
         event.preventDefault();
@@ -87,7 +90,6 @@ export default ({ state }) => {
 
     return (
         <>
-            <Profile />
             <label className="label has-text-centered">Food Intolerances</label>
             <FlexContainer>
                 {intolerances.map((item) => (
