@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 // Components
 import InputForm from "./InputForm";
@@ -7,6 +8,10 @@ import RecipeContainer from "./RecipeContainer";
 import Logo from "./Logo";
 
 export default ({ state }) => {
+    const { isAuthenticated, user } = useAuth0();
+    useEffect(() => {
+        if (isAuthenticated) state.set({ id: user.email });
+    }, [isAuthenticated]);
     const [offset, setOffset] = useState([6]);
 
     // Input form submit event handler
@@ -109,10 +114,17 @@ export default ({ state }) => {
             .catch((err) => console.log(err));
     };
 
-    return (
-        <> <Logo /><br></br>
-            <h1>Type the ingredients you have on hand to find recipes that work for you! Use the Save and Details buttons to take a closer look, or save the recipe to your library!</h1>
-           <br></br>
+    return state.get && isAuthenticated ? (
+        <>
+            {" "}
+            <Logo />
+            <br></br>
+            <h1>
+                Type the ingredients you have on hand to find recipes that work
+                for you! Use the Save and Details buttons to take a closer look,
+                or save the recipe to your library!
+            </h1>
+            <br></br>
             <InputForm onSubmitHandler={onSubmitHandler} />
             <button
                 className="button is-fullwidth is-warning"
@@ -136,5 +148,5 @@ export default ({ state }) => {
                 </button>
             ) : null}
         </>
-    );
+    ) : null;
 };

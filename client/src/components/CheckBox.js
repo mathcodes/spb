@@ -1,6 +1,8 @@
 import React from "react";
 
-const css = { margin: "0.4em" };
+const css = {
+    margin: "0.4em",
+};
 
 const CheckBox = ({ text, onClickHandler, checked }) => (
     <label className="checkbox" style={css} onClick={onClickHandler}>
