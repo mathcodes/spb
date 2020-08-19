@@ -139,7 +139,6 @@ body{
 
 card-header-title-Det{
     color:var(--dgreen);
-/* margin-top:3%; */
     background-color: var(--lgreen);
 }
 
@@ -149,12 +148,9 @@ card-content-details{
 }
 card-header-title, .card.details{
 background-color: var(--lgreen);
- /* height:200%; */
 }
 
 .card-header-title {
-    /* align-items: center; */
-     /* font-size:48px; */
     background-color: var(--dgreen); 
     color: var(--light); 
     display: flex;
@@ -178,9 +174,7 @@ background-color: var(--lgreen);
 }
 .tabs {
     background-color: var(--dgreen);
-    /* width: 100%; */
     margin: 0;
-    /* width: fit-content; */
 }
 
 .tabStyle{
@@ -237,7 +231,6 @@ background-color: var(--lgreen);
   font-weight: bold;
   border: var(-lgreen);
   border-style:none;
-  /* margin-top: 3%; */
   padding: 0 5%;
   color:#444444;
 }

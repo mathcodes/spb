@@ -6,7 +6,7 @@ import FlexContainer from "./FlexContainer";
 const detailsCSS = {
     margin: "0.5em",
     color: "black",
-    // background: "#48C773",
+    // background: "#48C443",
 };
 
 export default ({ recipe }) => {
@@ -17,30 +17,27 @@ export default ({ recipe }) => {
 {/* ******************************Nutrition table****************************** */}
             {rec && rec.nutrients.length > 0 ? (
                 <table className="table is-fullwidth is-striped is-hoverable">
-                    <caption>
-                        <h1>
-                            <b className="is-size-7-mobile">Nutrition</b>
-                        </h1>
-                    </caption>
-                    <thead>
-                        <tr>
-                            <th className="is-size-7-mobile">Name</th>
-                            <th className="is-size-7-mobile">Amount</th>
-                            <th className="is-size-7-mobile">Unit</th>
-                        </tr>
-                    </thead>
+                  <caption>
+                            <h1>
+                                <b className="is-12">Nutrition</b>
+                            </h1>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th className="is-3">Name</th>
+                                <th className="is-3">Amount</th> 
+                            </tr>
+                        </thead>
                     <tbody>
                         {rec.nutrients.slice(0, 8).map((item) => (
                             <tr key={uuid()}>
-                                <td className="is-size-7-mobile">
+                                <td className="is-3">
                                     {item.name}
                                 </td>
-                                <td className="is-size-7-mobile">
-                                    {item.amount}
+                                <td className="is-3">
+                                    {item.amount} {item.unit}
                                 </td>
-                                <td className="is-size-7-mobile">
-                                    {item.unit}
-                                </td>
+                                 
                             </tr>
                         ))}
                     </tbody>
@@ -53,28 +50,26 @@ export default ({ recipe }) => {
                     <table className="table tableNutrition is-fullwidth is-striped is-hoverable">
                         <caption>
                             <h1>
-                                <b className="is-size-7-mobile is-size-3">Ingredients</b>
+                                <b className="is-12">Ingredients</b>
                             </h1>
                         </caption>
                         <thead>
                             <tr>
-                                <th className="is-size-7-mobile">Name</th>
-                                <th className="is-size-7-mobile">Amount</th>
-                                <th className="is-size-7-mobile">Unit</th>
+                                <th className="is-3">Name</th>
+                                <th className="is-3">Amount</th>
+                                 
                             </tr>
                         </thead>
                         <tbody>
                             {rec.usedIngredients.map((item) => (
                                 <tr key={uuid()}>
-                                    <td className="is-size-7-mobile">
+                                    <td className="is-3">
                                         {item.name}
                                     </td>
-                                    <td className="is-size-7-mobile">
-                                        {item.amount}
+                                    <td className="is-3">
+                                        {item.amount} {item.unit}
                                     </td>
-                                    <td className="is-size-7-mobile">
-                                        {item.unit}
-                                    </td>
+                                     
                                 </tr>
                             ))}
                         </tbody>
@@ -88,26 +83,26 @@ export default ({ recipe }) => {
                     <table className="table tableMissing is-fullwidth is-striped is-hoverable">
                         <caption>
                             <h1>
-                                <b className="is-size-7-mobile is-size-3">Missing Ingredients</b>
+                                <b className="is-3">Missing Ingredients</b>
                             </h1>
                         </caption>
                         <thead>
                             <tr>
-                                <th className="is-size-7-mobile">Name</th>
-                                <th className="is-size-7-mobile">Amount</th>
-                                <th className="is-size-7-mobile">Unit</th>
+                                <th className="is-3">Name</th>
+                                <th className="is-3">Amount</th>
+                                <th className="is-3">Unit</th>
                             </tr>
                         </thead>
                         <tbody>
                             {rec.missedIngredients.map((item) => (
                                 <tr key={uuid()}>
-                                    <td className="is-size-7-mobile">
+                                    <td className="is-3">
                                         {item.name}
                                     </td>
-                                    <td className="is-size-7-mobile">
+                                    <td className="is-3">
                                         {item.amount}
                                     </td>
-                                    <td className="is-size-7-mobile">
+                                    <td className="is-3">
                                         {item.unit}
                                     </td>
                                 </tr>
