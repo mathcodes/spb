@@ -122,7 +122,7 @@ export default ({ recipe }) => {
             <FlexContainer>
                 {/* Missing ingredients table */}
                 {rec && rec.instructions.length > 0 ? (
-                        <table className="table is-fullwidth is-hoverable">
+                        <table className="Inst-table is-fullwidth is-hoverable">
                             <caption>
                                 <h1>
                                     <b>Instructions</b>
@@ -131,10 +131,11 @@ export default ({ recipe }) => {
                         
                             <tbody>
                                 {rec && rec.instructions.length > 0 ? (
-                                <ol>
+                                <ol><strong>
                                     {rec.instructions.map((step) => (
                                         <li key={uuid()}>{step}</li>
                                     ))}
+                                    </strong>
                                 </ol>
                             ) : null}
                             </tbody>

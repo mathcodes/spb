@@ -11,7 +11,20 @@
 /* ------------- *Font ----------------- */
 /* ------------- *Tables---------------- */
 /* ------------------------------------- */
-
+html {
+    background-color:var(--lgreen);
+    font-size: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
 body{
     margin-bottom: 5rem;
 }
@@ -76,7 +89,7 @@ body{
     padding: 2.25rem;
 }
 .hero.is-success {
-    background-color: #48c774;
+    background-color: var(--lgreen);
 }
 
 .hero-head {
@@ -149,6 +162,10 @@ body{
     /* width: fit-content; */
 }
 
+.tabStyle{
+    size: 18pt;
+}
+
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
 /* ------------------------------------- */
@@ -175,12 +192,12 @@ body{
 /* -------         Font           ------ */
 /* ------------------------------------- */
 
-caption{
-  background: black);
+caption {
+  background: var(--lgreen);
   font-weight: bold;
-  border: var(--dgreen);
-  border-style: groove;
-  margin-top:3%;
+  border: var(-lgreen);
+  border-style:none;
+  margin-top: 3%;
   padding: 0 5%;
   color:white;
 }
@@ -206,7 +223,7 @@ h2 {
     background-color: #fff;
     border-color: #ee662e;
     border-width: 3px;
-    color: #478843;
+    color: black;
     -webkit-text-stroke-width: medium;
 }
 
@@ -230,6 +247,11 @@ h2 {
     color: black;
   font-weight: bold;
   border-color:black;
+}
+
+.Inst-table{
+ 
+    border:none;
 }
 
 

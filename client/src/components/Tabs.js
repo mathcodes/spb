@@ -2,7 +2,7 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
 export default () => {
-    const { loginWithPopup, isAuthenticated, logout } = useAuth0();
+    const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
     return (
         <div className="tabs is-boxed is-fullwidth">
             <ul>
@@ -32,7 +32,7 @@ export default () => {
                                 aria-hidden="true"></i>
                         </a>
                     ) : (
-                        <a onClick={() => loginWithPopup()}>
+                        <a onClick={() => loginWithRedirect()}>
                             <i
                                 className="fas fa-sign-in-alt"
                                 aria-hidden="true"></i>
