@@ -16,17 +16,17 @@ export default ({ recipe }) => {
         <>
 {/* ******************************Nutrition table****************************** */}
             {rec && rec.nutrients.length > 0 ? (
-                <table className="table is-fullwidth">
+                <table className="table is-fullwidth is-striped is-hoverable">
                     <caption>
                         <h1>
-                            <b className="is-size-7-mobile is-size-3">Nutrition</b>
+                            <b className="is-size-7-mobile">Nutrition</b>
                         </h1>
                     </caption>
                     <thead>
                         <tr>
-                            <th className="is-size-7-mobile is-size-4">Name</th>
-                            <th className="is-size-7-mobile is-size-4">Amount</th>
-                            <th className="is-size-7-mobile is-size-4">Unit</th>
+                            <th className="is-size-7-mobile">Name</th>
+                            <th className="is-size-7-mobile">Amount</th>
+                            <th className="is-size-7-mobile">Unit</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,17 +50,17 @@ export default ({ recipe }) => {
             <FlexContainer>
 {/* ******************************Owned Ingredients table****************************** */}
                 {rec && rec.usedIngredients.length > 0 ? (
-                    <table className="table is-fullwidth">
+                    <table className="table tableNutrition is-fullwidth is-striped is-hoverable">
                         <caption>
                             <h1>
-                                <b>Ingredients</b>
+                                <b className="is-size-7-mobile is-size-3">Ingredients</b>
                             </h1>
                         </caption>
                         <thead>
                             <tr>
-                                <th className="is-size-7-mobile is-size-4">Name</th>
-                                <th className="is-size-7-mobile is-size-4">Amount</th>
-                                <th className="is-size-7-mobile is-size-4">Unit</th>
+                                <th className="is-size-7-mobile">Name</th>
+                                <th className="is-size-7-mobile">Amount</th>
+                                <th className="is-size-7-mobile">Unit</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -85,17 +85,17 @@ export default ({ recipe }) => {
             <FlexContainer>
 {/* ******************************Missing Ingredients table****************************** */}
                 {rec && rec.missedIngredients.length > 0 ? (
-                    <table className="table is-fullwidth">
+                    <table className="table tableMissing is-fullwidth is-striped is-hoverable">
                         <caption>
                             <h1>
-                                <b>Missing Ingredients</b>
+                                <b className="is-size-7-mobile is-size-3">Missing Ingredients</b>
                             </h1>
                         </caption>
                         <thead>
                             <tr>
-                                <th className="is-size-7-mobile is-size-4">Name</th>
-                                <th className="is-size-7-mobile is-size-4">Amount</th>
-                                <th className="is-size-7-mobile is-size-4">Unit</th>
+                                <th className="is-size-7-mobile">Name</th>
+                                <th className="is-size-7-mobile">Amount</th>
+                                <th className="is-size-7-mobile">Unit</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -117,7 +117,7 @@ export default ({ recipe }) => {
                 ) : null}
             </FlexContainer>
             <FlexContainer>
-                <div className="card">
+                <div className="card card-instructions">
                     <div className="card-header">
                         <div className="card-header-title card.details">Instructions</div>
                     </div>
@@ -125,7 +125,7 @@ export default ({ recipe }) => {
                         {rec && rec.instructions.length > 0 ? (
                             <ol>
                                 {rec.instructions.map((step) => (
-                                    <li key={uuid()}>{step}</li>
+                                    <li class="instructions" key={uuid()}> <input class="is-large" type="checkbox"></input> {step}</li>
                                 ))}
                             </ol>
                         ) : null}

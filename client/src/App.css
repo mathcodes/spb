@@ -10,6 +10,7 @@
 /* ------------- *Keyframes ------------ */
 /* ------------- *Font ----------------- */
 /* ------------- *Tables---------------- */
+/* ------------- *Layouts--------------- */
 /* ------------------------------------- */
 html {
     background-color:var(--lgreen);
@@ -27,6 +28,7 @@ html {
 }
 body{
     margin-bottom: 5rem;
+    background-color:var(--lgreen);
 }
 
 :root {
@@ -63,7 +65,7 @@ body{
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: var(--lgreen);
 }
 
 .App-link {
@@ -84,18 +86,18 @@ body{
 }
 
 .hero-body {
-    flex-grow: 1;
-    flex-shrink: 0;
+    flex-grow: 6;
+    flex-shrink: 1;
     padding: 2.25rem;
 }
 .hero.is-success {
     background-color: var(--lgreen);
 }
 
-.hero-head {
+/* .hero-head {
     /* padding: 1%; */
     /* margin-bottom: 3%; */
-}
+
 
 /* ------------------------------------- */
 /* -------    Header + NavBar     ------ */
@@ -125,27 +127,36 @@ body{
 /* ------------------------------------- */
 /* ------------- *Cards ---------------- */
 /* ------------------------------------- */
+
+
 .card-content {
     background-color: transparent;
     padding: .2rem;
     color: var(--light);
     text-align: center;
+    margin-top:3%;
 }
 
 card-header-title-Det{
     color:var(--dgreen);
-margin-top:3%;
+/* margin-top:3%; */
+    background-color: var(--lgreen);
 }
 
 card-content-details{
     color:var(--dgreen);
     
 }
+card-header-title, .card.details{
+background-color: var(--lgreen);
+ /* height:200%; */
+}
 
 .card-header-title {
-    align-items: center;
-    background-color: var(--dgreen);
-    color: var(--light);
+    /* align-items: center; */
+     /* font-size:48px; */
+    background-color: var(--dgreen); 
+    color: var(--light); 
     display: flex;
     flex-grow: 1;
     font-weight: 700;
@@ -178,29 +189,28 @@ card-content-details{
 
 .save-button{
     background-color: var(--dgreen);
-    color:white;
+    color: var(--light);
     font-style: bold;
 }
 
 .delete-button{
     background-color: red;
-    color:white;
+    color: var(--light);
     font-style: bold;
 }
 
 .details-button{
     background-color: var(--yellow);
-    color:white;
+    color: var(--light);
     font-style: bold;
 }
 
-git add .
+
 
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
 /* ------------------------------------- */
 
-.label,
 .has-text-centered {
     text-align: left;
 }
@@ -222,14 +232,14 @@ git add .
 /* -------         Font           ------ */
 /* ------------------------------------- */
 
-caption {
+.caption {
   background: var(--lgreen);
   font-weight: bold;
   border: var(-lgreen);
   border-style:none;
-  margin-top: 3%;
+  /* margin-top: 3%; */
   padding: 0 5%;
-  color:white;
+  color:#444444;
 }
 
 h1 {
@@ -264,8 +274,14 @@ h2 {
 
 
 /* ------------------------------------- */
-/* -------         Table           ------ */
+/* -------         Table          ------ */
 /* ------------------------------------- */
+.tableNutrition{
+    margin-bottom:3%;  
+}
+.tableMissing{
+    margin-bottom:3%;
+}
 
 .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
     background-color: var(--dgreen);
@@ -292,10 +308,18 @@ h2 {
 
 .table {
     background-color: var(--lgreen);
-    color: green;
+    color: black;
 }
 
 .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
     background-color: var(--dgreen);
     color: black;
 }
+
+
+.instructions{
+    padding: 0 2%;
+    font-size:large;
+}
+
+ 
