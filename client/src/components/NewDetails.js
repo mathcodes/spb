@@ -2,7 +2,6 @@ import React from "react";
 import { pruneRecipe } from "../utils/ParseRecipe";
 import { v4 as uuid } from "uuid";
 import FlexContainer from "./FlexContainer";
-import Logo from "./Logo";
 
 const detailsCSS = {
     margin: "0.5em",
@@ -15,32 +14,31 @@ export default ({ recipe }) => {
     console.log(rec);
     return (
         <>
-            <Logo/>
-            {/* Nutrition table */}
+{/* ******************************Nutrition table****************************** */}
             {rec && rec.nutrients.length > 0 ? (
-                <table className="table is-fullwidth is-striped is-hoverable">
+                <table className="table is-fullwidth">
                     <caption>
                         <h1>
-                            <b>Nutrition</b>
+                            <b className="is-size-7-mobile is-size-3">Nutrition</b>
                         </h1>
                     </caption>
                     <thead>
                         <tr>
-                            <th className="is-size-6-mobile">Name</th>
-                            <th className="is-size-3-mobile">Amount</th>
-                            <th className="is-size-3-mobile">Unit</th>
+                            <th className="is-size-7-mobile is-size-4">Name</th>
+                            <th className="is-size-7-mobile is-size-4">Amount</th>
+                            <th className="is-size-7-mobile is-size-4">Unit</th>
                         </tr>
                     </thead>
                     <tbody>
                         {rec.nutrients.slice(0, 8).map((item) => (
                             <tr key={uuid()}>
-                                <td className="is-size-6-mobile">
+                                <td className="is-size-7-mobile">
                                     {item.name}
                                 </td>
-                                <td className="is-size-3-mobile">
+                                <td className="is-size-7-mobile">
                                     {item.amount}
                                 </td>
-                                <td className="is-size-3-mobile">
+                                <td className="is-size-7-mobile">
                                     {item.unit}
                                 </td>
                             </tr>
@@ -50,9 +48,9 @@ export default ({ recipe }) => {
             ) : null}
 
             <FlexContainer>
-                {/* Owned ingredients table */}
+{/* ******************************Owned Ingredients table****************************** */}
                 {rec && rec.usedIngredients.length > 0 ? (
-                    <table className="table is-fullwidth is-striped is-hoverable">
+                    <table className="table is-fullwidth">
                         <caption>
                             <h1>
                                 <b>Ingredients</b>
@@ -60,9 +58,9 @@ export default ({ recipe }) => {
                         </caption>
                         <thead>
                             <tr>
-                                <th className="is-size-6-mobile">Name</th>
-                                <th className="is-size-3-mobile">Amount</th>
-                                <th className="is-size-3-mobile">Unit</th>
+                                <th className="is-size-7-mobile is-size-4">Name</th>
+                                <th className="is-size-7-mobile is-size-4">Amount</th>
+                                <th className="is-size-7-mobile is-size-4">Unit</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -85,9 +83,9 @@ export default ({ recipe }) => {
             </FlexContainer>
 
             <FlexContainer>
-                {/* Missing ingredients table */}
+{/* ******************************Missing Ingredients table****************************** */}
                 {rec && rec.missedIngredients.length > 0 ? (
-                    <table className="table is-fullwidth is-striped is-hoverable">
+                    <table className="table is-fullwidth">
                         <caption>
                             <h1>
                                 <b>Missing Ingredients</b>
@@ -95,21 +93,21 @@ export default ({ recipe }) => {
                         </caption>
                         <thead>
                             <tr>
-                                <th className="is-size-6-mobile">Name</th>
-                                <th className="is-size-3-mobile">Amount</th>
-                                <th className="is-size-3-mobile">Unit</th>
+                                <th className="is-size-7-mobile is-size-4">Name</th>
+                                <th className="is-size-7-mobile is-size-4">Amount</th>
+                                <th className="is-size-7-mobile is-size-4">Unit</th>
                             </tr>
                         </thead>
                         <tbody>
                             {rec.missedIngredients.map((item) => (
                                 <tr key={uuid()}>
-                                    <td className="is-size-6-mobile">
+                                    <td className="is-size-7-mobile">
                                         {item.name}
                                     </td>
-                                    <td className="is-size-3-mobile">
+                                    <td className="is-size-7-mobile">
                                         {item.amount}
                                     </td>
-                                    <td className="is-size-3-mobile">
+                                    <td className="is-size-7-mobile">
                                         {item.unit}
                                     </td>
                                 </tr>
@@ -118,32 +116,22 @@ export default ({ recipe }) => {
                     </table>
                 ) : null}
             </FlexContainer>
-
             <FlexContainer>
-                {/* Missing ingredients table */}
-                {rec && rec.instructions.length > 0 ? (
-                        <table className="Inst-table is-fullwidth is-hoverable">
-                            <caption>
-                                <h1>
-                                    <b>Instructions</b>
-                                </h1>
-                            </caption>
-                        
-                            <tbody>
-                                {rec && rec.instructions.length > 0 ? (
-                                <ol><strong>
-                                    {rec.instructions.map((step) => (
-                                        <li key={uuid()}>{step}</li>
-                                    ))}
-                                    </strong>
-                                </ol>
-                            ) : null}
-                            </tbody>
-                        </table>
-                    ) : null}
+                <div className="card">
+                    <div className="card-header">
+                        <div className="card-header-title card.details">Instructions</div>
+                    </div>
+                    <div className="card-content-details">
+                        {rec && rec.instructions.length > 0 ? (
+                            <ol>
+                                {rec.instructions.map((step) => (
+                                    <li key={uuid()}>{step}</li>
+                                ))}
+                            </ol>
+                        ) : null}
+                    </div>
+                </div>
             </FlexContainer>
-
-
         </>
     );
 };

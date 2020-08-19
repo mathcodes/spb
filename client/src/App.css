@@ -132,6 +132,16 @@ body{
     text-align: center;
 }
 
+card-header-title-Det{
+    color:var(--dgreen);
+margin-top:3%;
+}
+
+card-content-details{
+    color:var(--dgreen);
+    
+}
+
 .card-header-title {
     align-items: center;
     background-color: var(--dgreen);
