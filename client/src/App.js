@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 // import { getItem, setItem } from "localforage";
+import { useAuth0 } from "@auth0/auth0-react";
 
 // Components
 import Hero from "./components/Hero";
@@ -15,6 +16,7 @@ import "./App.css";
 // Other Stuff
 import MenuTabs from "./assets/js/MenuTabs";
 import Library from "./components/Library";
+import { get } from "mongoose";
 
 export default () => {
     // Define our initial state
@@ -39,6 +41,7 @@ export default () => {
     // Save state to local storage when it's updated
     useEffect(() => {
         localStorage.setItem("state", JSON.stringify(getState));
+        console.log(state.get);
     }, [getState]);
     // Package it all up into an elegantly named object
     const state = {

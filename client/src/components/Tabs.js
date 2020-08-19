@@ -24,6 +24,7 @@ export default () => {
                 <li>
                     {isAuthenticated ? (
                         <a
+                            href="/search"
                             onClick={() =>
                                 logout({ returnTo: window.location.origin })
                             }>

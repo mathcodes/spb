@@ -8,7 +8,7 @@ import { v4 as uuid } from "uuid";
 import { useAuth0 } from "@auth0/auth0-react";
 
 export default ({ state }) => {
-    const { isAuthenticated, user } = useAuth0;
+    const { isAuthenticated, user } = useAuth0();
     console.log("isAuthenticated:", isAuthenticated);
     console.log("user:", user);
     // Input form submit event handler
