@@ -130,7 +130,7 @@ export default ({ state }) => {
             />
             {state.get.recipes.length > 0 ? (
                 <button
-                    className="button is-fullwidth is-warning"
+                    className="moreButton button is-fullwidth is-warning"
                     onClick={moreRecipes}>
                     Load More Recipes
                 </button>

@@ -9,7 +9,12 @@
 /* ------------- *Dropdowns      ------- */
 /* ------------- *Keyframes ------------ */
 /* ------------- *Font ----------------- */
+/* ------------- *Tables---------------- */
 /* ------------------------------------- */
+
+body{
+    margin-bottom: 5rem;
+}
 
 :root {
     --lgreen: #85b135;
@@ -110,9 +115,10 @@
 /* ------------------------------------- */
 .card-content {
     background-color: transparent;
-    padding: .5rem;
+    padding: .2rem;
     color: var(--light);
-    }
+    text-align: center;
+}
 
 .card-header-title {
     align-items: center;
@@ -121,10 +127,9 @@
     display: flex;
     flex-grow: 1;
     font-weight: 700;
-    padding: 0.1rem 0.3rem 0.5rem 0.5rem;
+    padding: 0.5rem 0.3rem 0.5rem 0.5rem;
 }
 
-<<<<<<< HEAD
 
 
 .delete-button{
@@ -137,21 +142,46 @@ color:black;
 background-color: var(--lorange);
     border-color: var(--dgreen);
 
-=======
-.card {
-    overflow: hidden;
-    content: "\f70e";
->>>>>>> 45f7225ca2596b5141999ae42f211976700b3d24
 }
 
 /* ------------------------------------- */
 /* -------    Buttons + Tabs      ------ */
 /* ------------------------------------- */
-<<<<<<< HEAD
+
+.hero.is-success .tabs.is-boxed a, .hero.is-success .tabs.is-toggle a {
+    color: #fff;
+}
+.hero.is-success .tabs a {
+    color: #fff;
+    opacity: .9;
+}
+
+.tabs.is-boxed a {
+    border: 0.2px solid;
+    border-radius: 4px 4px 0 0;
+    height: 5rem;
+}
+.tabs a {
+    align-items: center;
+    border-bottom-color: #dbdbdb;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: #4a4a4a;
+    display: flex;
+    justify-content: center;
+    padding: .5em 1em;
+    vertical-align: top;
+}
+
+
 .button.is-warning, button.is-warning.is-active {
-    background-color: var(--lorange);
+    background-color: black;
     border-color: var(--dgreen);
-    color: rgba(0,0,0,.7);
+    color: white;
+}
+
+.moreButton{
+  margin-bottom: 3%;
 }
 
 .save-button{
@@ -161,14 +191,6 @@ background-color: var(--lorange);
 
 }
 .tabs{
-=======
-.button.is-warning {
-    background-color: var(--yellow);
-    border-color: transparent;
-    color: rgba(0, 0, 0, 0.7);
-}
-.tabs {
->>>>>>> 45f7225ca2596b5141999ae42f211976700b3d24
     background-color: var(--dgreen);
     /* width: 100%; */
     margin: 0;
@@ -202,6 +224,17 @@ background-color: var(--lorange);
 /* ------------------------------------- */
 /* -------         Font           ------ */
 /* ------------------------------------- */
+
+caption{
+  background: black);
+  font-weight: bold;
+  border: var(--dgreen);
+  border-style: groove;
+  margin-top:3%;
+  padding: 0 5%;
+  color:white;
+}
+
 h1 {
     font-size: 24px;
     color: var(--dgreen);
@@ -226,11 +259,41 @@ h2 {
     color: #478843;
     -webkit-text-stroke-width: medium;
 }
-<<<<<<< HEAD
 
 .content{
       border-color: var(--dgreen);
 
 }
-=======
->>>>>>> 45f7225ca2596b5141999ae42f211976700b3d24
+
+
+/* ------------------------------------- */
+/* -------         Table           ------ */
+/* ------------------------------------- */
+
+.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+    background-color: var(--dgreen);
+    color: var(--light);
+}
+
+.table thead{
+    background-color: var(--lorange);
+    color: black;
+  font-weight: bold;
+  border-color:black;
+}
+
+
+
+.table:not(:last-child) {
+    margin-bottom: 0rem;
+}
+
+.table {
+    background-color: var(--lgreen);
+    color: green;
+}
+
+.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+    background-color: var(--dgreen);
+    color: black;
+}

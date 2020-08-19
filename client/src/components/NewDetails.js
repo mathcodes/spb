@@ -18,7 +18,7 @@ export default ({ recipe }) => {
             <Logo/>
             {/* Nutrition table */}
             {rec && rec.nutrients.length > 0 ? (
-                <table className="table is-fullwidth">
+                <table className="table is-fullwidth is-striped is-hoverable">
                     <caption>
                         <h1>
                             <b>Nutrition</b>
@@ -26,21 +26,21 @@ export default ({ recipe }) => {
                     </caption>
                     <thead>
                         <tr>
-                            <th className="is-size-7-mobile">Name</th>
-                            <th className="is-size-7-mobile">Amount</th>
-                            <th className="is-size-7-mobile">Unit</th>
+                            <th className="is-size-6-mobile">Name</th>
+                            <th className="is-size-3-mobile">Amount</th>
+                            <th className="is-size-3-mobile">Unit</th>
                         </tr>
                     </thead>
                     <tbody>
                         {rec.nutrients.slice(0, 8).map((item) => (
                             <tr key={uuid()}>
-                                <td className="is-size-7-mobile">
+                                <td className="is-size-6-mobile">
                                     {item.name}
                                 </td>
-                                <td className="is-size-7-mobile">
+                                <td className="is-size-3-mobile">
                                     {item.amount}
                                 </td>
-                                <td className="is-size-7-mobile">
+                                <td className="is-size-3-mobile">
                                     {item.unit}
                                 </td>
                             </tr>
@@ -52,7 +52,7 @@ export default ({ recipe }) => {
             <FlexContainer>
                 {/* Owned ingredients table */}
                 {rec && rec.usedIngredients.length > 0 ? (
-                    <table className="table is-fullwidth">
+                    <table className="table is-fullwidth is-striped is-hoverable">
                         <caption>
                             <h1>
                                 <b>Ingredients</b>
@@ -60,9 +60,9 @@ export default ({ recipe }) => {
                         </caption>
                         <thead>
                             <tr>
-                                <th className="is-size-7-mobile">Name</th>
-                                <th className="is-size-7-mobile">Amount</th>
-                                <th className="is-size-7-mobile">Unit</th>
+                                <th className="is-size-6-mobile">Name</th>
+                                <th className="is-size-3-mobile">Amount</th>
+                                <th className="is-size-3-mobile">Unit</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -87,7 +87,7 @@ export default ({ recipe }) => {
             <FlexContainer>
                 {/* Missing ingredients table */}
                 {rec && rec.missedIngredients.length > 0 ? (
-                    <table className="table is-fullwidth">
+                    <table className="table is-fullwidth is-striped is-hoverable">
                         <caption>
                             <h1>
                                 <b>Missing Ingredients</b>
@@ -95,21 +95,21 @@ export default ({ recipe }) => {
                         </caption>
                         <thead>
                             <tr>
-                                <th className="is-size-7-mobile">Name</th>
-                                <th className="is-size-7-mobile">Amount</th>
-                                <th className="is-size-7-mobile">Unit</th>
+                                <th className="is-size-6-mobile">Name</th>
+                                <th className="is-size-3-mobile">Amount</th>
+                                <th className="is-size-3-mobile">Unit</th>
                             </tr>
                         </thead>
                         <tbody>
                             {rec.missedIngredients.map((item) => (
                                 <tr key={uuid()}>
-                                    <td className="is-size-7-mobile">
+                                    <td className="is-size-6-mobile">
                                         {item.name}
                                     </td>
-                                    <td className="is-size-7-mobile">
+                                    <td className="is-size-3-mobile">
                                         {item.amount}
                                     </td>
-                                    <td className="is-size-7-mobile">
+                                    <td className="is-size-3-mobile">
                                         {item.unit}
                                     </td>
                                 </tr>
@@ -122,7 +122,7 @@ export default ({ recipe }) => {
             <FlexContainer>
                 {/* Missing ingredients table */}
                 {rec && rec.instructions.length > 0 ? (
-                        <table className="table is-fullwidth">
+                        <table className="table is-fullwidth is-hoverable">
                             <caption>
                                 <h1>
                                     <b>Instructions</b>

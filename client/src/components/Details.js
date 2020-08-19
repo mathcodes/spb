@@ -58,9 +58,9 @@ export default ({ recipe }) => {
 
                     <div className="tile">
                         <div className="tile is-parent">
-                            <article className="tile is-child notification">
+                            <article className="tile is-child notification table is-striped table is-hoverable">
                                 <p>You Have:</p>
-                                <table className="table">
+                                <table className="table table is-striped">
                                     <thead>
                                         <tr>
                                             <th>
