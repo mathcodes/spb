@@ -146,12 +146,9 @@ card-content-details{
     color:var(--dgreen);
     
 }
-card-header-title, .card.details{
-background-color: var(--lgreen);
-}
 
 .card-header-title {
-    background-color: var(--dgreen); 
+    background-color: var(--lorange); 
     color: var(--light); 
     display: flex;
     flex-grow: 1;
@@ -267,13 +264,15 @@ h2 {
 
 
 /* ------------------------------------- */
-/* -------         Table          ------ */
-/* ------------------------------------- */
-.tableNutrition{
-    margin-bottom:3%;  
+
+.table-row-hover-background-color{
+    background-color:var(--lorange);
+    color:black;
 }
-.tableMissing{
+
+..missingTable, .ingredientsTable, .nutritionTable, .card-header-title .card.details{
     margin-bottom:3%;
+    margin-top:3%;
 }
 
 .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
@@ -295,9 +294,7 @@ h2 {
 
 
 
-.table:not(:last-child) {
-    margin-bottom: 0rem;
-}
+ 
 
 .table {
     background-color: var(--lgreen);
@@ -309,10 +306,21 @@ h2 {
     color: black;
 }
 
+.td{
+    font-weight: bold;
+}
+
 
 .instructions{
     padding: 0 2%;
     font-size:large;
 }
 
- 
+ .card-instructions {
+    background-color: #fff;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+    color: #4a4a4a;
+    max-width: 100%;
+    position: relative;
+    margin-top: 4%;
+}
