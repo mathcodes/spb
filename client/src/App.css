@@ -166,6 +166,26 @@ body{
     size: 18pt;
 }
 
+.save-button{
+    background-color: var(--dgreen);
+    color:white;
+    font-style: bold;
+}
+
+.delete-button{
+    background-color: red;
+    color:white;
+    font-style: bold;
+}
+
+.details-button{
+    background-color: var(--yellow);
+    color:white;
+    font-style: bold;
+}
+
+git add .
+
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
 /* ------------------------------------- */

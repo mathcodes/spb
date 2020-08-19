@@ -57,8 +57,8 @@ export default ({ state, id, src, alt, title, prepTime, cookTime, footer }) => {
             </div>
             <footer className="card-footer">
                 <a
-                    href="/Details"
-                    className="button is-warning is-fullwidth"
+                    href="/details"
+                    className="details-button button is-warning is-fullwidth"
                     onClick={detailsHandler}>
                     Details
                 </a>
@@ -72,7 +72,7 @@ export default ({ state, id, src, alt, title, prepTime, cookTime, footer }) => {
                     </button>
                 ) : footer === "library" ? (
                     <button
-                        className="delete-button button is-warning is-fullwidth"
+                        className="delete-button button is-fullwidth"
                         onClick={deleteHandler}>
                         Delete
                     </button>
