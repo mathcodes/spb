@@ -2,6 +2,7 @@ import React from "react";
 import FlexContainer from "./FlexContainer";
 import CheckBox from "./CheckBox";
 import InputForm from "./InputForm";
+import Logo from "./Logo";
 import Pantry from "./Pantry";
 import { intolerances, diet, cuisine } from "../assets/js/Lists";
 import { v4 as uuid } from "uuid";
@@ -89,7 +90,8 @@ export default ({ state }) => {
     };
 
     return (
-        <>
+        <><Logo />
+            <h2>Select or enter the items below to either exclude any food intolerances, cuisines, or ingredients, and select a diet if you like. All information will be stored in your settings for future searches until you decide to change them.</h2>
             <label className="label has-text-centered">Food Intolerances</label>
             <FlexContainer>
                 {intolerances.map((item) => (
