@@ -9,7 +9,25 @@
 /* ------------- *Dropdowns      ------- */
 /* ------------- *Keyframes ------------ */
 /* ------------- *Font ----------------- */
+/* ------------- *Tables---------------- */
 /* ------------------------------------- */
+html {
+    background-color:var(--lgreen);
+    font-size: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+body{
+    margin-bottom: 5rem;
+}
 
 :root {
     --lgreen: #85b135;
@@ -71,7 +89,7 @@
     padding: 2.25rem;
 }
 .hero.is-success {
-    background-color: #48c774;
+    background-color: var(--lgreen);
 }
 
 .hero-head {
@@ -109,8 +127,9 @@
 /* ------------------------------------- */
 .card-content {
     background-color: transparent;
-    padding: 0.5rem;
+    padding: .2rem;
     color: var(--light);
+    text-align: center;
 }
 
 .card-header-title {
@@ -120,7 +139,7 @@
     display: flex;
     flex-grow: 1;
     font-weight: 700;
-    padding: 0.1rem 0.3rem 0.5rem 0.5rem;
+    padding: 0.5rem 0.3rem 0.5rem 0.5rem;
 }
 
 .card {
@@ -141,6 +160,10 @@
     /* width: 100%; */
     margin: 0;
     /* width: fit-content; */
+}
+
+.tabStyle{
+    size: 18pt;
 }
 
 /* ------------------------------------- */
@@ -168,6 +191,17 @@
 /* ------------------------------------- */
 /* -------         Font           ------ */
 /* ------------------------------------- */
+
+caption {
+  background: var(--lgreen);
+  font-weight: bold;
+  border: var(-lgreen);
+  border-style:none;
+  margin-top: 3%;
+  padding: 0 5%;
+  color:white;
+}
+
 h1 {
     font-size: 24px;
     color: var(--dgreen);
@@ -189,6 +223,49 @@ h2 {
     background-color: #fff;
     border-color: #ee662e;
     border-width: 3px;
-    color: #478843;
+    color: black;
     -webkit-text-stroke-width: medium;
+}
+
+.content{
+      border-color: var(--dgreen);
+
+}
+
+
+/* ------------------------------------- */
+/* -------         Table           ------ */
+/* ------------------------------------- */
+
+.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+    background-color: var(--dgreen);
+    color: var(--light);
+}
+
+.table thead{
+    background-color: var(--lorange);
+    color: black;
+  font-weight: bold;
+  border-color:black;
+}
+
+.Inst-table{
+ 
+    border:none;
+}
+
+
+
+.table:not(:last-child) {
+    margin-bottom: 0rem;
+}
+
+.table {
+    background-color: var(--lgreen);
+    color: green;
+}
+
+.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+    background-color: var(--dgreen);
+    color: black;
 }
