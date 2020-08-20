@@ -120,7 +120,7 @@ body {
     text-align: center;
     margin-top: 3%;
 }
-.card-header-title-Det {
+.mmicard-header-title-Det {
     color: var(--dgreen);
     background-color: var(--lgreen);
 }
