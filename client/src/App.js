@@ -96,9 +96,16 @@ export default () => {
                                 />
                             )}
                         />
-                    </>
+                  
+                    <div
+                        key={uuid()}
+                        className="navbar is-fixed-bottom"
+                        style={{ backgroundColor: "#284d1d" }}>
+                        <Tabs tabs={MenuTabs} />
+                    </div>  </>
                 }
             />
         </BrowserRouter>
     );
+
 };

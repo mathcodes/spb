@@ -10,6 +10,7 @@
 /* ------------- *Keyframes ------------ */
 /* ------------- *Font ----------------- */
 /* ------------- *Tables---------------- */
+/* ------------- *Layouts--------------- */
 /* ------------------------------------- */
 html {
     background-color: var(--lgreen);
@@ -27,6 +28,7 @@ html {
 }
 body {
     margin-bottom: 5rem;
+    background-color:var(--lgreen);
 }
 
 :root {
@@ -63,7 +65,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: var(--lgreen);
 }
 
 .App-link {
@@ -84,18 +86,18 @@ body {
 }
 
 .hero-body {
-    flex-grow: 1;
-    flex-shrink: 0;
+    flex-grow: 6;
+    flex-shrink: 1;
     padding: 2.25rem;
 }
 .hero.is-success {
     background-color: var(--lgreen);
 }
 
-.hero-head {
+/* .hero-head {
     /* padding: 1%; */
     /* margin-bottom: 3%; */
-}
+
 
 /* ------------------------------------- */
 /* -------    Header + NavBar     ------ */
@@ -125,17 +127,29 @@ body {
 /* ------------------------------------- */
 /* ------------- *Cards ---------------- */
 /* ------------------------------------- */
+
+
 .card-content {
     background-color: transparent;
     padding: 0.2rem;
     color: var(--light);
     text-align: center;
+    margin-top:3%;
+}
+
+card-header-title-Det{
+    color:var(--dgreen);
+    background-color: var(--lgreen);
+}
+
+card-content-details{
+    color:var(--dgreen);
+    
 }
 
 .card-header-title {
-    align-items: center;
-    background-color: var(--dgreen);
-    color: var(--light);
+    background-color: var(--lorange); 
+    color: var(--light); 
     display: flex;
     flex-grow: 1;
     font-weight: 700;
@@ -157,9 +171,7 @@ body {
 }
 .tabs {
     background-color: var(--dgreen);
-    /* width: 100%; */
     margin: 0;
-    /* width: fit-content; */
 }
 
 .tabStyle {
@@ -168,27 +180,43 @@ body {
 
 .save-button {
     background-color: var(--dgreen);
+<<<<<<< HEAD
     color: white;
+=======
+    color: var(--light);
+>>>>>>> 69504c6536e64da89d473e80ffeec60127127bca
     font-style: bold;
 }
 
 .delete-button {
     background-color: red;
+<<<<<<< HEAD
     color: white;
+=======
+    color: var(--light);
+>>>>>>> 69504c6536e64da89d473e80ffeec60127127bca
     font-style: bold;
 }
 
 .details-button {
     background-color: var(--yellow);
+<<<<<<< HEAD
     color: white;
     font-style: bold;
 }
 
+=======
+    color: var(--light);
+    font-style: bold;
+}
+
+
+
+>>>>>>> 69504c6536e64da89d473e80ffeec60127127bca
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
 /* ------------------------------------- */
 
-.label,
 .has-text-centered {
     text-align: left;
 }
@@ -210,6 +238,7 @@ body {
 /* -------         Font           ------ */
 /* ------------------------------------- */
 
+<<<<<<< HEAD
 caption {
     background: var(--lgreen);
     font-weight: bold;
@@ -218,6 +247,15 @@ caption {
     margin-top: 3%;
     padding: 0 5%;
     color: white;
+=======
+.caption {
+  background: var(--lgreen);
+  font-weight: bold;
+  border: var(-lgreen);
+  border-style:none;
+  padding: 0 5%;
+  color:#444444;
+>>>>>>> 69504c6536e64da89d473e80ffeec60127127bca
 }
 
 h1 {
@@ -250,8 +288,16 @@ h2 {
 }
 
 /* ------------------------------------- */
-/* -------         Table           ------ */
-/* ------------------------------------- */
+
+.table-row-hover-background-color{
+    background-color:var(--lorange);
+    color:black;
+}
+
+..missingTable, .ingredientsTable, .nutritionTable, .card-header-title .card.details{
+    margin-bottom:3%;
+    margin-top:3%;
+}
 
 .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
     background-color: var(--dgreen);
@@ -269,16 +315,41 @@ h2 {
     border: none;
 }
 
+<<<<<<< HEAD
 .table:not(:last-child) {
     margin-bottom: 0rem;
 }
+=======
+
+
+ 
+>>>>>>> 69504c6536e64da89d473e80ffeec60127127bca
 
 .table {
     background-color: var(--lgreen);
-    color: green;
+    color: black;
 }
 
 .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
     background-color: var(--dgreen);
     color: black;
+}
+
+.td{
+    font-weight: bold;
+}
+
+
+.instructions{
+    padding: 0 2%;
+    font-size:large;
+}
+
+ .card-instructions {
+    background-color: #fff;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+    color: #4a4a4a;
+    max-width: 100%;
+    position: relative;
+    margin-top: 4%;
 }

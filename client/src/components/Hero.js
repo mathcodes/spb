@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 const Hero = ({ header, body, footer }) => (
     <section className="hero is-success is-fullheight">
-        <div className="hero-head">{header}</div>
+        {/* <div className="hero-head">{header}</div> */}
         <div className="hero-body">
             <div className="container">{body}</div>
         </div>

@@ -5,145 +5,119 @@ import FlexContainer from "./FlexContainer";
 import Logo from "./Logo";
 
 const detailsCSS = {
-    margin: "0.5em",
-    color: "black",
-    // background: "#48C773",
+  margin: "0.5em",
+  color: "black",
+  // background: "#48C443",
 };
 
 export default ({ recipe }) => {
-    const rec = recipe ? pruneRecipe(recipe) : null;
-    console.log(rec);
+  const rec = recipe ? pruneRecipe(recipe) : null;
+  console.log(rec);
     return (
-        <>
-            <Logo/>
-            {/* Nutrition table */}
-            {rec && rec.nutrients.length > 0 ? (
-                <table className="table is-fullwidth is-striped is-hoverable">
-                    <caption>
-                        <h1>
-                            <b>Nutrition</b>
-                        </h1>
-                    </caption>
-                    <thead>
-                        <tr>
-                            <th className="is-size-6-mobile">Name</th>
-                            <th className="is-size-3-mobile">Amount</th>
-                            <th className="is-size-3-mobile">Unit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {rec.nutrients.slice(0, 8).map((item) => (
-                            <tr key={uuid()}>
-                                <td className="is-size-6-mobile">
-                                    {item.name}
-                                </td>
-                                <td className="is-size-3-mobile">
-                                    {item.amount}
-                                </td>
-                                <td className="is-size-3-mobile">
-                                    {item.unit}
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+     <>   <Logo/>
+    
+      {/* ******************************Nutrition table****************************** */}
+      {rec && rec.nutrients.length > 0 ? (
+        <table className="table is-fullwidth is-striped is-hoverable">
+          <thead className="is-12 is-fullwidth ">
+            <td colSpan="3" className="is-12">Nutrition</td>
+          </thead>
+
+          <tbody>
+         
+            <tr>
+              <th className="is-6">Name</th>
+              <th className="is-6">Amount</th> 
+            </tr>
+            {rec.nutrients.slice(0, 8).map((item) => (
+              <tr key={uuid()}>
+                <td className="is-6">{item.name}</td>
+                <td className="is-6">
+                  {item.amount} {item.unit}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : null}
+
+      <FlexContainer>
+        {/* ******************************Owned Ingredients table****************************** */}
+        {rec && rec.usedIngredients.length > 0 ? (
+          <table className="table tableNutrition is-fullwidth is-striped is-hoverable">
+            <thead className="is-2 is-fullwidth ">
+              <th colSpan="3">Included Ingredients</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th className="is-3">Name</th>
+                <th colspan="2" className="is-3">
+                  Amount
+                </th>
+              </tr>
+              {rec.usedIngredients.map((item) => (
+                <tr key={uuid()}>
+                  <td className="is-3">{item.name}</td>
+                  <td className="is-3">
+                    {item.amount} {item.unit}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : null}
+      </FlexContainer>
+<br/>
+      <FlexContainer>
+        {/* ******************************Missing Ingredients table****************************** */}
+        {rec && rec.missedIngredients.length > 0 ? (
+          <table className="table tableMissing is-fullwidth is-striped is-hoverable">
+            {/* <caption>
+                            <h1>
+                                <b className="is-3">Missing Ingredients</b>
+                            </h1>
+                        </caption> */}
+            <thead className="is-2 is-fullwidth ">
+              <th colSpan="3">Missing Ingredients</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th className="is-3">Name</th>
+                <th colspan="2" className="is-3">
+                  Amount
+                </th>
+              </tr>
+              {rec.missedIngredients.map((item) => (
+                <tr key={uuid()}>
+                  <td className="is-3">{item.name}</td>
+                  <td className="is-3">
+                    {item.amount} {item.unit}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : null}
+      </FlexContainer>
+      <FlexContainer>
+        <div className="card card-instructions">
+          <div className="card-header">
+            <div className="card-header-title card.details">Instructions</div>
+          </div>
+          <div className="card-content-details">
+            {rec && rec.instructions.length > 0 ? (
+              <ol>
+                {rec.instructions.map((step) => (
+                  <li class="instructions" key={uuid()}>
+                    {" "}
+                    <strong><input class="is-large" type="checkbox"></input></strong> {step}
+                  </li>
+                ))}
+              </ol>
             ) : null}
-
-            <FlexContainer>
-                {/* Owned ingredients table */}
-                {rec && rec.usedIngredients.length > 0 ? (
-                    <table className="table is-fullwidth is-striped is-hoverable">
-                        <caption>
-                            <h1>
-                                <b>Ingredients</b>
-                            </h1>
-                        </caption>
-                        <thead>
-                            <tr>
-                                <th className="is-size-6-mobile">Name</th>
-                                <th className="is-size-3-mobile">Amount</th>
-                                <th className="is-size-3-mobile">Unit</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {rec.usedIngredients.map((item) => (
-                                <tr key={uuid()}>
-                                    <td className="is-size-7-mobile">
-                                        {item.name}
-                                    </td>
-                                    <td className="is-size-7-mobile">
-                                        {item.amount}
-                                    </td>
-                                    <td className="is-size-7-mobile">
-                                        {item.unit}
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                ) : null}
-            </FlexContainer>
-
-            <FlexContainer>
-                {/* Missing ingredients table */}
-                {rec && rec.missedIngredients.length > 0 ? (
-                    <table className="table is-fullwidth is-striped is-hoverable">
-                        <caption>
-                            <h1>
-                                <b>Missing Ingredients</b>
-                            </h1>
-                        </caption>
-                        <thead>
-                            <tr>
-                                <th className="is-size-6-mobile">Name</th>
-                                <th className="is-size-3-mobile">Amount</th>
-                                <th className="is-size-3-mobile">Unit</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {rec.missedIngredients.map((item) => (
-                                <tr key={uuid()}>
-                                    <td className="is-size-6-mobile">
-                                        {item.name}
-                                    </td>
-                                    <td className="is-size-3-mobile">
-                                        {item.amount}
-                                    </td>
-                                    <td className="is-size-3-mobile">
-                                        {item.unit}
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                ) : null}
-            </FlexContainer>
-
-            <FlexContainer>
-                {/* Missing ingredients table */}
-                {rec && rec.instructions.length > 0 ? (
-                        <table className="Inst-table is-fullwidth is-hoverable">
-                            <caption>
-                                <h1>
-                                    <b>Instructions</b>
-                                </h1>
-                            </caption>
-                        
-                            <tbody>
-                                {rec && rec.instructions.length > 0 ? (
-                                <ol><strong>
-                                    {rec.instructions.map((step) => (
-                                        <li key={uuid()}>{step}</li>
-                                    ))}
-                                    </strong>
-                                </ol>
-                            ) : null}
-                            </tbody>
-                        </table>
-                    ) : null}
-            </FlexContainer>
-
-
-        </>
-    );
+          </div>
+        </div>
+      </FlexContainer>
+    </>
+  );
 };

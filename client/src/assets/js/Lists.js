@@ -54,3 +54,4 @@ export const cuisine = [
     "Thai",
     "Vietnamese",
 ];
+
