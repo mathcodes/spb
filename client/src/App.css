@@ -12,7 +12,7 @@
 /* ------------- *Tables---------------- */
 /* ------------------------------------- */
 html {
-    background-color:var(--lgreen);
+    background-color: var(--lgreen);
     font-size: 16px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -25,7 +25,7 @@ html {
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
-body{
+body {
     margin-bottom: 5rem;
 }
 
@@ -127,7 +127,7 @@ body{
 /* ------------------------------------- */
 .card-content {
     background-color: transparent;
-    padding: .2rem;
+    padding: 0.2rem;
     color: var(--light);
     text-align: center;
 }
@@ -162,29 +162,27 @@ body{
     /* width: fit-content; */
 }
 
-.tabStyle{
+.tabStyle {
     size: 18pt;
 }
 
-.save-button{
+.save-button {
     background-color: var(--dgreen);
-    color:white;
+    color: white;
     font-style: bold;
 }
 
-.delete-button{
+.delete-button {
     background-color: red;
-    color:white;
+    color: white;
     font-style: bold;
 }
 
-.details-button{
+.details-button {
     background-color: var(--yellow);
-    color:white;
+    color: white;
     font-style: bold;
 }
-
-git add .
 
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
@@ -213,13 +211,13 @@ git add .
 /* ------------------------------------- */
 
 caption {
-  background: var(--lgreen);
-  font-weight: bold;
-  border: var(-lgreen);
-  border-style:none;
-  margin-top: 3%;
-  padding: 0 5%;
-  color:white;
+    background: var(--lgreen);
+    font-weight: bold;
+    border: var(-lgreen);
+    border-style: none;
+    margin-top: 3%;
+    padding: 0 5%;
+    color: white;
 }
 
 h1 {
@@ -247,11 +245,9 @@ h2 {
     -webkit-text-stroke-width: medium;
 }
 
-.content{
-      border-color: var(--dgreen);
-
+.content {
+    border-color: var(--dgreen);
 }
-
 
 /* ------------------------------------- */
 /* -------         Table           ------ */
@@ -262,19 +258,16 @@ h2 {
     color: var(--light);
 }
 
-.table thead{
+.table thead {
     background-color: var(--lorange);
     color: black;
-  font-weight: bold;
-  border-color:black;
+    font-weight: bold;
+    border-color: black;
 }
 
-.Inst-table{
- 
-    border:none;
+.Inst-table {
+    border: none;
 }
-
-
 
 .table:not(:last-child) {
     margin-bottom: 0rem;
