@@ -44,7 +44,7 @@ app.post("/api/search", (req, res) => {
 
 // Connect to the Mongo DB
 mongoose.connect(
-    process.env.MONGODB_URI || 127.0.0.1:27017
+    process.env.MONGODB_URI || localhost:3000
 );
 
 // Start the API server
