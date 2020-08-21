@@ -11,7 +11,7 @@ export default ({ state }) => {
     const { isAuthenticated, user } = useAuth0();
     useEffect(() => {
         if (isAuthenticated) state.set({ id: user.email });
-    }, [isAuthenticated]);
+    }, []);
     const [offset, setOffset] = useState([6]);
 
     // Input form submit event handler

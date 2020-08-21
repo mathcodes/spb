@@ -28,11 +28,12 @@ const getRecipes = (params) => {
 // is no reason for users to set them
 const params = {
     apiKey: process.env.apiKey,
-    instructionsRequired: true,
+    instructionsRequired: false,
     fillIngredients: true,
     addRecipeInformation: true,
     addRecipeNutrition: true,
-    sort: "min-missing-ingredients",
+    sort: "random",
+    ignorePantry: true,
 };
 
 app.post("/api/search", (req, res) => {

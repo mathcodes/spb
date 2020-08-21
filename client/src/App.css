@@ -13,7 +13,7 @@
 /* ------------- *Layouts--------------- */
 /* ------------------------------------- */
 html {
-    background-color:var(--lgreen);
+    background-color: var(--lgreen);
     font-size: 16px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -26,11 +26,10 @@ html {
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
-body{
+body {
     margin-bottom: 5rem;
-    background-color:var(--lgreen);
+    background-color: var(--lgreen);
 }
-
 :root {
     --lgreen: #85b135;
     --dgreen: #284d1d;
@@ -45,18 +44,15 @@ body{
 .App {
     text-align: center;
 }
-
 .App-logo {
     height: 40vmin;
     pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
         animation: App-logo-spin infinite 20s linear;
     }
 }
-
 .App-header {
     background-color: #282c34;
     min-height: ppvh;
@@ -67,11 +63,9 @@ body{
     font-size: calc(10px + 2vmin);
     color: var(--lgreen);
 }
-
 .App-link {
     color: #61dafb;
 }
-
 /* ------------------------------------- */
 /* ------------     Hero     ----------- */
 /* ------------------------------------- */
@@ -84,7 +78,6 @@ body{
 .hero-head {
     background-color: var(--lgreen);
 }
-
 .hero-body {
     flex-grow: 6;
     flex-shrink: 1;
@@ -93,26 +86,20 @@ body{
 .hero.is-success {
     background-color: var(--lgreen);
 }
-
 /* .hero-head {
     /* padding: 1%; */
-    /* margin-bottom: 3%; */
-
-
+/* margin-bottom: 3%; */
 /* ------------------------------------- */
 /* -------    Header + NavBar     ------ */
 /* ------------------------------------- */
-
 .hero.is-success {
     background-color: var(--lgreen);
 }
-
 .headerImage {
     height: 50%;
     width: 50%;
     padding: 2.25rem;
 }
-
 .navbar,
 .navbar-end,
 .navbar-menu,
@@ -123,44 +110,35 @@ body{
 .navbar {
     min-height: 2.25rem;
 }
-
 /* ------------------------------------- */
 /* ------------- *Cards ---------------- */
 /* ------------------------------------- */
-
-
 .card-content {
     background-color: transparent;
-    padding: .2rem;
+    padding: 0.2rem;
     color: var(--light);
     text-align: center;
-    margin-top:3%;
+    margin-top: 3%;
 }
-
-card-header-title-Det{
-    color:var(--dgreen);
+.mmicard-header-title-Det {
+    color: var(--dgreen);
     background-color: var(--lgreen);
 }
-
-card-content-details{
-    color:var(--dgreen);
-    
+card-content-details {
+    color: var(--dgreen);
 }
-
 .card-header-title {
-    background-color: var(--lorange); 
-    color: var(--light); 
+    background-color: var(--lorange);
+    color: var(--light);
     display: flex;
     flex-grow: 1;
     font-weight: 700;
     padding: 0.5rem 0.3rem 0.5rem 0.5rem;
 }
-
 .card {
     overflow: hidden;
     content: "\f70e";
 }
-
 /* ------------------------------------- */
 /* -------    Buttons + Tabs      ------ */
 /* ------------------------------------- */
@@ -173,43 +151,33 @@ card-content-details{
     background-color: var(--dgreen);
     margin: 0;
 }
-
-.tabStyle{
+.tabStyle {
     size: 18pt;
 }
-
-.save-button{
+.save-button {
     background-color: var(--dgreen);
     color: var(--light);
     font-style: bold;
 }
-
-.delete-button{
+.delete-button {
     background-color: red;
     color: var(--light);
     font-style: bold;
 }
-
-.details-button{
+.details-button {
     background-color: var(--yellow);
     color: var(--light);
     font-style: bold;
 }
-
-
-
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
 /* ------------------------------------- */
-
 .has-text-centered {
     text-align: left;
 }
-
 /* ------------------------------------- */
 /* -------       Keyframes        ------ */
 /* ------------------------------------- */
-
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
@@ -218,20 +186,17 @@ card-content-details{
         transform: rotate(360deg);
     }
 }
-
 /* ------------------------------------- */
 /* -------         Font           ------ */
 /* ------------------------------------- */
-
 .caption {
-  background: var(--lgreen);
-  font-weight: bold;
-  border: var(-lgreen);
-  border-style:none;
-  padding: 0 5%;
-  color:#444444;
+    background: var(--lgreen);
+    font-weight: bold;
+    border: var(-lgreen);
+    border-style: none;
+    padding: 0 5%;
+    color: #444444;
 }
-
 h1 {
     font-size: 24px;
     color: var(--dgreen);
@@ -242,11 +207,9 @@ h2 {
     color: var(--dgreen);
     font-weight: 700;
 }
-
 .has-text-centered {
     text-align: 478843;
 }
-
 .input,
 .select select,
 .textarea {
@@ -256,69 +219,53 @@ h2 {
     color: black;
     -webkit-text-stroke-width: medium;
 }
-
-.content{
-      border-color: var(--dgreen);
-
+.content {
+    border-color: var(--dgreen);
 }
-
-
 /* ------------------------------------- */
-
-.table-row-hover-background-color{
-    background-color:var(--lorange);
-    color:black;
+.table-row-hover-background-color {
+    background-color: var(--lorange);
+    color: black;
 }
-
-..missingTable, .ingredientsTable, .nutritionTable, .card-header-title .card.details{
-    margin-bottom:3%;
-    margin-top:3%;
+..missingTable,
+.ingredientsTable,
+.nutritionTable,
+.card-header-title .card.details {
+    margin-bottom: 3%;
+    margin-top: 3%;
 }
-
 .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
     background-color: var(--dgreen);
     color: var(--light);
 }
-
-.table thead{
+.table thead {
     background-color: var(--lorange);
     color: black;
-  font-weight: bold;
-  border-color:black;
+    font-weight: bold;
+    border-color: black;
 }
-
-.Inst-table{
- 
-    border:none;
+.Inst-table {
+    border: none;
 }
-
-
-
- 
-
 .table {
     background-color: var(--lgreen);
     color: black;
 }
-
 .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
     background-color: var(--dgreen);
     color: black;
 }
-
-.td{
+.td {
     font-weight: bold;
 }
-
-
-.instructions{
+.instructions {
     padding: 0 2%;
-    font-size:large;
+    font-size: large;
 }
-
- .card-instructions {
+.card-instructions {
     background-color: #fff;
-    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+        0 0 0 1px rgba(10, 10, 10, 0.02);
     color: #4a4a4a;
     max-width: 100%;
     position: relative;
