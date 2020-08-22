@@ -94,8 +94,8 @@ export default ({ recipe }) => {
                     </table>
                 ) : null}
             </FlexContainer>
-            <FlexContainer>
-                <div className="card card-instructions">
+              <FlexContainer>
+                <div className="card-details card-instructions is-fullwidth">
                     <div className="card-header">
                         <div className="card-header-title card.details">
                             Instructions

@@ -4,8 +4,7 @@ const Hero = ({ header, body, footer }) => (
     <section
         className="hero is-success is-fullheight"
         style={{
-            backgroundImage:
-                "url(" + "./../assets/img/TALLPANTRYGRASS.png" + ")",
+            backgroundColor: "var(--lgreen)",
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",

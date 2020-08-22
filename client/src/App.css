@@ -139,12 +139,21 @@ body {
     align-items: stretch;
     display: flex;
     border-radius:3px;
-        position:absolute;
+    position:absolute;
     bottom:0;
- width: 100%;
+    width: 100%;
 }
 
-
+.card-instructions {
+    background-color: #fff;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+        0 0 0 1px rgba(10, 10, 10, 0.02);
+    color: #4a4a4a;
+    max-width: 100%;
+    position: relative;
+    margin-top: 4%;
+    overflow: hidden;
+}
 
 .card-content {
     color: white;
@@ -299,15 +308,7 @@ h2 {
     padding: 0 2%;
     font-size: large;
 }
-.card-instructions {
-    background-color: #fff;
-    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
-        0 0 0 1px rgba(10, 10, 10, 0.02);
-    color: #4a4a4a;
-    max-width: 100%;
-    position: relative;
-    margin-top: 4%;
-}
+
 
 .backgroundimage{
         background-color: var(--lgreen);
