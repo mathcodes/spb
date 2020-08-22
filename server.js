@@ -2,7 +2,7 @@ const express = require("express");
 
 const mongoose = require("mongoose");
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -45,7 +45,7 @@ app.post("/api/search", (req, res) => {
 
 // Connect to the Mongo DB
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"
+    process.env.MONGODB_URI || localhost:3000
 );
 
 // Start the API server

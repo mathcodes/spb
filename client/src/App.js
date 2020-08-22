@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 // import { getItem, setItem } from "localforage";
 
+
+
 // Components
 import Hero from "./components/Hero";
 import Tabs from "./components/Tabs";
@@ -14,6 +16,11 @@ import "./App.css";
 // Other Stuff
 import MenuTabs from "./assets/js/MenuTabs";
 import Library from "./components/Library";
+<<<<<<< HEAD
+=======
+import { get } from "mongoose";
+import imageUrl from "./assets/img/TALLPANTRYGRASS.png";
+>>>>>>> fcd5d91dc9e13f231239da58f1085ddadffcb3fa
 
 export default () => {
     // Define our initial state
@@ -48,7 +55,7 @@ export default () => {
     }, [getState, state.get]);
     return (
         <BrowserRouter>
-            <Hero
+            <Hero className="App" style={{backgroundImage: `url(${imageUrl})` }}
                 header={
                     <div
                         key={uuid()}
