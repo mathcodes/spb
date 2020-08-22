@@ -26,7 +26,7 @@ const getRecipes = (params) => {
 // is no reason for users to set them
 const params = {
     apiKey: process.env.apiKey,
-    instructionsRequired: false,
+    instructionsRequired: true,
     fillIngredients: true,
     addRecipeInformation: true,
     addRecipeNutrition: true,
