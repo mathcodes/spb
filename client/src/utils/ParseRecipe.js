@@ -37,7 +37,9 @@ export const getNutrients = (recipe) =>
 
 // Returns step by step instructions from recipe as an array of strings
 export const getInstructions = (recipe) =>
-    recipe.analyzedInstructions[0].steps.map((step) => step.step);
+    recipe.analyzedInstructions
+        ? recipe.analyzedInstructions[0].steps.map((step) => step.step)
+        : [];
 
 // Returns basic info for recipe
 export const getInformation = (recipe) => ({

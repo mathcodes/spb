@@ -1,9 +1,8 @@
 import React from "react";
-import Logo from "./Logo";
 
-const Hero = ({ header, body, footer }) => (
+const Hero = ({ body, footer }) => (
     <section className="hero is-success is-fullheight">
-        {/* <div className="hero-head">{header}</div> */}
+        <div className="hero-head">{header}</div>
         <div className="hero-body">
             <div className="container">{body}</div>
         </div>
