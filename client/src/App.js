@@ -19,6 +19,7 @@ import imageUrl from "./assets/img/TALLPANTRYGRASS.png";
 export default () => {
     // Define our initial state
     const initialState = {
+        id: "",
         cuisine: [],
         excludeCuisine: [],
         diet: [],
