@@ -1,43 +1,46 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
 
 export default () => {
-    const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+    const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+    console.log(isAuthenticated);
     return (
         <div className="tabs is-boxed is-fullwidth">
             <ul>
                 <li>
-                    <a href="/search">
+                    <Link to="/search">
                         <i className="fa fa-search" aria-hidden="true"></i>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/library">
+                    <Link to="/library">
                         <i className="fa fa-list" aria-hidden="true"></i>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/settings">
+                    <Link to="/settings">
                         <i className="fa fa-cog" aria-hidden="true"></i>
-                    </a>
+                    </Link>
                 </li>
+
                 <li>
                     {isAuthenticated ? (
-                        <a
-                            href="/search"
+                        <Link
+                            to="/search"
                             onClick={() =>
                                 logout({ returnTo: window.location.origin })
                             }>
                             <i
                                 className="fas fa-sign-out-alt"
                                 aria-hidden="true"></i>
-                        </a>
+                        </Link>
                     ) : (
-                        <a onClick={() => loginWithRedirect()}>
+                        <Link onClick={() => loginWithRedirect()} to="/library">
                             <i
                                 className="fas fa-sign-in-alt"
                                 aria-hidden="true"></i>
-                        </a>
+                        </Link>
                     )}
                 </li>
             </ul>
