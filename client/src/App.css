@@ -139,12 +139,21 @@ body {
     align-items: stretch;
     display: flex;
     border-radius:3px;
-        position:absolute;
+    position:absolute;
     bottom:0;
- width: 100%;
+    width: 100%;
 }
 
-
+.card-instructions {
+    background-color: #fff;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+        0 0 0 1px rgba(10, 10, 10, 0.02);
+    color: #4a4a4a;
+    max-width: 100%;
+    position: relative;
+    margin-top: 4%;
+    overflow: hidden;
+}
 
 .card-content {
     color: white;
@@ -258,10 +267,13 @@ h2 {
     border-color: var(--dgreen);
 }
 /* ------------------------------------- */
-.table-row-hover-background-color {
+/* ------------- *Tables---------------- */
+/* ------------------------------------- */
+
+/* .table-row-hover-background-color {
     background-color: var(--lorange);
     color: black;
-}
+} */
 .missingTable,
 .ingredientsTable,
 .nutritionTable,
@@ -273,41 +285,57 @@ h2 {
     background-color: var(--dgreen);
     color: var(--light);
 }
+.table.is-striped:hover tbody tr:not(.is-selected):nth-child(even):hover {
+    background-color: var(--lorange);
+    color: black;
+}
+.table.is-striped tbody tr:not(.is-selected):nth-child(odd) {
+        background-color: white;
+    color: black;
+
+}
+.table.is-striped:hover tbody tr:not(.is-selected):nth-child(odd):hover {
+    background-color: var(--lorange);
+    color: black;
+}
+
+tr:hover{
+background-color: var(--yellow);
+color: black;
+}
+
 .table thead {
     background-color: var(--lorange);
     color: black;
     font-weight: bold;
     border-color: black;
+    text-align: center;
+    font-size: 20px;
 }
 .Inst-table {
     border: none;
 }
 .table {
-        background-color: var(--lgreen);
-
-
+    background-color: white;
     color: black;
 }
-.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
-    background-color: var(--dgreen);
+.table.is-striped tbody tr:not(.is-selected):nth-child(odd) {
+    background-color: white;
     color: black;
 }
 .td {
     font-weight: bold;
 }
+
+/* ------------------------------------- */
+/* ------------- *Layouts--------------- */
+/* ------------------------------------- */
+
 .instructions {
     padding: 0 2%;
     font-size: large;
 }
-.card-instructions {
-    background-color: #fff;
-    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
-        0 0 0 1px rgba(10, 10, 10, 0.02);
-    color: #4a4a4a;
-    max-width: 100%;
-    position: relative;
-    margin-top: 4%;
-}
+
 
 .backgroundimage{
         background-color: var(--lgreen);
