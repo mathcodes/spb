@@ -2,7 +2,7 @@ const express = require("express");
 
 const mongoose = require("mongoose");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -23,7 +23,7 @@ const getRecipes = (params) => {
     );
     return fetch(url_).then((response) => response.json());
 };
-
+ 
 // These search params are set server side as there
 // is no reason for users to set them
 const params = {
@@ -45,7 +45,7 @@ app.post("/api/search", (req, res) => {
 
 // Connect to the Mongo DB
 mongoose.connect(
-    process.env.MONGODB_URI || localhost:3000
+    process.env.MONGODB_URI || "localhost:3001"
 );
 
 // Start the API server

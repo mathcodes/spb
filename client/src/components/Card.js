@@ -57,12 +57,12 @@ export default ({ state, id, src, alt, title, prepTime, cookTime, footer }) => {
                 </div>
             </div>
             <footer className="card-foot">
-                <button
+                <a
                     href="/details"
                     className="details-button button is-fullwidth"
                     onClick={detailsHandler}>
                     Details
-                </button>
+                </a>
                 {/* Render save or delete button depending on which page 
                 it's on */}
                 {footer === "search" ? (

@@ -262,7 +262,7 @@ h2 {
     background-color: var(--lorange);
     color: black;
 }
-..missingTable,
+.missingTable,
 .ingredientsTable,
 .nutritionTable,
 .card-header-title .card.details {
