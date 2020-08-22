@@ -6,7 +6,7 @@ export default () => {
     const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
     console.log(isAuthenticated);
     return (
-        <div className="tabs is-boxed is-fullwidth">
+        <div className="tabs navtabs is-boxed is-fullwidth">
             <ul>
                 <li>
                     <Link to="/search">

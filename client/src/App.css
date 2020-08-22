@@ -212,6 +212,10 @@ body {
     height:15%;
 }
 
+.navtabs {
+    height: 50px;
+    font-size: large;
+}
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
 /* ------------------------------------- */
@@ -325,6 +329,15 @@ color: black;
 }
 .td {
     font-weight: bold;
+    width: 50%;
+}
+
+/* .table th:not([align]) {
+    text-align: unset;
+} */
+
+.inclTD{
+    text-align: center;
 }
 
 /* ------------------------------------- */

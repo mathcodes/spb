@@ -9,8 +9,9 @@ export default ({ recipe }) => {
     console.log(rec);
     return (
         <>
-            {" "}
+            
             <Logo />
+            <FlexContainer>
             {/* ******************************Nutrition table****************************** */}
             {rec && rec.nutrients.length > 0 ? (
                 <table className="table is-fullwidth is-striped is-hoverable">
@@ -27,35 +28,31 @@ export default ({ recipe }) => {
                         </tr>
                         {rec.nutrients.slice(0, 8).map((item) => (
                             <tr key={uuid()}>
-                                <td className="is-6">{item.name}</td>
-                                <td className="is-6">
-                                    {item.amount} {item.unit}
-                                </td>
+                                <td>{item.name}</td>
+                                <td>{item.amount} {item.unit}</td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
             ) : null}
+            </FlexContainer>
+            <br />
             <FlexContainer>
                 {/* ******************************Owned Ingredients table****************************** */}
                 {rec && rec.usedIngredients.length > 0 ? (
-                    <table className="table tableNutrition is-fullwidth is-striped is-hoverable">
-                        <thead className="is-2 is-fullwidth ">
-                            <th colSpan="3">Included Ingredients</th>
+                    <table className="table is-fullwidth is-striped is-hoverable">
+                        <thead className="is-12 is-fullwidth ">
+                            <th colSpan="2" className="is-12">Included Ingredients</th>
                         </thead>
                         <tbody>
                             <tr>
-                                <th className="is-3">Name</th>
-                                <th colspan="2" className="is-3">
-                                    Amount
-                                </th>
+                                <th>Name</th>
+                                <th>Amount</th>
                             </tr>
                             {rec.usedIngredients.map((item) => (
                                 <tr key={uuid()}>
-                                    <td className="is-3">{item.name}</td>
-                                    <td className="is-3">
-                                        {item.amount} {item.unit}
-                                    </td>
+                                    <td>{item.name}</td>
+                                    <td>{item.amount} {item.unit}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -63,31 +60,23 @@ export default ({ recipe }) => {
                 ) : null}
             </FlexContainer>
             <br />
+            
             <FlexContainer>
                 {/* ******************************Missing Ingredients table****************************** */}
                 {rec && rec.missedIngredients.length > 0 ? (
-                    <table className="table tableMissing is-fullwidth is-striped is-hoverable">
-                        {/* <caption>
-                            <h1>
-                                <b className="is-3">Missing Ingredients</b>
-                            </h1>
-                        </caption> */}
-                        <thead className="is-2 is-fullwidth ">
-                            <th colSpan="3">Missing Ingredients</th>
+                    <table className="table is-fullwidth is-striped is-hoverable">
+                        <thead className="is-12 is-fullwidth ">
+                            <th colSpan="2" className="is-12">Missing Ingredients</th>
                         </thead>
                         <tbody>
                             <tr>
-                                <th className="is-3">Name</th>
-                                <th colspan="2" className="is-3">
-                                    Amount
-                                </th>
+                                <th>Name</th>
+                                <th>Amount</th>
                             </tr>
                             {rec.missedIngredients.map((item) => (
                                 <tr key={uuid()}>
-                                    <td className="is-3">{item.name}</td>
-                                    <td className="is-3">
-                                        {item.amount} {item.unit}
-                                    </td>
+                                    <td>{item.name}</td>
+                                    <td>{item.amount} {item.unit}</td>
                                 </tr>
                             ))}
                         </tbody>
