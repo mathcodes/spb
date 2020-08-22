@@ -25,7 +25,7 @@ export default () => {
         intolerances: [],
         includeIngredients: [],
         excludeIngredients: [],
-        recipes: [],
+        recipes: [" "],
         savedRecipes: [],
         activeRecipe: 0,
     };
@@ -108,3 +108,4 @@ export default () => {
         </BrowserRouter>
     );
 };
+

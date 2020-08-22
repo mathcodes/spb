@@ -9,7 +9,7 @@ export default ({ recipe }) => {
     console.log(rec);
     return (
         <>
-            
+            {" "}
             <Logo />
             <FlexContainer>
             {/* ******************************Nutrition table****************************** */}

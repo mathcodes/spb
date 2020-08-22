@@ -13,8 +13,7 @@
 /* ------------- *Layouts--------------- */
 /* ------------------------------------- */
 html {
-        background-color: var(--lgreen);
-
+    background-color: var(--lgreen);
     font-size: 16px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
