@@ -30,7 +30,8 @@ const params = {
     fillIngredients: true,
     addRecipeInformation: true,
     addRecipeNutrition: true,
-    sort: "random",
+    sort: "min-missing-ingredients",
+    sortDirection: "asc",
     ignorePantry: true,
 };
 
@@ -48,6 +49,22 @@ mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost/superpantrybuddy",
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
+
+app.post("/db/set", async (req, res) => {
+    //check if a document with given id exists
+    if (await User.exists({ id: req.body.id })) {
+        console.log("user exists");
+        User.update({ id: req.body.id }, { ...req.body });
+    } else {
+        console.log("created new user");
+        User.create({ ...req.body });
+    }
+    res.sendStatus(200);
+});
+
+app.post("/db/get", async (req, res) => {
+    res.json(await User.find({ id: req.body.id }));
+});
 
 // Start the API server
 app.listen(PORT, function () {
