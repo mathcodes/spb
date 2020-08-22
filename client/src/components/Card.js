@@ -9,7 +9,6 @@ const css = {
     borderRadius: "3px",
 };
 
-
 // footer prop should be either "search" or "library".  This component
 // Renders some things conditionally depending on whether it's going in
 // the search or library page. This is kind of hacky and could be handled
@@ -52,8 +51,12 @@ export default ({ state, id, src, alt, title, prepTime, cookTime, footer }) => {
 
             <div className="card-content">
                 <div className="content">
-                    <p>Prep <i class="fas fa-clock"></i> : {prepTime} min</p>
-                    <p>Cook <i class="fas fa-clock"></i> : {cookTime} min</p>
+                    <p>
+                        Prep <i className="fas fa-clock"></i> : {prepTime} min
+                    </p>
+                    <p>
+                        Cook <i className="fas fa-clock"></i> : {cookTime} min
+                    </p>
                 </div>
             </div>
             <footer className="card-foot">
