@@ -13,7 +13,8 @@
 /* ------------- *Layouts--------------- */
 /* ------------------------------------- */
 html {
-    background-image: src("./assets/img/TALLPANTRYGRASS.png");
+        background-color: var(--lgreen);
+
     font-size: 16px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -28,7 +29,8 @@ html {
 }
 body {
     margin-bottom: 5rem;
-    background-image: src("./assets/img/TALLPANTRYGRASS.png");
+        background-color: var(--lgreen);
+
 }
 :root {
     --lgreen: #85b135;
@@ -54,7 +56,8 @@ body {
     }
 }
 .App-header {
-    background-image: src("./assets/img/TALLPANTRYGRASS.png");
+        background-color: var(--lgreen);
+
     min-height: ppvh;
     display: flex;
     flex-direction: column;
@@ -76,7 +79,8 @@ body {
 .hero-body,
 .hero-foot,
 .hero-head {
-    background-image: src("./assets/img/TALLPANTRYGRASS.png");
+        background-color: var(--lgreen);
+
 }
 .hero-body {
     flex-grow: 6;
@@ -84,7 +88,8 @@ body {
     padding: 2.25rem;
 }
 .hero.is-success {
-    background-image: src("./assets/img/TALLPANTRYGRASS.png");
+        background-color: var(--lgreen);
+
 
 }
 /* .hero-head {
@@ -93,8 +98,9 @@ body {
 /* ------------------------------------- */
 /* -------    Header + NavBar     ------ */
 /* ------------------------------------- */
-.hero.is-success {
-    background-image: src("./assets/img/TALLPANTRYGRASS.png");
+.hero.is-success, .container {
+        background-color: var(--lgreen);
+
 
 }
 .headerImage {
@@ -193,6 +199,10 @@ body {
     font-weight: bolder;
 }
 
+.li.a{
+    height:15%;
+}
+
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
 /* ------------------------------------- */
@@ -214,7 +224,7 @@ body {
 /* -------         Font           ------ */
 /* ------------------------------------- */
 .caption {
-    background-image: src("./assets/img/TALLPANTRYGRASS.png");
+    background-color: var(--lgreen);
     font-weight: bold;
     border: var(-lgreen);
     border-style: none;
@@ -273,7 +283,8 @@ h2 {
     border: none;
 }
 .table {
-    background-image: src("./assets/img/TALLPANTRYGRASS.png");
+        background-color: var(--lgreen);
+
 
     color: black;
 }
@@ -299,5 +310,6 @@ h2 {
 }
 
 .backgroundimage{
-    background-image: src("./assets/img/TALLPANTRYGRASS.png");
+        background-color: var(--lgreen);
+
 }
