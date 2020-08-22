@@ -127,7 +127,7 @@ export default ({ state }) => {
             <br></br>
             <InputForm onSubmitHandler={onSubmitHandler} />
             <button
-                className="button is-fullwidth is-warning"
+                className="button is-fullwidth details-button"
                 onClick={getRecipes}>
                 Get Recipes
             </button>
@@ -142,7 +142,7 @@ export default ({ state }) => {
             />
             {state.get.recipes.length > 0 ? (
                 <button
-                    className="moreButton button is-fullwidth is-warning"
+                    className="moreButton button is-fullwidth details-button"
                     onClick={moreRecipes}>
                     Load More Recipes
                 </button>

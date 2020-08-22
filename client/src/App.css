@@ -13,7 +13,7 @@
 /* ------------- *Layouts--------------- */
 /* ------------------------------------- */
 html {
-    background-color: var(--lgreen);
+    background-image: src("./assets/img/TALLPANTRYGRASS.png");
     font-size: 16px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -28,7 +28,7 @@ html {
 }
 body {
     margin-bottom: 5rem;
-    background-color: var(--lgreen);
+    background-image: src("./assets/img/TALLPANTRYGRASS.png");
 }
 :root {
     --lgreen: #85b135;
@@ -54,7 +54,7 @@ body {
     }
 }
 .App-header {
-    background-color: #282c34;
+    background-image: src("./assets/img/TALLPANTRYGRASS.png");
     min-height: ppvh;
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@ body {
 .hero-body,
 .hero-foot,
 .hero-head {
-    background-color: var(--lgreen);
+    background-image: src("./assets/img/TALLPANTRYGRASS.png");
 }
 .hero-body {
     flex-grow: 6;
@@ -84,7 +84,8 @@ body {
     padding: 2.25rem;
 }
 .hero.is-success {
-    background-color: var(--lgreen);
+    background-image: src("./assets/img/TALLPANTRYGRASS.png");
+
 }
 /* .hero-head {
     /* padding: 1%; */
@@ -93,7 +94,8 @@ body {
 /* -------    Header + NavBar     ------ */
 /* ------------------------------------- */
 .hero.is-success {
-    background-color: var(--lgreen);
+    background-image: src("./assets/img/TALLPANTRYGRASS.png");
+
 }
 .headerImage {
     height: 50%;
@@ -120,55 +122,77 @@ body {
     text-align: center;
     margin-top: 3%;
 }
-.mmicard-header-title-Det {
-    color: var(--dgreen);
-    background-color: var(--lgreen);
+
+.card-image{
+    border-radius: 4px;
+    padding: 4px;
 }
-card-content-details {
-    color: var(--dgreen);
+
+.card-foot {
+    background-color: transparent;
+    align-items: stretch;
+    display: flex;
+    border-radius:3px;
+        position:absolute;
+    bottom:0;
+ width: 100%;
 }
-.card-header-title {
+
+
+
+.card-content {
+    color: white;
+    border: none;
+    height: 70px;
+    margin-bottom:60px;
+}
+.card-header {
     background-color: var(--lorange);
     color: var(--light);
     display: flex;
     flex-grow: 1;
-    font-weight: 700;
-    padding: 0.5rem 0.3rem 0.5rem 0.5rem;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 2px 4px; 
+    border-color: white;
 }
 .card {
     overflow: hidden;
     content: "\f70e";
+    width:320px;
+    height:430px;
+   
+    /* position:relative; */
 }
 /* ------------------------------------- */
 /* -------    Buttons + Tabs      ------ */
 /* ------------------------------------- */
+
+.button{
+    border-color: black;
+}
 .button.is-warning {
     background-color: var(--yellow);
-    border-color: transparent;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0);
+    font-weight: bolder;
 }
-.tabs {
-    background-color: var(--dgreen);
-    margin: 0;
-}
-.tabStyle {
-    size: 18pt;
-}
+ 
 .save-button {
     background-color: var(--dgreen);
     color: var(--light);
-    font-style: bold;
+    font-weight: bolder;
 }
 .delete-button {
     background-color: red;
     color: var(--light);
-    font-style: bold;
+    font-weight: bolder;
 }
 .details-button {
     background-color: var(--yellow);
-    color: var(--light);
-    font-style: bold;
+    color: black;
+    font-weight: bolder;
 }
+
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
 /* ------------------------------------- */
@@ -190,7 +214,7 @@ card-content-details {
 /* -------         Font           ------ */
 /* ------------------------------------- */
 .caption {
-    background: var(--lgreen);
+    background-image: src("./assets/img/TALLPANTRYGRASS.png");
     font-weight: bold;
     border: var(-lgreen);
     border-style: none;
@@ -206,6 +230,7 @@ h2 {
     font-size: 16px;
     color: var(--dgreen);
     font-weight: 700;
+
 }
 .has-text-centered {
     text-align: 478843;
@@ -248,7 +273,8 @@ h2 {
     border: none;
 }
 .table {
-    background-color: var(--lgreen);
+    background-image: src("./assets/img/TALLPANTRYGRASS.png");
+
     color: black;
 }
 .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
@@ -270,4 +296,8 @@ h2 {
     max-width: 100%;
     position: relative;
     margin-top: 4%;
+}
+
+.backgroundimage{
+    background-image: src("./assets/img/TALLPANTRYGRASS.png");
 }

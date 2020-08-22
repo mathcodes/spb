@@ -6,6 +6,7 @@ const css = {
     background: "#222222",
     color: "var(--dgreen)",
     padding: "1px",
+    borderRadius: "3px",
 };
 
 
@@ -38,7 +39,7 @@ export default ({ state, id, src, alt, title, prepTime, cookTime, footer }) => {
     const detailsHandler = () => state.set({ activeRecipe: id });
 
     return (
-        <div className="card" style={css}>
+        <div className="card card-modify" style={css}>
             <div className="card-image">
                 <figure className="image">
                     <img src={src} alt={alt} />
@@ -55,13 +56,13 @@ export default ({ state, id, src, alt, title, prepTime, cookTime, footer }) => {
                     <p>Cook <i class="fas fa-clock"></i> : {cookTime} min</p>
                 </div>
             </div>
-            <footer className="card-footer">
-                <a
+            <footer className="card-foot">
+                <button
                     href="/details"
-                    className="details-button button is-warning is-fullwidth"
+                    className="details-button button is-fullwidth"
                     onClick={detailsHandler}>
                     Details
-                </a>
+                </button>
                 {/* Render save or delete button depending on which page 
                 it's on */}
                 {footer === "search" ? (

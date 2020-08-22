@@ -3,6 +3,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 // import { getItem, setItem } from "localforage";
 import { useAuth0 } from "@auth0/auth0-react";
 
+
+
 // Components
 import Hero from "./components/Hero";
 import Logo from "./components/Logo";
@@ -17,6 +19,7 @@ import "./App.css";
 import MenuTabs from "./assets/js/MenuTabs";
 import Library from "./components/Library";
 import { get } from "mongoose";
+import imageUrl from "./assets/img/TALLPANTRYGRASS.png";
 
 export default () => {
     // Define our initial state
@@ -51,7 +54,7 @@ export default () => {
 
     return (
         <BrowserRouter>
-            <Hero
+            <Hero className="App" style={{backgroundImage: `url(${imageUrl})` }}
                 header={
                     <div
                         key={uuid()}

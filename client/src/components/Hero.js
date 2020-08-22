@@ -1,8 +1,17 @@
 import React from "react";
 import Logo from "./Logo";
 
+
+
+
+
 const Hero = ({ header, body, footer }) => (
-    <section className="hero is-success is-fullheight">
+    <section className="hero is-success is-fullheight" style={{  
+  backgroundImage: "url(" + "./../assets/img/TALLPANTRYGRASS.png" + ")",
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat'
+}}>
         {/* <div className="hero-head">{header}</div> */}
         <div className="hero-body">
             <div className="container">{body}</div>
