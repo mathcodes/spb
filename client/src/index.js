@@ -10,7 +10,7 @@ ReactDOM.render(
     <Auth0Provider
         domain="dev-4ud-jigw.us.auth0.com"
         clientId="p9lkgV3Ohh7V1lowuxsE96nQTSJt8hGz"
-        redirectUri="http://localhost:3000">
+        redirectUri="https://superpantrybuddy.herokuapp.com/">
         <App />
     </Auth0Provider>,
     document.getElementById("root")
