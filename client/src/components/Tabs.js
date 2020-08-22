@@ -9,7 +9,7 @@ export default () => {
         <div className="tabs navtabs is-boxed is-fullwidth">
             <ul>
                 <li>
-                    <Link to="/search">
+                    <Link to="/">
                         <i className="fa fa-search" aria-hidden="true"></i>
                     </Link>
                 </li>
@@ -27,7 +27,7 @@ export default () => {
                 <li>
                     {isAuthenticated ? (
                         <Link
-                            to="/"
+                            to="/landing"
                             onClick={() =>
                                 logout({ returnTo: window.location.origin })
                             }>
