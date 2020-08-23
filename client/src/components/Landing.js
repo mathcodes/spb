@@ -8,13 +8,14 @@ export default () => {
   
   return (
     <>
-    <h1 className="landingtext">Welcome to...</h1>
-   <Link onClick={() => loginWithRedirect()} to="/">
-                           <LogoSmall />
-                        </Link>
-      
-   
-      <h2 className="landingtext">Click the logo above to login and get started!!!</h2>
-      </>
-  )
+      <h1 className="landingtext">Welcome to...</h1>
+      <Link onClick={() => loginWithRedirect()} to="/">
+        <LogoSmall />
+      </Link>
+
+      <h2 className="landingtext">
+        Click the logo above to login and get started!!!
+      </h2>
+    </>
+  );
 }

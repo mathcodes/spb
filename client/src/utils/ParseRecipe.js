@@ -27,13 +27,13 @@ export const getUnusedIngredients = (recipe) =>
     parseIngredients(recipe.unusedIngredients);
 
 // Returns array of nutrients from recipe
-export const getNutrients = (recipe) =>
-    recipe.nutrition.nutrients.map((item) => ({
-        name: item.title,
-        amount: item.amount.toFixed(0),
-        unit: item.unit,
-        dv: item.percentOfDailyNeeds.toFixed(0),
-    }));
+// export const getNutrients = (recipe) =>
+//     recipe.nutrition.nutrients.map((item) => ({
+//         name: item.title,
+//         amount: item.amount.toFixed(0),
+//         unit: item.unit,
+//         dv: item.percentOfDailyNeeds.toFixed(0),
+//     }));
 
 // Returns step by step instructions from recipe as an array of strings
 export const getInstructions = (recipe) =>
@@ -54,7 +54,7 @@ export const getInformation = (recipe) => ({
 export const pruneRecipe = (recipe) => ({
     information: getInformation(recipe),
     instructions: getInstructions(recipe),
-    nutrients: getNutrients(recipe),
+    // nutrients: getNutrients(recipe),
     missedIngredients: getMissedIngredients(recipe),
     usedIngredients: getUsedIngredients(recipe),
     unusedIngredients: getUnusedIngredients(recipe),

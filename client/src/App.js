@@ -11,10 +11,12 @@ import Settings from "./components/Settings";
 import NewDetails from "./components/NewDetails";
 import { v4 as uuid } from "uuid";
 import "./App.css";
-
+import { useAuth0 } from "@auth0/auth0-react";
 // Other Stuff
 import MenuTabs from "./assets/js/MenuTabs";
 import Library from "./components/Library";
+
+const { isAuthenticated } = useAuth0();
 
 export default () => {
     // Define our initial state
@@ -52,7 +54,7 @@ export default () => {
         <BrowserRouter>
             <Hero
                 className="App"
-                style={ "backgroundColor: var(--lgreen)"}
+                style={"backgroundColor: var(--lgreen)"}
                 header={
                     <div
                         key={uuid()}
@@ -65,7 +67,7 @@ export default () => {
                     <>
                         <Route
                             exact
-                            path={["/", "/search"]}
+                            path={["/"]}
                             render={() => <Search state={state} />}
                         />
                         <Route
@@ -81,7 +83,7 @@ export default () => {
                         <Route
                             exact
                             path="/landing"
-                            render={() => <Landing state={state} />}
+                            
                         />
                         <Route
                             exact
@@ -102,6 +104,17 @@ export default () => {
                                 />
                             )}
                         />
+                        
+                        <Landing />
+                      
+                        if {isAuthenticated} {
+                            "display:none"
+                        } else {
+                            "display:inline"
+                        }
+                       
+                            
+                   
                         <div
                             key={uuid()}
                             className="navbar is-fixed-bottom"
@@ -110,6 +123,7 @@ export default () => {
                         </div>{" "}
                     </>
                 }
+                
             />
         </BrowserRouter>
     );
