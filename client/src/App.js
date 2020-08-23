@@ -7,17 +7,13 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Hero from "./components/Hero";
 import Tabs from "./components/Tabs";
 import Search from "./components/Search";
-import Landing from "./components/Landing";
 import Settings from "./components/Settings";
 import NewDetails from "./components/NewDetails";
 import { v4 as uuid } from "uuid";
 import "./App.css";
-import { useAuth0 } from "@auth0/auth0-react";
 // Other Stuff
 import MenuTabs from "./assets/js/MenuTabs";
 import Library from "./components/Library";
-
-const { isAuthenticated } = useAuth0();
 
 export default () => {
     const { isAuthenticated, user } = useAuth0();
@@ -68,11 +64,8 @@ export default () => {
         <BrowserRouter>
             <Hero
                 className="App"
-
                 style={"backgroundColor: var(--lgreen)"}
-
                 style={{ backgroundColor: "var(--lgreen)" }}
-
                 header={
                     <div
                         key={uuid()}
@@ -100,11 +93,6 @@ export default () => {
                         />
                         <Route
                             exact
-                            path="/landing"
-                            
-                        />
-                        <Route
-                            exact
                             path="/details"
                             render={() => (
                                 <NewDetails
@@ -121,17 +109,6 @@ export default () => {
                                 />
                             )}
                         />
-                        
-                        <Landing />
-                      
-                        if {isAuthenticated} {
-                            "display:none"
-                        } else {
-                            "display:inline"
-                        }
-                       
-                            
-                   
                         <div
                             key={uuid()}
                             className="navbar is-fixed-bottom"
@@ -140,7 +117,6 @@ export default () => {
                         </div>{" "}
                     </>
                 }
-                
             />
         </BrowserRouter>
     );
