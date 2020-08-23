@@ -85,10 +85,9 @@ export default () => {
                         />
                         <Route
                             exact
-                            path="/Details"
+                            path="/details"
                             render={() => (
                                 <NewDetails
-                                    state={state}
                                     recipe={
                                         [
                                             ...getState.recipes,
