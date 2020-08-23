@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 // import { getItem, setItem } from "localforage";
+import { useAuth0 } from "@auth0/auth0-react";
 
 // Components
 import Hero from "./components/Hero";
@@ -17,6 +18,7 @@ import MenuTabs from "./assets/js/MenuTabs";
 import Library from "./components/Library";
 
 export default () => {
+    const { isAuthenticated, user } = useAuth0();
     // Define our initial state
     const initialState = {
         id: "",
@@ -32,22 +34,34 @@ export default () => {
     };
     // Create state object and setter function
     const [getState, setState] = useState(initialState);
-    // Load state from local storage on startup
-    useEffect(() => {
-        const loadedState = JSON.parse(localStorage.getItem("state"));
-        if (loadedState) setState(loadedState);
-    }, []);
-
     // Package it all up into an elegantly named object
     const state = {
         get: getState,
         set: (payload) => setState({ ...getState, ...payload }),
     };
+    // Load state from local storage on startup
+    useEffect(() => {
+        // const loadedState = JSON.parse(localStorage.getItem("state"));
+        // if (loadedState) setState(loadedState);
+        if (isAuthenticated) {
+            fetch("/db/get", {
+                method: "POST",
+                headers: { "Content-Type": "appplication/json" },
+                body: JSON.stringify({ id: user.email }),
+            })
+                .then((response) => state.set(response))
+                .then((_) => console.log("data retrieved from server"));
+        }
+    }, []);
     // Save state to local storage when it's updated
     useEffect(() => {
-        localStorage.setItem("state", JSON.stringify(getState));
-        console.log(state.get);
-    }, [getState, state.get]);
+        // localStorage.setItem("state", JSON.stringify(state.get));
+        fetch("db/set", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(state.get),
+        }).then((_) => console.log("data backed up to the server"));
+    }, [state.get]);
     return (
         <BrowserRouter>
             <Hero

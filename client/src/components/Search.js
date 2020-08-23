@@ -6,6 +6,7 @@ import InputForm from "./InputForm";
 import Pantry from "./Pantry";
 import RecipeContainer from "./RecipeContainer";
 import Logo from "./Logo";
+import Landing from "./Landing";
 
 export default ({ state }) => {
     const { isAuthenticated, user } = useAuth0();
@@ -152,5 +153,7 @@ export default ({ state }) => {
                 </button>
             ) : null}
         </>
-    ) : null;
+    ) : (
+        <Landing />
+    );
 };
