@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 // import { getItem, setItem } from "localforage";
 import { useAuth0 } from "@auth0/auth0-react";
+import { v4 as uuid } from "uuid";
+import "./App.css";
 
 // Components
 import Hero from "./components/Hero";
@@ -9,11 +11,10 @@ import Tabs from "./components/Tabs";
 import Search from "./components/Search";
 import Settings from "./components/Settings";
 import NewDetails from "./components/NewDetails";
-import { v4 as uuid } from "uuid";
-import "./App.css";
+import Library from "./components/Library";
+
 // Other Stuff
 import MenuTabs from "./assets/js/MenuTabs";
-import Library from "./components/Library";
 
 export default () => {
     const { isAuthenticated, user } = useAuth0();

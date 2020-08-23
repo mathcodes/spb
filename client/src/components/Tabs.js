@@ -27,14 +27,16 @@ export default () => {
                 <li>
                     {isAuthenticated ? (
                         <Link
-                            onClick={() => logout({ returnTo: window.location.origin })}>
+                            to="/search"
+                            onClick={() =>
+                                logout({ returnTo: window.location.origin })
+                            }>
                             <i
                                 className="fas fa-sign-out-alt"
                                 aria-hidden="true"></i>
                         </Link>
-                    )
-                        : (
-                        <Link onClick={() => loginWithRedirect()}>
+                    ) : (
+                        <Link to="/search" onClick={() => loginWithRedirect()}>
                             <i
                                 className="fas fa-sign-in-alt"
                                 aria-hidden="true"></i>
