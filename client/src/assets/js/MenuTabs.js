@@ -1,7 +1,7 @@
 const menuTabs = [
     {
         text: "Search",
-        href: "/search",
+        href: "/",
     },
     {
         text: "Library",
@@ -12,9 +12,10 @@ const menuTabs = [
         href: "/settings",
     },
     {
-        text: "Logout",
-        href: "/logout",
+        text: "Landing",
+        href: "/landing",
     },
+
 ];
 
 export default menuTabs;

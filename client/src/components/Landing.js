@@ -1,43 +1,20 @@
 import React from "react";
-import { pruneRecipe } from "../utils/ParseRecipe";
-import { v4 as uuid } from "uuid";
-import FlexContainer from "./FlexContainer";
-import Logo from "./Logo";
-
-export default ({ recipe }) => {
-    const rec = recipe ? pruneRecipe(recipe) : null;
-    console.log(rec);
-    return (
-        <>
-            <Logo />
-            <FlexContainer>
-<div class="field">
-  <p class="control has-icons-left has-icons-right">
-    <input class="input" type="email" placeholder="Email">
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-check"></i>
-    </span>
-  </p>
-</div>
-<div class="field">
-  <p class="control has-icons-left">
-    <input class="input" type="password" placeholder="Password">
-    <span class="icon is-small is-left">
-      <i class="fas fa-lock"></i>
-    </span>
-  </p>
-</div>
-<div class="field">
-  <p class="control">
-    <button class="button is-success">
-      Login
-    </button>
-  </p>
-</div>
-            </FlexContainer>
-        </>
-    );
-};
+import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
+import LogoSmall from "./LogoSmall";
+ 
+export default () => {
+  const { loginWithRedirect } = useAuth0();
+  
+  return (
+    <>
+    <h1 className="landingtext">Welcome to...</h1>
+   <Link onClick={() => loginWithRedirect()} to="/">
+                           <LogoSmall />
+                        </Link>
+      
+   
+      <h2 className="landingtext">Click the logo above to login and get started!!!</h2>
+      </>
+  )
+}

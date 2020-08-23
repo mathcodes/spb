@@ -6,6 +6,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Hero from "./components/Hero";
 import Tabs from "./components/Tabs";
 import Search from "./components/Search";
+import Landing from "./components/Landing";
 import Settings from "./components/Settings";
 import NewDetails from "./components/NewDetails";
 import { v4 as uuid } from "uuid";
@@ -14,7 +15,6 @@ import "./App.css";
 // Other Stuff
 import MenuTabs from "./assets/js/MenuTabs";
 import Library from "./components/Library";
-import imageUrl from "./assets/img/TALLPANTRYGRASS.png";
 
 export default () => {
     // Define our initial state
@@ -52,12 +52,12 @@ export default () => {
         <BrowserRouter>
             <Hero
                 className="App"
-                style={{ backgroundImage: `url(${imageUrl})` }}
+                style={ "backgroundColor: var(--lgreen)"}
                 header={
                     <div
                         key={uuid()}
                         className="navbar is-fixed-bottom"
-                        style={{ backgroundColor: "#284d1d" }}>
+                        style={{ backgroundColor: "var(--lgreen)" }}>
                         <Tabs tabs={MenuTabs} />
                     </div>
                 }
@@ -77,6 +77,11 @@ export default () => {
                             exact
                             path="/settings"
                             render={() => <Settings state={state} />}
+                        />
+                        <Route
+                            exact
+                            path="/landing"
+                            render={() => <Landing state={state} />}
                         />
                         <Route
                             exact

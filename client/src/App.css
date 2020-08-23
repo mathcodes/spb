@@ -99,9 +99,13 @@ body {
 /* ------------------------------------- */
 .hero.is-success, .container {
         background-color: var(--lgreen);
-
-
 }
+
+.img{
+    height:200px;
+    width:50%;
+}
+
 .headerImage {
     height: 50%;
     width: 50%;
@@ -269,6 +273,13 @@ h2 {
 .content {
     border-color: var(--dgreen);
 }
+
+.landingtext {
+    font-size: 24px;
+    color: var(--dgreen);
+    font-weight: 700;
+}
+
 /* ------------------------------------- */
 /* ------------- *Tables---------------- */
 /* ------------------------------------- */
