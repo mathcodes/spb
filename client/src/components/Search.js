@@ -136,13 +136,12 @@ export default ({ state }) => {
                 items={state.get.includeIngredients}
                 onClickHandler={onClickHandler}
             />
-            
             <RecipeContainer
                 state={state}
                 renderRecipes={state.get.recipes}
                 footer="search"
             />
-            {state.get.recipes.length >= 0 ? (
+            {state.get.recipes.length > 0 ? (
                 <button
                     className="moreButton button is-fullwidth details-button"
                     onClick={moreRecipes}>
