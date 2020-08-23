@@ -18,11 +18,8 @@ export default ({ state, footer, renderRecipes }) => {
                               id={recipe.id}
                               src={recipe.image}
                               alt={recipe.title}
-                              title={
-                                  recipe.title
-                                      ? recipe.title.slice(0, 32)
-                                      : null
-                              } // to maintain card spacing
+                              title={recipe.title} // to maintain card spacing
+                              //   title={recipe.title.slice(0, 32)} // to maintain card spacing
                               prepTime={recipe.preparationMinutes}
                               cookTime={recipe.cookingMinutes}
                               footer={footer}

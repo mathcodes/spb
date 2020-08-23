@@ -111,6 +111,7 @@ export default ({ state }) => {
                 return JSON.stringify(obj);
             })(),
         })
+       
             .then((response) => response.json())
             .then(({ results }) =>
                 state.set({ recipes: [...state.get.recipes, ...results] })
