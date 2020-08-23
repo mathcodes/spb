@@ -10,9 +10,12 @@ import Logo from "./Logo";
 export default ({ state }) => {
     const { isAuthenticated, user } = useAuth0();
     const email = user ? user.email : null;
-    useEffect(() => {
-        if (isAuthenticated) state.set({ id: email });
-    }, [isAuthenticated, email]);
+    useEffect(
+        (isAuthenticated, email, state) => {
+            if (isAuthenticated) state.set({ id: email });
+        },
+        [isAuthenticated, email, state]
+    );
     const [offset, setOffset] = useState([6]);
 
     // Input form submit event handler
