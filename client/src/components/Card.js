@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 const css = {
@@ -60,12 +61,12 @@ export default ({ state, id, src, alt, title, prepTime, cookTime, footer }) => {
                 </div>
             </div>
             <footer className="card-foot">
-                <a
-                    href="/details"
+                <Link
+                    to="/details"
                     className="details-button button is-fullwidth"
                     onClick={detailsHandler}>
                     Details
-                </a>
+                </Link>
                 {/* Render save or delete button depending on which page 
                 it's on */}
                 {footer === "search" ? (

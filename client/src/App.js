@@ -54,7 +54,11 @@ export default () => {
         <BrowserRouter>
             <Hero
                 className="App"
+
                 style={"backgroundColor: var(--lgreen)"}
+
+                style={{ backgroundColor: "var(--lgreen)" }}
+
                 header={
                     <div
                         key={uuid()}
@@ -87,10 +91,9 @@ export default () => {
                         />
                         <Route
                             exact
-                            path="/Details"
+                            path="/details"
                             render={() => (
                                 <NewDetails
-                                    state={state}
                                     recipe={
                                         [
                                             ...getState.recipes,
@@ -128,4 +131,3 @@ export default () => {
         </BrowserRouter>
     );
 };
-
