@@ -1,23 +1,22 @@
 import React from "react";
-import FlexContainer from "./FlexContainer";
 import { v4 as uuid } from "uuid";
 
-const Pantry = ({ items, onClickHandler }) => (
-    <FlexContainer
-        children={
-            items
-                ? items.map((item) => (
-                      <button
-                          onClick={onClickHandler}
-                          key={uuid()}
-                          className="button"
-                          style={{ margin: "0.2em" }}>
-                          {item}
-                      </button>
-                  ))
-                : null
-        }
-    />
-);
+// Components
+import FlexContainer from "./FlexContainer";
 
-export default Pantry;
+export default ({ items, onClickHandler }) => {
+    const CSS = { margin: "0.2em" };
+    return (
+        <FlexContainer>
+            {items.map((item) => (
+                <button
+                    key={uuid()}
+                    className="button"
+                    onClick={onClickHandler}
+                    style={CSS}>
+                    {item}
+                </button>
+            ))}
+        </FlexContainer>
+    );
+};

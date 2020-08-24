@@ -1,9 +1,8 @@
 import React from "react";
 
-// need to add local and global state to this one
-export default ({ onSubmitHandler }) => {
+export default ({ submitHandler }) => {
     return (
-        <form className="field has-addons" onSubmit={onSubmitHandler}>
+        <form className="field has-addons" onSubmit={submitHandler}>
             <input className="input" type="text" placeholder="Ingredients" />
             <button className="details-button">Add</button>
         </form>

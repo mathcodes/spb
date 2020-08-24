@@ -1,107 +1,86 @@
-import React from "react";
-import FlexContainer from "./FlexContainer";
-import CheckBox from "./CheckBox";
-import InputForm from "./InputForm";
-import Logo from "./Logo";
-import Pantry from "./Pantry";
-import { intolerances, diet, cuisine } from "../assets/js/Lists";
+import React, { useContext } from "react";
+import AppContext from "../utils/AppContext";
 import { v4 as uuid } from "uuid";
-import { useAuth0 } from "@auth0/auth0-react";
 
-export default ({ state }) => {
-    const { isAuthenticated, user } = useAuth0();
-    console.log("isAuthenticated:", isAuthenticated);
-    console.log("user:", user);
-    // Input form submit event handler
-    const inputformOnSubmitHandler = (event) => {
-        event.preventDefault();
-        state.set({
-            excludeIngredients: [
-                ...new Set([
-                    ...state.get.excludeIngredients,
-                    ...event.target.firstChild.value
-                        .split(",")
-                        .map((item) => item.trim()),
-                ]),
-            ],
-        });
-        event.target.firstChild.value = "";
-    };
+// Components
+import FlexContainer from "./FlexContainer";
+import InputForm from "./InputForm";
+import Pantry from "./Pantry";
+import CheckBox from "./CheckBox";
 
-    // Pantry click event handler
-    const pantryOnClickHandler = (event) => {
-        state.set({
-            excludeIngredients: state.get.excludeIngredients.filter(
-                (item) => item !== event.target.innerText
-            ),
-        });
-    };
+export default () => {
+    const { excludeIngredients } = useContext(AppContext);
+    const intolerances = [
+        "dairy",
+        "Egg",
+        "Gluten",
+        "Grain",
+        "Peanut",
+        "Seafood",
+        "Sesame",
+        "Shellfish",
+        "Soy",
+        "Sulfite",
+        "Tree Nut",
+        "Wheat",
+    ];
 
-    // Intolerances click event handler
-    const intolerancesOnClickHandler = (event) => {
-        if (event.target.checked) {
-            state.set({
-                intolerances: [
-                    ...new Set([...state.get.intolerances, event.target.value]),
-                ],
-            });
-        } else {
-            state.set({
-                intolerances: state.get.intolerances.filter(
-                    (item) => item !== event.target.value
-                ),
-            });
-        }
-    };
+    const diet = [
+        "Gluten Free",
+        "Ketogenic",
+        "Vegetarian",
+        "Lacto-Vegetarian",
+        "Ovo-Vegetarian",
+        "Vegan",
+        "Pescetarian",
+        "Paleo",
+        "Primal",
+        "Whole30",
+    ];
 
-    // diet click event handler
-    const dietOnClickHandler = (event) => {
-        if (event.target.checked) {
-            state.set({
-                diet: [...new Set([...state.get.diet, event.target.value])],
-            });
-        } else {
-            state.set({
-                diet: state.get.diet.filter(
-                    (item) => item !== event.target.value
-                ),
-            });
-        }
-    };
-
-    // exclude Cuisine click event handler
-    const excludeCuisineOnClickHandler = (event) => {
-        if (event.target.checked) {
-            state.set({
-                excludeCuisine: [
-                    ...new Set([
-                        ...state.get.excludeCuisine,
-                        event.target.value,
-                    ]),
-                ],
-            });
-        } else {
-            state.set({
-                excludeCuisine: state.get.excludeCuisine.filter(
-                    (item) => item !== event.target.value
-                ),
-            });
-        }
-    };
-
+    const cuisine = [
+        "African",
+        "American",
+        "British",
+        "Cajun",
+        "Caribbean",
+        "Chinese",
+        "Eastern European",
+        "European",
+        "French",
+        "German",
+        "Greek",
+        "Indian",
+        "Irish",
+        "Italian",
+        "Japanese",
+        "Jewish",
+        "Korean",
+        "latin American",
+        "Mediterranean",
+        "Mexican",
+        "Middle Eastern",
+        "Nordic",
+        "Southern",
+        "Spanish",
+        "Thai",
+        "Vietnamese",
+    ];
     return (
-        <><Logo />
-            <h2>Select or enter the items below to either exclude any food intolerances, cuisines, or ingredients, and select a diet if you like. All information will be stored in your settings for future searches until you decide to change them.</h2>
+        <>
+            <h2>
+                Select or enter the items below to either exclude any food
+                intolerances, cuisines, or ingredients, and select a diet if you
+                like. All information will be stored in your settings for future
+                searches until you decide to change them.
+            </h2>
             <label className="label has-text-centered">Food Intolerances</label>
             <FlexContainer>
                 {intolerances.map((item) => (
                     <CheckBox
                         key={uuid()}
                         text={item}
-                        onClickHandler={intolerancesOnClickHandler}
-                        checked={
-                            state.get.intolerances.includes(item) ? true : false
-                        }
+                        // need to add event handlers
                     />
                 ))}
             </FlexContainer>{" "}
@@ -113,8 +92,7 @@ export default ({ state }) => {
                     <CheckBox
                         key={uuid()}
                         text={item}
-                        onClickHandler={dietOnClickHandler}
-                        checked={state.get.diet.includes(item) ? true : false}
+                        // need to add event handlers
                     />
                 ))}
             </FlexContainer>{" "}
@@ -124,23 +102,15 @@ export default ({ state }) => {
                     <CheckBox
                         key={uuid()}
                         text={item}
-                        onClickHandler={excludeCuisineOnClickHandler}
-                        checked={
-                            state.get.excludeCuisine.includes(item)
-                                ? true
-                                : false
-                        }
+                        // need to add event handlers
                     />
                 ))}
             </FlexContainer>
             <label className="label has-text-centered">
                 exclude Ingredients
             </label>
-            <InputForm onSubmitHandler={inputformOnSubmitHandler} />
-            <Pantry
-                items={state.get.excludeIngredients}
-                onClickHandler={pantryOnClickHandler}
-            />
+            <InputForm />
+            <Pantry items={excludeIngredients} />
         </>
     );
 };

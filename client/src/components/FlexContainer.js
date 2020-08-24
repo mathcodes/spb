@@ -1,16 +1,15 @@
 import React from "react";
 
-const css = {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    flexDirection: "row",
+export default ({ children }) => {
+    const CSS = {
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        flexDirection: "row",
+    };
+    return (
+        <div className="container" style={CSS}>
+            {children}
+        </div>
+    );
 };
-
-const FlexContainer = ({ children }) => (
-    <div className="container" style={css}>
-        {children}
-    </div>
-);
-
-export default FlexContainer;

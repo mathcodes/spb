@@ -1,19 +1,11 @@
 import React from "react";
 
-const css = {
-    margin: "0.4em",
+export default ({ text }) => {
+    const CSS = { margin: "0.4em" };
+    return (
+        <label className="checkbox" style={CSS}>
+            <input type="checkbox" value={text} />
+            {text}
+        </label>
+    );
 };
-
-const CheckBox = ({ text, onClickHandler, checked }) => (
-    <label className="checkbox" style={css} onClick={onClickHandler}>
-        <input
-            type="checkbox"
-            value={text}
-            checked={checked}
-            onChange={() => {}}
-        />
-        {text}
-    </label>
-);
-
-export default CheckBox;
