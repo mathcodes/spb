@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 export default () => {
     const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
-    console.log(isAuthenticated);
     return (
         <div className="tabs navtabs is-boxed is-fullwidth">
             <ul>

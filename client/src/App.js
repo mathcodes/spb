@@ -27,7 +27,7 @@ export default () => {
         intolerances: [],
         includeIngredients: [],
         excludeIngredients: [],
-        recipes: [" "],
+        recipes: [],
         savedRecipes: [],
         activeRecipe: 0,
     };
@@ -40,26 +40,27 @@ export default () => {
     };
     // Load state from local storage on startup
     useEffect(() => {
-        // const loadedState = JSON.parse(localStorage.getItem("state"));
-        // if (loadedState) setState(loadedState);
-        if (isAuthenticated) {
-            fetch("/db/get", {
-                method: "POST",
-                headers: { "Content-Type": "appplication/json" },
-                body: JSON.stringify({ id: user.email }),
-            })
-                .then((response) => state.set(response))
-                .then((_) => console.log("data retrieved from server"));
-        }
+        const loadedState = JSON.parse(localStorage.getItem("state"));
+        if (loadedState) setState(loadedState);
+        // if (isAuthenticated) {
+        //     fetch("/db/get", {
+        //         method: "POST",
+        //         headers: { "Content-Type": "appplication/json" },
+        //         body: JSON.stringify({ id: user.email }),
+        //     })
+        //         .then((response) => state.set(response))
+        //         .then((_) => console.log("data retrieved from server"));
+        // }
     }, []);
     // Save state to local storage when it's updated
     useEffect(() => {
-        // localStorage.setItem("state", JSON.stringify(state.get));
-        fetch("db/set", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(state.get),
-        }).then((_) => console.log("data backed up to the server"));
+        console.log(state.get);
+        localStorage.setItem("state", JSON.stringify(state.get));
+        // fetch("db/set", {
+        //     method: "POST",
+        //     headers: { "Content-Type": "application/json" },
+        //     body: JSON.stringify(state.get),
+        // }).then((_) => console.log("data backed up to the server"));
     }, [state.get]);
     return (
         <BrowserRouter>
