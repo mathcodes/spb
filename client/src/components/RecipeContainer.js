@@ -11,6 +11,7 @@ export default ({ dispatch, recipes }) => {
             {recipes.map(({ information }) => (
                 <Card
                     key={uuid()}
+                    dispatch={dispatch}
                     id={information.id}
                     src={information.image}
                     alt={information.name}

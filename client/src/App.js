@@ -11,6 +11,7 @@ import Search from "./components/Search";
 import Nav from "./components/Nav";
 import Library from "./components/Library";
 import Settings from "./components/Settings";
+import Details from "./components/Details";
 
 export default () => {
     const [state, setState] = useState({
@@ -45,18 +46,18 @@ export default () => {
                         <Route
                             exact
                             path="/library"
-                            render={() => <Library />}
+                            render={() => <Library dispatch={dispatch} />}
                         />
                         <Route
                             exact
                             path="/settings"
-                            render={() => <Settings />}
+                            render={() => <Settings dispatch={dispatch} />}
                         />
-                        {/* <Route
-                                exact
-                                path="/details"
-                                render={() => <NewDetails />}
-                            /> */}
+                        <Route
+                            exact
+                            path="/details"
+                            render={() => <Details />}
+                        />
                         <Nav />
                     </>
                 </Hero>

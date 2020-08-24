@@ -1,7 +1,9 @@
-import React from "react";
-// import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import AppContext from "../utils/AppContext";
+import { Link } from "react-router-dom";
 
-export default ({ id, src, alt, title, prepTime, cookTime }) => {
+export default ({ dispatch, id, src, alt, title, prepTime, cookTime }) => {
+    const { activePage, recipes, savedRecipes } = useContext(AppContext);
     const CSS = {
         margin: "0.5em",
         background: "#222222",
@@ -9,6 +11,26 @@ export default ({ id, src, alt, title, prepTime, cookTime }) => {
         padding: "1px",
         borderRadius: "3px",
     };
+
+    // Details link handler
+    const setActiveRecipe = () => dispatch({ activeRecipe: id });
+
+    // Save Recipe
+    const saveRecipe = () => {
+        const recipe = [...recipes, ...savedRecipes].filter(
+            ({ information }) => information.id === id
+        )[0];
+        dispatch({ savedRecipes: [...savedRecipes, recipe] });
+    };
+
+    // Delete Recipe
+    const deleteRecipe = () =>
+        dispatch({
+            savedRecipes: savedRecipes.filter(
+                ({ information }) => information.id !== id
+            ),
+        });
+
     return (
         <div className="card card-modify" style={CSS}>
             <div className="card-image">
@@ -30,7 +52,25 @@ export default ({ id, src, alt, title, prepTime, cookTime }) => {
                 </div>
             </div>
             <footer className="card-foot">
-                {/* Conditionally render details, save, delete links here */}
+                <Link
+                    to="/details"
+                    className="details-button button is-fullwidth"
+                    onClick={setActiveRecipe}>
+                    Details
+                </Link>
+                {activePage === "search" ? (
+                    <button
+                        className="save-button button is-fullwidth"
+                        onClick={saveRecipe}>
+                        Save
+                    </button>
+                ) : activePage === "library" ? (
+                    <button
+                        className="delete-button button is-fullwidth"
+                        onClick={deleteRecipe}>
+                        Delete
+                    </button>
+                ) : null}
             </footer>
         </div>
     );

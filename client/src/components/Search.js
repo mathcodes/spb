@@ -97,7 +97,7 @@ export default ({ dispatch }) => {
                 items={includeIngredients}
                 onClickHandler={deleteFromIncludeIngredients}
             />
-            <RecipeContainer recipes={recipes} />
+            <RecipeContainer dispatch={dispatch} recipes={recipes} />
         </>
     );
 };
