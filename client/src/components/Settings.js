@@ -11,7 +11,7 @@ import CheckBox from "./CheckBox";
 export default () => {
     const { excludeIngredients } = useContext(AppContext);
     const intolerances = [
-        "dairy",
+        "Dairy",
         "Egg",
         "Gluten",
         "Grain",
