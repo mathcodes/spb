@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import AppContext from "./utils/AppContext";
 // import { useAuth0 } from "@auth0/auth0-react";
 // import { v4 as uuid } from "uuid";
+import localforage from "localforage";
 import "./App.css";
 
 // Components
@@ -32,7 +33,20 @@ export default () => {
 
     const dispatch = (payload) => setState({ ...state, ...payload });
 
-    useEffect(() => console.log(state), [state]);
+    // Load state from storage on startup
+    useEffect(() => {
+        localforage.getItem(state.id, state).then((state) => {
+            dispatch(state);
+            console.log("state loaded", state);
+        });
+    }, []);
+
+    // Save app state to local and remote storage when it updates
+    useEffect(() => {
+        localforage
+            .setItem(state.id, state)
+            .then((state) => console.log("state saved", state));
+    }, [state]);
     return (
         <AppContext.Provider value={state}>
             <BrowserRouter>

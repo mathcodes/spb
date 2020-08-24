@@ -25,7 +25,6 @@ mongoose.connect(
 app.post("/api/search", (req, res) => {
     let url = new URL("https://api.spoonacular.com/recipes/complexSearch");
     const params = { ...req.body, apiKey: process.env.apiKey };
-    console.log(params);
     Object.keys(params).forEach((key) =>
         url.searchParams.append(key, params[key])
     );
