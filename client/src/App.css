@@ -609,6 +609,8 @@ color: black;
     background-color: var(--yellow);
     color: var(--dgreen);
     font-size: large;
+        width: 25%;
+
     }
     .buttonPantry{
     font-size: 25px;
