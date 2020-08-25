@@ -6,13 +6,12 @@ import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
     <Auth0Provider
-        domain="dev-4ud-jigw.us.auth0.com"
         // comment these out if running locally
-        // clientId="bwevJxzw4Vp73fiD0LLcUjkPYt4rTDwO"
-        // redirectUri="https://superpantrybuddy.herokuapp.com/"
+        clientId="bwevJxzw4Vp73fiD0LLcUjkPYt4rTDwO"
+        redirectUri="https://superpantrybuddy.herokuapp.com/"
         // comment these in if running locally
-        clientId="p9lkgV3Ohh7V1lowuxsE96nQTSJt8hGz"
-        redirectUri="http://localhost"
+        // clientId="p9lkgV3Ohh7V1lowuxsE96nQTSJt8hGz"
+        // redirectUri="http://localhost"
     >
         <App />
     </Auth0Provider>,
