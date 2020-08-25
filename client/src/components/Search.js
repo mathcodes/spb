@@ -9,6 +9,7 @@ import Pantry from "./Pantry";
 import RecipeContainer from "./RecipeContainer";
 import fetch from "node-fetch";
 import Landing from "./Landing";
+import LogoSmall from "./LogoSmall"
 
 export default ({ dispatch }) => {
     const { isAuthenticated } = useAuth0();
@@ -116,6 +117,7 @@ export default ({ dispatch }) => {
     };
     return (
         <>
+        <LogoSmall/>
             {isAuthenticated ? (
                 <>
                     <br></br>

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import AppContext from "../utils/AppContext";
 import { v4 as uuid } from "uuid";
+import LogoSmall from "./LogoSmall"
 
 // Components
 import FlexContainer from "./FlexContainer";
@@ -13,6 +14,7 @@ export default () => {
 
     return (
         <>
+        <LogoSmall/>
             {recipe.nutrients.length > 0 ? (
                 <FlexContainer>
                     {/* ******************************Nutrition table****************************** */}
