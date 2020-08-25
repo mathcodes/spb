@@ -472,7 +472,6 @@ color: black;
         background-color: var(--yellow);
         color: var(--dgreen);
         font-weight: bolder;
-        width: 50%;
     }
     .save-button {
         background-color: var(--dgreen);
@@ -601,7 +600,6 @@ color: black;
         background-color: var(--yellow);
         color: var(--dgreen);
         font-weight: bolder;
-        width: 50%;
     }
     .save-button {
         background-color: var(--dgreen);
@@ -609,7 +607,6 @@ color: black;
         font-weight: bold;
         width: 50%;
     }
-    
     .details-button:hover {
         background-color: var(--dgreen);
         color: var(--yellow);
@@ -617,10 +614,10 @@ color: black;
         width: 50%;
     }
     .moreButton {
-    background-color: var(--yellow);
-    color: var(--dgreen);
-    font-weight: bold;
-    width: 100%;
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 100%;
     }
     .moreButton:hover {
     background-color: var(--dgreen);
@@ -722,7 +719,6 @@ color: black;
         background-color: var(--yellow);
         color: var(--dgreen);
         font-weight: bolder;
-        width: 50%;
     }
     .save-button {
         background-color: var(--dgreen);
@@ -776,7 +772,7 @@ color: black;
         display:block;
         height:auto;
         width:75%
-        }
+    }
     .landingtext {
     font-size: 34px;
     color: var(--dgreen);
@@ -847,7 +843,6 @@ color: black;
         background-color: var(--yellow);
         color: var(--dgreen);
         font-weight: bolder;
-        width: 50%;
     }
     .save-button {
         background-color: var(--dgreen);
@@ -855,7 +850,6 @@ color: black;
         font-weight: bold;
         width: 50%;
     }
-    
     .details-button:hover {
         background-color: var(--dgreen);
         color: var(--yellow);
@@ -959,7 +953,6 @@ color: black;
         background-color: var(--yellow);
         color: var(--dgreen);
         font-weight: bolder;
-        width: 50%;
     }
     .save-button {
         background-color: var(--dgreen);
@@ -979,7 +972,6 @@ color: black;
     color: var(--dgreen);
     font-weight: bold;
     width: 100%;
-
     }
     .moreButton:hover {
         background-color: var(--dgreen);
@@ -1079,7 +1071,6 @@ color: black;
         color: var(--yellow);
         font-weight: bold;
         font-size: auto;
-        width: 50%;
     }
     
     .details-button:hover {

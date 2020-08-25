@@ -127,7 +127,7 @@ export default ({ dispatch }) => {
                     <br></br>
                     <InputForm submitHandler={addToIncludeIngredients} />
                     <button
-                        className="moreButtonfAdd button is-fullwidth"
+                        className="moreButton Add button is-fullwidth"
                         onClick={getRecipes}>
                         {/* this button needs an event handler */}
                         Get Recipes
