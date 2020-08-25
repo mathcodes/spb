@@ -1,6 +1,7 @@
 /* ------------------------------------- */
 /* ---------  Table of Contents  ------- */
 /* ------------- *Global Variables------ */
+/* ------------- *Main ----------------- */
 /* ------------- *App ------------------ */
 /* ------------- *Hero ----------------- */
 /* ------------- *Header + NavBar ------ */
@@ -11,7 +12,30 @@
 /* ------------- *Font ----------------- */
 /* ------------- *Tables---------------- */
 /* ------------- *Layouts--------------- */
+/* ------------- *Breakpoints----------- */
 /* ------------------------------------- */
+
+
+/* ------------------------------------- */
+/* ------------- *Global Variables------ */
+/* ------------------------------------- */
+
+@import url("bulma.min.css");
+
+:root {
+    --lgreen: #85b135;
+    --dgreen: #284d1d;
+    --lorange: #ee9922;
+    --dorange: #ee662e;
+    --yellow: #e4c800;
+    --light: #f5f5f5;
+}
+
+
+/* ------------------------------------- */
+/* ------------- *Main ----------------- */
+/* ------------------------------------- */
+
 html {
     background-color: var(--lgreen);
     font-size: 16px;
@@ -29,16 +53,8 @@ html {
 body {
     margin-bottom: 5rem;
         background-color: var(--lgreen);
+}
 
-}
-:root {
-    --lgreen: #85b135;
-    --dgreen: #284d1d;
-    --lorange: #ee9922;
-    --dorange: #ee662e;
-    --yellow: #e4c800;
-    --light: #f5f5f5;
-}
 /* ------------------------------------- */
 /* ------------     App     ------------ */
 /* ------------------------------------- */
@@ -252,6 +268,8 @@ h1 {
     color: var(--dgreen);
     font-weight: 700;
 }
+
+
 h2 {
     font-size: 16px;
     color: var(--dgreen);
@@ -274,11 +292,6 @@ h2 {
     border-color: var(--dgreen);
 }
 
-.landingtext {
-    font-size: 24px;
-    color: var(--dgreen);
-    font-weight: 700;
-}
 
 /* ------------------------------------- */
 /* ------------- *Tables---------------- */
@@ -363,4 +376,511 @@ color: black;
 .backgroundimage{
         background-color: var(--lgreen);
 
+}
+
+/* ------------------------------------- */
+/* ------------- *Breakpoints----------- */
+/* -------- mobile: up to 367px ---------*/
+/* -------- mobile: up to 768px ---------*/
+/* -------- tablet: from 769px ----------*/
+/* -------- desktop: from 1024px --------*/
+/* -------- widescreen: from 1216px -----*/
+/* -------- fullhd: from 1408px ---------*/
+
+/* -------- fullhd: from 1408px ---------*/
+@media screen and (min-width:1409px){
+    .image img{
+        display:block;
+        align: center;
+        height:auto;
+        width:60%;
+        margin: 0 15%;
+        }
+    .landingtext {
+    font-size: 60px;
+    color: var(--dgreen);
+    font-weight: 800
+    }
+    .landingtexth1{
+        font-size: 70px;
+    }
+    .navbar{
+        height:auto;
+    }
+    .tabs {
+        font-size:x-large;
+        padding: 45px 0;
+    }
+    .h1Library{
+        font-size:60px;
+    }
+    .h3Library{
+        font-size:40px;
+        color: var(--dgreen);
+    }
+/* -------- fullhd: from 1408px ---------*/    
+    .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+    align-items: flex-start;
+    display: flex;}
+      .tabicon{
+        color: white;
+    }
+    .tagicon{
+        background-color: hsl(106, 45%, 21%);
+    }
+    .label{
+        font-size:45px;
+    }
+    .checkbox{
+        font-size:20px;
+    }
+    .h2Settings{
+        font-size:27px;
+    }
+    .inputSettings, .input{
+        width: 100%;
+        height: 70px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        font-size:25px;
+        font-weight: bold;
+    }
+/* -------- fullhd: from 1408px ---------*/
+    .details-button {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 15%;
+        font-size:30px;
+    }
+    .details-button:hover {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bolder;
+        width: 15%;
+        font-size:35px;
+    }
+    .buttonPantry{
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+/* -------- widescreen: from 1216px -----*/
+@media screen and (max-width:1407px){
+    .image img{
+        display:block;
+        align: center;
+        height:auto;
+        width:60%;
+        margin: 0 15%;
+        }
+    .landingtext {
+    font-size: 60px;
+    color: var(--dgreen);
+    font-weight: 800
+    }
+    .landingtexth1{
+        font-size: 70px;
+    }
+    .navbar{
+        height:auto;
+    }
+    .tabs {
+        font-size:x-large;
+        padding: 45px 0;
+    }
+    .h1Library{
+        font-size:60px;
+    }
+    .h3Library{
+        font-size:40px;
+        color: var(--dgreen);
+    }
+/* -------- widescreen: from 1216px -----*/
+    .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+    align-items: flex-start;
+    display: flex;}
+      .tabicon{
+        color: white;
+    }
+    .tagicon{
+        background-color: hsl(106, 45%, 21%);
+    }
+    .label{
+        font-size:35px;
+    }
+    .checkbox{
+        font-size:26px;
+    }
+    .h2Settings{
+        font-size:27px;
+    }
+    .inputSettings, .input{
+        width: 100%;
+        height: 70px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        font-size:25px;
+        font-weight: bold;
+    }
+/* -------- widescreen: from 1216px -----*/
+    .details-button {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 15%;
+        font-size:30px;
+    }
+    .details-button:hover {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bolder;
+        width: 15%;
+        font-size:35px;
+    }
+    .buttonPantry{
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+/* -------- desktop: from 1024px --------*/
+@media screen and (max-width:1215px){
+    .image img{
+        display:block;
+        align: center;
+        height:auto;
+        width:60%;
+        margin: 0 15%;
+        }
+    .landingtext {
+    font-size: 46px;
+    color: var(--dgreen);
+    font-weight: 700
+    }
+    .landingtexth1{
+        font-size: 60px;
+    }
+    .navbar{
+        height:auto;
+    }
+    .tabs {
+        font-size:x-large;
+        padding: 45px 0;
+    }
+    .h1Library{
+        font-size:50px;
+    }
+    .h3Library{
+        font-size:35px;
+        color: var(--dgreen);
+    }
+/* -------- desktop: from 1024px --------*/
+    .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+    align-items: flex-start;
+    display: flex;}
+    .tabicon{
+        color: white;
+    }
+    .tagicon{
+        background-color: hsl(106, 45%, 21%);
+    }
+     .label{
+        font-size:33px;
+    }
+    .checkbox{
+        font-size:22px;
+    }
+    .h2Settings{
+        font-size:27px;
+    }
+    .inputSettings, .input{
+        width: 100%;
+        height: 70px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        font-size:25px;
+        font-weight: bold;
+    }
+/* -------- desktop: from 1024px --------*/
+    .details-button {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 15%;
+        font-size:30px;
+    }
+    .details-button:hover {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bolder;
+        width: 15%;
+        font-size:35px;
+    }
+    .buttonPantry{
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+/* -------- tablet: from 769px ----------*/
+@media screen and (max-width:1023px){
+    .image img{
+        display:block;
+        height:auto;
+        width:75%
+        }
+    .landingtext {
+    font-size: 34px;
+    color: var(--dgreen);
+    font-weight: 750
+    }
+    .label{
+        font-size:30px;
+    }
+    .checkbox{
+        font-size:20px;
+    }
+    .tabs {
+        font-size:medium;
+        padding: 30px 0;
+    }
+/* -------- tablet: from 769px ----------*/
+    .navbar{
+        height:auto;
+    }
+    .tabs {
+        font-size:x-large;
+        padding: 45px 0;
+    }
+    .h1Library{
+        font-size:50px;
+    }
+    .h3Library{
+        font-size:35px;
+        color: var(--dgreen);
+    }
+/* -------- tablet: from 769px ----------*/
+     .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+    align-items: flex-start;
+    display: flex;}
+
+    .tabicon{
+        color: white;
+    }
+    .tagicon{
+        background-color: hsl(106, 45%, 21%);
+    }
+    .label{
+        font-size:27px;
+    }
+    .checkbox{
+        font-size:20px;
+    }
+    .h2Settings{
+        font-size:27px;
+    }
+/* -------- tablet: from 769px ----------*/
+    .inputSettings, .input{
+        width: 100%;
+        height: 70px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        font-size:25px;
+        font-weight: bold;
+    }
+    .details-button {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 20%;
+        font-size:30px;
+    }
+    .details-button:hover {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bolder;
+        width: 15%;
+        font-size:35px;
+    }
+    .buttonPantry{
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+/* -------- mobile: up to 768px ---------*/
+@media screen and (max-width:768px){    
+    .image img{
+        display:block;
+        height:auto;
+        width:75%
+        }
+    .landingtext {
+    font-size: 30px;
+    color: var(--dgreen);
+    font-weight: 700}
+    .label{
+        font-size:30px;
+    }
+    .checkbox{
+        font-size:20px;
+    }
+    .tabs {
+        font-size:large;
+        padding: 35px 0;
+    }
+     .navbar{
+        height:auto;
+    }
+    .tabs {
+        font-size:x-large;
+        padding: 45px 0;
+    }
+    .h1Library{
+        font-size:50px;
+    }
+    .h3Library{
+        font-size:35px;
+        color: var(--dgreen);
+    }
+/* -------- mobile: up to 768px ---------*/
+    .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+    align-items: flex-start;
+    display: flex;}
+    
+    .tabicon{
+        color: white;
+    }
+    .tagicon{
+        background-color: hsl(106, 45%, 21%);
+    }
+    .label{
+        font-size:25px;
+    }
+    .checkbox{
+        font-size:15px;
+    }
+    .h2Settings{
+        font-size:27px;
+    }
+    .inputSettings, .input{
+        width: 100%;
+        height: 70px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        font-size:25px;
+        font-weight: bold;
+    }
+/* -------- mobile: up to 768px ---------*/
+    .details-button {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 25%;
+        font-size:30px;
+    }
+    .details-button:hover {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bolder;
+        width: 15%;
+        font-size:35px;
+    }
+    .buttonPantry{
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+
+/* -------- mobile: up to 367px ---------*/
+@media screen and (max-width:376px){    
+    .image img{
+        display:block;
+        height:auto;
+        width:75%
+        }
+    .landingtext {
+    font-size: 26px;
+    color: var(--dgreen);
+    font-weight: 700}
+    .landingtexth1{
+        font-size: 50px;
+    }
+    .label{
+        font-size:30px;
+    }
+    .checkbox{
+        font-size:20px;
+    }
+    .tabs {
+        font-size:medium;
+        padding: 30px 0;
+    }
+      
+    .navbar{
+        height:auto;
+    }
+    .tabs {
+        font-size:x-large;
+        padding: 45px 0;
+/* -------- mobile: up to 367px ---------*/
+    }
+    .h1Library{
+        font-size:20px;
+    }
+    .h3Library{
+        font-size:17px;
+        color: var(--dgreen);
+    }
+    npm  .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+    align-items: flex-start;
+    display: flex;
+    width:100%;
+    }
+
+    .tabicon{
+        color: white;
+    }
+    .tagicon{
+        background-color: #294e1d;
+    }
+    .label{
+        font-size:20px;
+    }
+    .checkbox{
+        font-size:12px;
+    }
+    .h2Settings{
+        font-size:17px;
+    }
+/* -------- mobile: up to 367px ---------*/
+    .inputSettings, .input{
+        width: 100%;
+        height: 45px;
+        padding: 6px 12px;
+        box-sizing: border-box;
+        font-size:18px;
+        font-weight: bold;
+    }
+    .details-button {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 30%;
+        font-size:20px;
+    }
+    .details-button:hover {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bolder;
+        width: 30%;
+        font-size:25px;
+    }
+    .buttonPantry{
+        font-size: 25px;
+        font-weight: bold;
+    }
 }
