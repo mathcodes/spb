@@ -387,7 +387,7 @@ color: black;
 /* -------- widescreen: from 1216px -----*/
 /* -------- fullhd: from 1408px ---------*/
 
-/* -------- fullhd: from 1408px ---------*/
+/* --------------------------------------------------- fullhd: from 1408px --------------------------------------------------- */
 @media screen and (min-width:1409px){
     .image, .img{
         display:block;
@@ -437,6 +437,18 @@ color: black;
     .h2Settings{
         font-size:27px;
     }
+    .add-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    width: 25%;
+    font-size: large;
+    }
+    .add-button:hover {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    width: 25%;
+    font-size: large;
+    }
     .inputSettings, .input{
         width: 100%;
         height: 70px;
@@ -471,13 +483,49 @@ color: black;
         font-weight: bolder;
         width: 50%;
     }
+        .moreButton {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 100%;
+
+    }
+    .moreButton:hover {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bolder;
+        width: 100%;
+    }
+       .add-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    width: 25%;
+    font-size: large;
+    }
+    .add-button:hover {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    width: 25%;
+    font-size: large;
+    }
+    .add-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    width: 25%;
+    font-size: large;
+    }
+    .add-button:hover {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    width: 25%;
+    font-size: large;
+    }
     .buttonPantry{
         font-size: 25px;
         font-weight: bold;
     }
 }
-
-/* -------- widescreen: from 1216px -----*/
+/* --------------------------------------------------- widescreen: from 1216px --------------------------------------------------- */
 @media screen and (max-width:1407px){
     .image, .img{
         display:block;
@@ -561,13 +609,38 @@ color: black;
         font-weight: bolder;
         width: 50%;
     }
+    .moreButton {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 100%;
+
+    }
+    .moreButton:hover {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bolder;
+        width: 100%;
+    }
+    .add-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    width: 25%;
+    font-size: large;
+    }
+    .add-button:hover {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    width: 25%;
+    font-size: large;
+    }
     .buttonPantry{
         font-size: 25px;
         font-weight: bold;
     }
 }
 
-/* -------- desktop: from 1024px --------*/
+/* --------------------------------------------------- desktop: from 1024px ---------------------------------------------------*/
 @media screen and (max-width:1215px){
     .image, .img{
         display:block;
@@ -598,7 +671,7 @@ color: black;
         font-size:35px;
         color: var(--dgreen);
     }
-/* -------- desktop: from 1024px --------*/
+/* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
     .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
     align-items: flex-start;
     display: flex;}
@@ -651,13 +724,38 @@ color: black;
         font-weight: bolder;
         width: 50%;
     }
+        .moreButton {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 100%;
+
+    }
+    .moreButton:hover {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bolder;
+        width: 100%;
+    }
+    .add-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    width: 25%;
+    font-size: large;
+    }
+    .add-button:hover {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    width: 25%;
+    font-size: large;
+    }
     .buttonPantry{
         font-size: 25px;
         font-weight: bold;
     }
 }
 
-/* -------- tablet: from 769px ----------*/
+/* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
 @media screen and (max-width:1023px){
     .image, .img{
         display:block;
@@ -748,13 +846,26 @@ color: black;
         font-weight: bolder;
         width: 50%;
     }
+        .moreButton {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 100%;
+
+    }
+    .moreButton:hover {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bolder;
+        width: 100%;
+    }
     .buttonPantry{
         font-size: 25px;
         font-weight: bold;
     }
 }
 
-/* -------- mobile: up to 768px ---------*/
+/* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
 @media screen and (max-width:768px){    
     .image, .img{
         display:block;
@@ -843,6 +954,19 @@ color: black;
         font-weight: bolder;
         width: 50%;
     }
+        .moreButton {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 100%;
+
+    }
+    .moreButton:hover {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bolder;
+        width: 100%;
+    }
     .buttonPantry{
         font-size: 25px;
         font-weight: bold;
@@ -850,7 +974,7 @@ color: black;
 }
 
 
-/* -------- mobile: up to 367px ---------*/
+/* --------------------------------------------------- mobile: up to 367px --------------------------------------------------- */
 @media screen and (max-width:376px){    
     .image, .img{
         display:block;
@@ -953,7 +1077,6 @@ color: black;
         color: var(--yellow);
         font-weight: bolder;
         width: 100%;
- 
     }
     .buttonPantry{ 
         font-size: 25px;
