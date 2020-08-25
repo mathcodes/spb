@@ -129,18 +129,19 @@ export default ({ dispatch }) => {
                     <br></br>
                     <InputForm submitHandler={addToIncludeIngredients} />
                     <h1>
-                        Click to delete an item or Get Recipes to start cooking!
+                        Once you add ingredients, you can click to delete them or click Get Recipes to start cooking!
                     </h1>
+                    <Pantry
+                        items={includeIngredients}
+                        onClickHandler={deleteFromIncludeIngredients}
+                    />
                     <button
                         className="moreButton button is-fullwidth"
                         onClick={getRecipes}>
                         {/* this button needs an event handler */}
                         Get Recipes
                     </button>
-                    <Pantry
-                        items={includeIngredients}
-                        onClickHandler={deleteFromIncludeIngredients}
-                    />
+                    
                     <RecipeContainer dispatch={dispatch} recipes={recipes} />
                     {recipes.length > 0 ? (
                         <button
