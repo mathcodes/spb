@@ -58,7 +58,7 @@ export default ({ dispatch, id, src, alt, title, prepTime, cookTime }) => {
             <footer className="card-foot">
                 <Link
                     to="/details"
-                    className="details-button button is-fullwidth"
+                    className="moreButton button is-fullwidth"
                     onClick={setActiveRecipe}>
                     Details
                 </Link>
