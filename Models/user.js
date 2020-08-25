@@ -14,5 +14,6 @@ module.exports = mongoose.model(
         recipes: Array,
         savedRecipes: Array,
         activeRecipe: Number,
+        activePage: String,
     })
 );

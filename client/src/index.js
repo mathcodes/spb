@@ -6,19 +6,9 @@ import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
     <Auth0Provider
-        // comment these out if running locally
-        // domain="dev-4ud-jigw.us.auth0.com"
-        // clientId="bwevJxzw4Vp73fiD0LLcUjkPYt4rTDwO"
-        // redirectUri="https://superpantrybuddy.herokuapp.com/"
-        // comment these in if running locally
-        // domain="dev-4ud-jigw.us.auth0.com"
-        // clientId="p9lkgV3Ohh7V1lowuxsE96nQTSJt8hGz"
-        // redirectUri="http://localhost:3000"
-
-        // comment this in if running back up app
         domain="dev-4ud-jigw.us.auth0.com"
-        clientId="HwTGxav4YKw2dlmAGryvfUR2R6wtl8cR"
-        redirectUri="https://prancing-pangolin.herokuapp.com/">
+        clientId="bwevJxzw4Vp73fiD0LLcUjkPYt4rTDwO"
+        redirectUri="https://superpantrybuddy.herokuapp.com/">
         <App />
     </Auth0Provider>,
     document.getElementById("root")
