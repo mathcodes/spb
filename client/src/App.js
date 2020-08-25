@@ -35,17 +35,21 @@ export default () => {
 
     // Load state from storage on startup
     useEffect(() => {
-        localforage.getItem(state.id, state).then((state) => {
-            dispatch(state);
-            console.log("state loaded", state);
-        });
+        localforage
+            .getItem(state.id)
+            .then((state) => {
+                console.log("state loaded", state);
+                dispatch(state);
+            })
+            .catch((err) => console.log(err));
     }, []);
 
     // Save app state to local and remote storage when it updates
     useEffect(() => {
         localforage
             .setItem(state.id, state)
-            .then((state) => console.log("state saved", state));
+            .then((state) => console.log("state saved", state))
+            .catch((err) => console.log(err));
     }, [state]);
     return (
         <AppContext.Provider value={state}>
