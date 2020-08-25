@@ -8,7 +8,7 @@ import RecipeContainer from "./RecipeContainer";
 export default ({ dispatch }) => {
     const { savedRecipes } = useContext(AppContext);
     useEffect(() => dispatch({ activePage: "library" }), []);
-    const CSS = { textAlign: "center" };
+    const CSS = { textAlign: "center", fontSize:"larger" };
     return (
         <>
         <LogoSmall/>
