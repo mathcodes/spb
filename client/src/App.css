@@ -389,7 +389,7 @@ color: black;
 
 /* -------- fullhd: from 1408px ---------*/
 @media screen and (min-width:1409px){
-    .image img{
+    .image, .img{
         display:block;
         align: center;
         height:auto;
@@ -468,7 +468,7 @@ color: black;
 
 /* -------- widescreen: from 1216px -----*/
 @media screen and (max-width:1407px){
-    .image img{
+    .image, .img{
         display:block;
         align: center;
         height:auto;
@@ -547,7 +547,7 @@ color: black;
 
 /* -------- desktop: from 1024px --------*/
 @media screen and (max-width:1215px){
-    .image img{
+    .image, .img{
         display:block;
         align: center;
         height:auto;
@@ -626,7 +626,7 @@ color: black;
 
 /* -------- tablet: from 769px ----------*/
 @media screen and (max-width:1023px){
-    .image img{
+    .image, .img{
         display:block;
         height:auto;
         width:75%
@@ -712,7 +712,7 @@ color: black;
 
 /* -------- mobile: up to 768px ---------*/
 @media screen and (max-width:768px){    
-    .image img{
+    .image, .img{
         display:block;
         height:auto;
         width:75%
@@ -797,7 +797,7 @@ color: black;
 
 /* -------- mobile: up to 367px ---------*/
 @media screen and (max-width:376px){    
-    .image img{
+    .image, .img{
         display:block;
         height:auto;
         width:75%
@@ -877,9 +877,23 @@ color: black;
         color: var(--yellow);
         font-weight: bolder;
         width: 30%;
-        font-size:25px;
+        font-size:20px;
     }
-    .buttonPantry{
+    .moreButton {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bold;
+        width: 100%;
+        font-size:20px;
+    }
+    .moreButton:hover {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bolder;
+        width: 100%;
+        font-size:20px;
+    }
+    .buttonPantry{ 
         font-size: 25px;
         font-weight: bold;
     }
