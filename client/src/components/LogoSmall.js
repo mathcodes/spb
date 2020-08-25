@@ -3,6 +3,9 @@ import Image from "../assets/img/SPBlarge.png";
 
 const css = {
     width: "33%",
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto",
 };
 
 export default () => (
