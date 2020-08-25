@@ -388,6 +388,9 @@ color: black;
 /* -------- fullhd: from 1408px ---------*/
 
 /* --------------------------------------------------- fullhd: from 1408px --------------------------------------------------- */
+/* --------------------------------------------------- fullhd: from 1408px --------------------------------------------------- */
+/* --------------------------------------------------- fullhd: from 1408px --------------------------------------------------- */
+/* --------------------------------------------------- fullhd: from 1408px --------------------------------------------------- */
 @media screen and (min-width:1409px){
     .image, .img{
         display:block;
@@ -419,7 +422,9 @@ color: black;
         color: var(--dgreen);
     }
 /* -------- fullhd: from 1408px ---------*/    
-    .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+    .hero.is-fullheight .hero-body, 
+    .hero.is-fullheight-with-navbar .hero-body, 
+    .hero.is-halfheight .hero-body {
     align-items: flex-start;
     display: flex;}
       .tabicon{
@@ -451,11 +456,10 @@ color: black;
     }
     .inputSettings, .input{
         width: 100%;
-        height: 70px;
+        height: auto;
         padding: 12px 20px;
         box-sizing: border-box;
         font-size:25px;
-        font-weight: bold;
     }
 /* -------- fullhd: from 1408px ---------*/
     .details-button {
@@ -496,7 +500,7 @@ color: black;
         font-weight: bolder;
         width: 100%;
     }
-       .add-button:hover {
+    .add-button:hover {
     background-color: var(--dgreen);
     color: var(--yellow);
     width: 25%;
@@ -526,6 +530,9 @@ color: black;
     }
 }
 /* --------------------------------------------------- widescreen: from 1216px --------------------------------------------------- */
+/* --------------------------------------------------- widescreen: from 1216px --------------------------------------------------- */
+/* --------------------------------------------------- widescreen: from 1216px --------------------------------------------------- */
+/* --------------------------------------------------- widescreen: from 1216px --------------------------------------------------- */
 @media screen and (max-width:1407px){
     .image, .img{
         display:block;
@@ -537,7 +544,6 @@ color: black;
     .landingtext {
     font-size: 60px;
     color: var(--dgreen);
-    font-weight: 800
     }
     .landingtexth1{
         font-size: 70px;
@@ -557,7 +563,9 @@ color: black;
         color: var(--dgreen);
     }
 /* -------- widescreen: from 1216px -----*/
-    .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+    .hero.is-fullheight .hero-body, 
+    .hero.is-fullheight-with-navbar .hero-body, 
+    .hero.is-halfheight .hero-body {
     align-items: flex-start;
     display: flex;}
       .tabicon{
@@ -577,11 +585,10 @@ color: black;
     }
     .inputSettings, .input{
         width: 100%;
-        height: 70px;
+        height: auto;
         padding: 12px 20px;
         box-sizing: border-box;
         font-size:25px;
-        font-weight: bold;
     }
 /* -------- widescreen: from 1216px -----*/
     .details-button {
@@ -610,17 +617,16 @@ color: black;
         width: 50%;
     }
     .moreButton {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        width: 100%;
-
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bold;
+    width: 100%;
     }
     .moreButton:hover {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bolder;
-        width: 100%;
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bolder;
+    width: 100%;
     }
     .add-button:hover {
     background-color: var(--dgreen);
@@ -635,20 +641,23 @@ color: black;
     font-size: large;
     }
     .buttonPantry{
-        font-size: 25px;
-        font-weight: bold;
+    font-size: 25px;
+    font-weight: bold;
     }
 }
 
 /* --------------------------------------------------- desktop: from 1024px ---------------------------------------------------*/
+/* --------------------------------------------------- desktop: from 1024px ---------------------------------------------------*/
+/* --------------------------------------------------- desktop: from 1024px ---------------------------------------------------*/
+/* --------------------------------------------------- desktop: from 1024px ---------------------------------------------------*/
 @media screen and (max-width:1215px){
     .image, .img{
-        display:block;
-        align: center;
-        height:auto;
-        width:60%;
-        margin: 0 15%;
-        }
+    display:block;
+    align: center;
+    height:auto;
+    width:60%;
+    margin: 0 15%;
+    }
     .landingtext {
     font-size: 46px;
     color: var(--dgreen);
@@ -672,7 +681,12 @@ color: black;
         color: var(--dgreen);
     }
 /* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
-    .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+/* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
+/* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
+/* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
+    .hero.is-fullheight .hero-body, 
+    .hero.is-fullheight-with-navbar .hero-body, 
+    .hero.is-halfheight .hero-body {
     align-items: flex-start;
     display: flex;}
     .tabicon{
@@ -692,11 +706,10 @@ color: black;
     }
     .inputSettings, .input{
         width: 100%;
-        height: 70px;
+        height: auto;
         padding: 12px 20px;
         box-sizing: border-box;
         font-size:25px;
-        font-weight: bold;
     }
 /* -------- desktop: from 1024px --------*/
     .details-button {
@@ -754,7 +767,9 @@ color: black;
         font-weight: bold;
     }
 }
-
+/* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
+/* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
+/* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
 /* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
 @media screen and (max-width:1023px){
     .image, .img{
@@ -793,7 +808,9 @@ color: black;
         color: var(--dgreen);
     }
 /* -------- tablet: from 769px ----------*/
-     .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+    .hero.is-fullheight .hero-body, 
+    .hero.is-fullheight-with-navbar .hero-body, 
+    .hero.is-halfheight .hero-body {
     align-items: flex-start;
     display: flex;}
 
@@ -815,11 +832,10 @@ color: black;
 /* -------- tablet: from 769px ----------*/
     .inputSettings, .input{
         width: 100%;
-        height: 70px;
+        height: auto;
         padding: 12px 20px;
         box-sizing: border-box;
         font-size:25px;
-        font-weight: bold;
     }
     .details-button {
         background-color: var(--yellow);
@@ -851,7 +867,6 @@ color: black;
         color: var(--dgreen);
         font-weight: bold;
         width: 100%;
-
     }
     .moreButton:hover {
         background-color: var(--dgreen);
@@ -864,7 +879,9 @@ color: black;
         font-weight: bold;
     }
 }
-
+/* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
+/* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
+/* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
 /* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
 @media screen and (max-width:768px){    
     .image, .img{
@@ -875,7 +892,8 @@ color: black;
     .landingtext {
     font-size: 30px;
     color: var(--dgreen);
-    font-weight: 700}
+    font-weight: 700
+    }
     .label{
         font-size:30px;
     }
@@ -901,7 +919,9 @@ color: black;
         color: var(--dgreen);
     }
 /* -------- mobile: up to 768px ---------*/
-    .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+    .hero.is-fullheight .hero-body, 
+    .hero.is-fullheight-with-navbar .hero-body, 
+    .hero.is-halfheight .hero-body {
     align-items: flex-start;
     display: flex;}
     
@@ -954,11 +974,11 @@ color: black;
         font-weight: bolder;
         width: 50%;
     }
-        .moreButton {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        width: 100%;
+    .moreButton {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bold;
+    width: 100%;
 
     }
     .moreButton:hover {
@@ -972,19 +992,21 @@ color: black;
         font-weight: bold;
     }
 }
-
-
+/* --------------------------------------------------- mobile: up to 367px --------------------------------------------------- */
+/* --------------------------------------------------- mobile: up to 367px --------------------------------------------------- */
+/* --------------------------------------------------- mobile: up to 367px --------------------------------------------------- */
+/* --------------------------------------------------- mobile: up to 367px --------------------------------------------------- */
 /* --------------------------------------------------- mobile: up to 367px --------------------------------------------------- */
 @media screen and (max-width:376px){    
     .image, .img{
         display:block;
         height:auto;
-        width:75%
         }
     .landingtext {
     font-size: 26px;
     color: var(--dgreen);
-    font-weight: 700}
+    font-weight: 700;
+    }
     .landingtexth1{
         font-size: 50px;
     }
@@ -1005,8 +1027,8 @@ color: black;
     .tabs {
         font-size:x-large;
         padding: 45px 0;
-/* -------- mobile: up to 367px ---------*/
     }
+/* -------- mobile: up to 367px ---------*/
     .h1Library{
         font-size:20px;
     }
@@ -1014,7 +1036,9 @@ color: black;
         font-size:17px;
         color: var(--dgreen);
     }
-    npm  .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
+    .npm, .hero-body, 
+    .hero.is-fullheight-with-navbar, .hero-body, 
+    .hero.is-halfheight, .hero-body {
     align-items: flex-start;
     display: flex;
     width:100%;
@@ -1042,7 +1066,6 @@ color: black;
         padding: 6px 12px;
         box-sizing: border-box;
         font-size:18px;
-        font-weight: bold;
     }
     .details-button {
         background-color: var(--yellow);
