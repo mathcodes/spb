@@ -450,14 +450,18 @@ color: black;
         background-color: var(--yellow);
         color: var(--dgreen);
         font-weight: bold;
-        font-size: auto;
+        width: 50%;
+    }
+    .save-button:hover {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bolder;
         width: 50%;
     }
     .save-button {
         background-color: var(--dgreen);
         color: var(--yellow);
         font-weight: bold;
-        font-size: auto;
         width: 50%;
     }
     
@@ -465,8 +469,7 @@ color: black;
         background-color: var(--dgreen);
         color: var(--yellow);
         font-weight: bolder;
-        
- 
+        width: 50%;
     }
     .buttonPantry{
         font-size: 25px;
@@ -537,13 +540,26 @@ color: black;
         background-color: var(--yellow);
         color: var(--dgreen);
         font-weight: bold;
-       font-size: auto;
         width: 50%;
-        }
+    }
+    .save-button:hover {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bolder;
+        width: 50%;
+    }
+    .save-button {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bold;
+        width: 50%;
+    }
+    
     .details-button:hover {
         background-color: var(--dgreen);
         color: var(--yellow);
         font-weight: bolder;
+        width: 50%;
     }
     .buttonPantry{
         font-size: 25px;
@@ -614,13 +630,26 @@ color: black;
         background-color: var(--yellow);
         color: var(--dgreen);
         font-weight: bold;
-        font-size: auto;
-        width: 50%; 
+        width: 50%;
     }
+    .save-button:hover {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bolder;
+        width: 50%;
+    }
+    .save-button {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bold;
+        width: 50%;
+    }
+    
     .details-button:hover {
         background-color: var(--dgreen);
         color: var(--yellow);
         font-weight: bolder;
+        width: 50%;
     }
     .buttonPantry{
         font-size: 25px;
@@ -698,13 +727,26 @@ color: black;
         background-color: var(--yellow);
         color: var(--dgreen);
         font-weight: bold;
-        font-size: auto;
-        width: 50%; 
-        }
+        width: 50%;
+    }
+    .save-button:hover {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bolder;
+        width: 50%;
+    }
+    .save-button {
+        background-color: var(--dgreen);
+        color: var(--yellow);
+        font-weight: bold;
+        width: 50%;
+    }
+    
     .details-button:hover {
         background-color: var(--dgreen);
         color: var(--yellow);
         font-weight: bolder;
+        width: 50%;
     }
     .buttonPantry{
         font-size: 25px;
@@ -780,14 +822,18 @@ color: black;
         background-color: var(--yellow);
         color: var(--dgreen);
         font-weight: bold;
-        font-size: auto;
+        width: 50%;
+    }
+    .save-button:hover {
+        background-color: var(--yellow);
+        color: var(--dgreen);
+        font-weight: bolder;
         width: 50%;
     }
     .save-button {
         background-color: var(--dgreen);
         color: var(--yellow);
         font-weight: bold;
-        font-size: auto;
         width: 50%;
     }
     
@@ -795,7 +841,7 @@ color: black;
         background-color: var(--dgreen);
         color: var(--yellow);
         font-weight: bolder;
-
+        width: 50%;
     }
     .buttonPantry{
         font-size: 25px;
