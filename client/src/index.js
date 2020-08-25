@@ -6,9 +6,9 @@ import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
     <Auth0Provider
-        domain="dev-t7jawcee.us.auth0.com"
-        clientId="61HgkbsWvmML9wSXY8CQCvfArxRvWCpy"
-        redirectUri="http://localhost:3000">
+        domain="dev-4ud-jigw.us.auth0.com"
+        clientId="p9lkgV3Ohh7V1lowuxsE96nQTSJt8hGz"
+        redirectUri="https://superpantrybuddy.herokuapp.com/">
         <App />
     </Auth0Provider>,
     document.getElementById("root")
