@@ -7,7 +7,6 @@ import FlexContainer from "./FlexContainer";
 import InputForm from "./InputForm";
 import Pantry from "./Pantry";
 import CheckBox from "./CheckBox";
-import { set } from "mongoose";
 
 export default ({ dispatch }) => {
     const {

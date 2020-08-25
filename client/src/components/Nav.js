@@ -3,7 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 
 export default () => {
-    const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+    const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
     const CSS = { backgroundColor: "#284d1d" };
     return (
         <div className="navbar is-fixed-bottom" style={CSS}>

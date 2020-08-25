@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AppContext from "../utils/AppContext";
 import { pruneRecipe } from "../utils/ParseRecipe";
 
@@ -7,6 +7,7 @@ import InputForm from "./InputForm";
 import Pantry from "./Pantry";
 import RecipeContainer from "./RecipeContainer";
 import fetch from "node-fetch";
+import { get } from "mongoose";
 
 export default ({ dispatch }) => {
     const {
@@ -17,10 +18,8 @@ export default ({ dispatch }) => {
         includeIngredients,
         excludeIngredients,
         recipes,
-        number,
-        offset,
     } = useContext(AppContext);
-
+    const [offset, setOffset] = useState(6);
     useEffect(() => dispatch({ activePage: "search" }), []);
 
     // InputForm handler
@@ -77,6 +76,41 @@ export default ({ dispatch }) => {
             )
             .catch((err) => console.log(err));
     };
+
+    // Get more recipes button handler
+    const moreRecipes = () => {
+        setOffset(offset + 6);
+        fetch("api/search", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                cuisine: cuisine.join(),
+                excludeCuisine: excludeCuisine.join(),
+                diet: diet.join(),
+                intolerances: intolerances.join(),
+                includeIngredients: includeIngredients.join(),
+                excludeIngredients: excludeIngredients.join(),
+                //need to add not user settable parameters in here
+                number: 6,
+                offset: offset,
+                instructionsRequired: true,
+                fillIngredients: true,
+                addRecipeInformation: true,
+                addRecipeNutrition: true,
+                ignorePantry: true,
+            }),
+        })
+            .then((response) => response.json())
+            .then(({ results }) =>
+                dispatch({
+                    recipes: [
+                        ...recipes,
+                        ...results.map((recipe) => pruneRecipe(recipe)),
+                    ],
+                })
+            )
+            .catch((err) => console.log(err));
+    };
     return (
         <>
             <br></br>
@@ -98,6 +132,13 @@ export default ({ dispatch }) => {
                 onClickHandler={deleteFromIncludeIngredients}
             />
             <RecipeContainer dispatch={dispatch} recipes={recipes} />
+            {recipes.length > 0 ? (
+                <button
+                    className="moreButton button is-fullwidth details-button"
+                    onClick={moreRecipes}>
+                    Get More Recipes
+                </button>
+            ) : null}
         </>
     );
 };
