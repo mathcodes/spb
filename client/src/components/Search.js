@@ -1,15 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import AppContext from "../utils/AppContext";
 import { pruneRecipe } from "../utils/ParseRecipe";
+import { useAuth0 } from "@auth0/auth0-react";
 
 // Components
 import InputForm from "./InputForm";
 import Pantry from "./Pantry";
 import RecipeContainer from "./RecipeContainer";
 import fetch from "node-fetch";
-import { get } from "mongoose";
+import Landing from "./Landing";
 
 export default ({ dispatch }) => {
+    const { isAuthenticated } = useAuth0();
     const {
         cuisine,
         excludeCuisine,
@@ -113,32 +115,38 @@ export default ({ dispatch }) => {
     };
     return (
         <>
-            <br></br>
-            <h1>
-                Type the ingredients you have on hand to find recipes that work
-                for you! Use the Save and Details buttons to take a closer look,
-                or save the recipe to your library!
-            </h1>
-            <br></br>
-            <InputForm submitHandler={addToIncludeIngredients} />
-            <button
-                className="button is-fullwidth details-button"
-                onClick={getRecipes}>
-                {/* this button needs an event handler */}
-                Get Recipes
-            </button>
-            <Pantry
-                items={includeIngredients}
-                onClickHandler={deleteFromIncludeIngredients}
-            />
-            <RecipeContainer dispatch={dispatch} recipes={recipes} />
-            {recipes.length > 0 ? (
-                <button
-                    className="moreButton button is-fullwidth details-button"
-                    onClick={moreRecipes}>
-                    Get More Recipes
-                </button>
-            ) : null}
+            {isAuthenticated ? (
+                <>
+                    <br></br>
+                    <h1>
+                        Type the ingredients you have on hand to find recipes
+                        that work for you! Use the Save and Details buttons to
+                        take a closer look, or save the recipe to your library!
+                    </h1>
+                    <br></br>
+                    <InputForm submitHandler={addToIncludeIngredients} />
+                    <button
+                        className="button is-fullwidth details-button"
+                        onClick={getRecipes}>
+                        {/* this button needs an event handler */}
+                        Get Recipes
+                    </button>
+                    <Pantry
+                        items={includeIngredients}
+                        onClickHandler={deleteFromIncludeIngredients}
+                    />
+                    <RecipeContainer dispatch={dispatch} recipes={recipes} />
+                    {recipes.length > 0 ? (
+                        <button
+                            className="moreButton button is-fullwidth details-button"
+                            onClick={moreRecipes}>
+                            Get More Recipes
+                        </button>
+                    ) : null}
+                </>
+            ) : (
+                <Landing />
+            )}
         </>
     );
 };
