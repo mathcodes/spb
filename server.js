@@ -33,6 +33,7 @@ app.post("/api/search", (req, res) => {
         .then((data) => res.json(data));
 });
 
+// This route isn't working on deployed app
 app.post("/db/set", async (req, res) => {
     //check if a document with given id exists
     if (await User.exists({ id: req.body.id })) {

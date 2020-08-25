@@ -38,6 +38,7 @@ export default ({ dispatch }) => {
                 ]),
             ],
         });
+        event.target.firstChild.value = "";
     };
 
     // Pantry item tags handler
