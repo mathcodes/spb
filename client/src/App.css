@@ -442,19 +442,6 @@ color: black;
     .h2Settings{
         font-size:27px;
     }
-    .add-button:hover {
-    background-color: var(--dgreen);
-    color: var(--yellow);
-    font-size: large;
-    width: 25%;
-    }
-    .add-button:hover {
-    background-color: var(--yellow);
-    color: var(--dgreen);
-    width: 25%;
-    width: 25%;
-    font-size: large;
-    }
     .inputSettings, .input{
         width: 100%;
         height: auto;
@@ -502,28 +489,13 @@ color: black;
     background-color: var(--dgreen);
     color: var(--yellow);
     width: 25%;
-    width: 25%;
     font-size: large;
     }
-    .add-button:hover {
+    .add-button {
     background-color: var(--yellow);
     color: var(--dgreen);
     font-size: large;
     width: 25%;
-    }
-    .add-button:hover {
-    background-color: var(--dgreen);
-    color: var(--yellow);
-    width: 25%;
-    width: 25%;
-    font-size: large;
-    }
-    .add-button:hover {
-    background-color: var(--yellow);
-    color: var(--dgreen);
-    width: 25%;
-    width: 25%;
-    font-size: large;
     }
     .buttonPantry{
         font-size: 25px;
