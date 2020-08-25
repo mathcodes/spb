@@ -9,6 +9,7 @@ import Pantry from "./Pantry";
 import RecipeContainer from "./RecipeContainer";
 import fetch from "node-fetch";
 import Landing from "./Landing";
+import LogoSmall from "./LogoSmall"
 
 export default ({ dispatch }) => {
     const { isAuthenticated } = useAuth0();
@@ -116,26 +117,31 @@ export default ({ dispatch }) => {
     };
     return (
         <>
+        <LogoSmall/>
             {isAuthenticated ? (
                 <>
                     <br></br>
                     <h1>
-                        Type the ingredients you have on hand to find recipes
-                        that work for you! Use the Save and Details buttons to
-                        take a closer look, or save the recipe to your library!
+                        Type in the ingredients you have on hand to find recipes
+                        that work for you! Use the Details and Save buttons to
+                        take a closer look or save the recipe to your library!
                     </h1>
                     <br></br>
                     <InputForm submitHandler={addToIncludeIngredients} />
+                    <h1>
+                        Once you add ingredients, you can click to delete them or click Get Recipes to start cooking!
+                    </h1>
+                    <Pantry
+                        items={includeIngredients}
+                        onClickHandler={deleteFromIncludeIngredients}
+                    />
                     <button
                         className="moreButton button is-fullwidth"
                         onClick={getRecipes}>
                         {/* this button needs an event handler */}
                         Get Recipes
                     </button>
-                    <Pantry
-                        items={includeIngredients}
-                        onClickHandler={deleteFromIncludeIngredients}
-                    />
+                    
                     <RecipeContainer dispatch={dispatch} recipes={recipes} />
                     {recipes.length > 0 ? (
                         <button

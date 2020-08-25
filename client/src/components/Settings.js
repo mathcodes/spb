@@ -9,6 +9,7 @@ import InputForm from "./InputForm";
 import Pantry from "./Pantry";
 import CheckBox from "./CheckBox";
 import Landing from "./Landing";
+import LogoSmall from "./LogoSmall"
 
 export default ({ dispatch }) => {
     const { isAuthenticated } = useAuth0();
@@ -139,6 +140,7 @@ export default ({ dispatch }) => {
 
     return (
         <>
+        <LogoSmall/>
             {isAuthenticated ? (
                 <>
                     <h2>

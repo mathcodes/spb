@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import AppContext from "../utils/AppContext";
+import LogoSmall from "./LogoSmall"
 
 // Components
 import RecipeContainer from "./RecipeContainer";
@@ -10,6 +11,7 @@ export default ({ dispatch }) => {
     const CSS = { textAlign: "center" };
     return (
         <>
+        <LogoSmall/>
             {savedRecipes.length > 0 ? (
                 <>
                     <h1 style={CSS}>Saved Recipes</h1>

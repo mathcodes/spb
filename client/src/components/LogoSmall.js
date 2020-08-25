@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../assets/img/SPBlarge.png";
+import Image from "../assets/img/SPB-SMLogoText1382x121.png";
  
 export default () => (
     <>
