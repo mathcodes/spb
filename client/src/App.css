@@ -445,7 +445,6 @@ color: black;
     .add-button:hover {
     background-color: var(--dgreen);
     color: var(--yellow);
-    width: 25%;
     font-size: large;
     }
     .add-button:hover {
@@ -484,7 +483,6 @@ color: black;
         background-color: var(--dgreen);
         color: var(--yellow);
         font-weight: bolder;
-        width: 50%;
     }
         .moreButton {
         background-color: var(--yellow);
@@ -497,7 +495,6 @@ color: black;
         background-color: var(--dgreen);
         color: var(--yellow);
         font-weight: bolder;
-        width: 100%;
     }
     .add-button:hover {
     background-color: var(--dgreen);
@@ -508,7 +505,6 @@ color: black;
     .add-button:hover {
     background-color: var(--yellow);
     color: var(--dgreen);
-    width: 25%;
     font-size: large;
     }
     .add-button:hover {
@@ -628,13 +624,11 @@ color: black;
     .add-button:hover {
     background-color: var(--dgreen);
     color: var(--yellow);
-    width: 25%;
     font-size: large;
     }
-    .add-button:hover {
+    .add-button {
     background-color: var(--yellow);
     color: var(--dgreen);
-    width: 25%;
     font-size: large;
     }
     .buttonPantry{
@@ -749,10 +743,9 @@ color: black;
     .add-button:hover {
     background-color: var(--dgreen);
     color: var(--yellow);
-    width: 25%;
     font-size: large;
     }
-    .add-button:hover {
+    .add-button {
     background-color: var(--yellow);
     color: var(--dgreen);
     width: 25%;
@@ -868,6 +861,17 @@ color: black;
         font-weight: bolder;
         width: 100%;
     }
+     .add-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-size: large;
+    }
+    .add-button {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    width: 25%;
+    font-size: large;
+    }
     .buttonPantry{
         font-size: 25px;
         font-weight: bold;
@@ -978,6 +982,17 @@ color: black;
         color: var(--yellow);
         font-weight: bolder;
         width: 100%;
+    }
+     .add-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-size: large;
+    }
+    .add-button {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    width: 25%;
+    font-size: large;
     }
     .buttonPantry{
         font-size: 25px;
@@ -1091,6 +1106,17 @@ color: black;
         color: var(--yellow);
         font-weight: bolder;
         width: 100%;
+    }
+     .add-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-size: large;
+    }
+    .add-button {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    width: 25%;
+    font-size: large;
     }
     .buttonPantry{ 
         font-size: 25px;
