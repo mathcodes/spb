@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const fetch = require("node-fetch");
-// const User = require("./Models/user");
+const User = require("./Models/user");
 require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3001;

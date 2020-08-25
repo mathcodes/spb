@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import AppContext from "./utils/AppContext";
-// import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 // import { v4 as uuid } from "uuid";
 import localforage from "localforage";
 import "./App.css";
@@ -27,30 +27,48 @@ export default () => {
         savedRecipes: [],
         activeRecipe: 0,
         activePage: "",
-        number: 6,
-        offset: 0,
     });
 
     const dispatch = (payload) => setState({ ...state, ...payload });
 
-    // Load state from storage on startup
-    useEffect(() => {
-        localforage
-            .getItem(state.id)
-            .then((state) => {
-                console.log("state loaded", state);
-                dispatch(state);
-            })
-            .catch((err) => console.log(err));
-    }, []);
+    const { isAuthenticated, user } = useAuth0();
 
-    // Save app state to local and remote storage when it updates
+    // If user is Authenticated load state from server else load
+    // from local storage
     useEffect(() => {
-        localforage
-            .setItem(state.id, state)
-            .then((state) => console.log("state saved", state))
-            .catch((err) => console.log(err));
+        if (isAuthenticated) {
+            dispatch({ id: user.email });
+            fetch("db/get", { id: user.email })
+                .then((state) => dispatch(state))
+                .then(() => console.log("data loaded from server storage"))
+                .catch((err) => console.log(err));
+        } else {
+            localforage
+                .getItem("local")
+                .then((state) => dispatch(state))
+                .then(() => console.log("data loaded from local storage"))
+                .catch((err) => console.log(err));
+        }
+    }, [isAuthenticated]);
+
+    // When the state is updated save it to local and server storage
+    useEffect(() => {
+        console.log(state);
+        if (isAuthenticated) {
+            fetch("db/set", {
+                method: "POST",
+                headers: { "Content-Type": "application.json" },
+                body: JSON.stringify(state),
+            })
+                .then(() => console.log("data saved to server storage"))
+                .catch((err) => console.log(err));
+            localforage
+                .setItem("local", state)
+                .then(() => console.log("data saved to local storage"))
+                .catch((err) => console.log(err));
+        }
     }, [state]);
+
     return (
         <AppContext.Provider value={state}>
             <BrowserRouter>
@@ -58,7 +76,7 @@ export default () => {
                     <>
                         <Route
                             exact
-                            path="/search"
+                            path={["/", "/search"]}
                             render={() => <Search dispatch={dispatch} />}
                         />
                         <Route

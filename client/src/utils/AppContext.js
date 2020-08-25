@@ -12,6 +12,4 @@ export default React.createContext({
     savedRecipes: [],
     activeRecipe: 0,
     activePage: "",
-    number: 6,
-    offset: 0,
 });

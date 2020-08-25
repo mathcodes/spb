@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import AppContext from "../utils/AppContext";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default ({ dispatch, id, src, alt, title, prepTime, cookTime }) => {
+    const { isAuthenticated } = useAuth0();
     const { activePage, recipes, savedRecipes } = useContext(AppContext);
     const CSS = {
         margin: "0.5em",
@@ -24,12 +26,14 @@ export default ({ dispatch, id, src, alt, title, prepTime, cookTime }) => {
     };
 
     // Delete Recipe
-    const deleteRecipe = () =>
-        dispatch({
-            savedRecipes: savedRecipes.filter(
-                ({ information }) => information.id !== id
-            ),
-        });
+    const deleteRecipe = () => {
+        if (isAuthenticated)
+            dispatch({
+                savedRecipes: savedRecipes.filter(
+                    ({ information }) => information.id !== id
+                ),
+            });
+    };
 
     return (
         <div className="card card-modify" style={CSS}>
