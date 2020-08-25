@@ -1,9 +1,9 @@
 import React from "react";
-import Image from "../assets/img/SPB-SMLogoText1382x121.png";
+import Image from "../assets/img/SPBRetroSlantAcross1382x120.png";
  
 export default () => (
     <>
-        <figure className="image is-100by100">
+        <figure className="headerImageSPB">
             <img src={Image} alt="super pantry buddy logo" />
         </figure>
     </>

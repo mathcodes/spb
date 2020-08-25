@@ -121,16 +121,16 @@ export default ({ dispatch }) => {
             {isAuthenticated ? (
                 <>
                     <br></br>
-                    <h1>
+                    <h6>
                         Type in the ingredients you have on hand to find recipes
                         that work for you! Use the Details and Save buttons to
                         take a closer look or save the recipe to your library!
-                    </h1>
+                    </h6>
                     <br></br>
                     <InputForm submitHandler={addToIncludeIngredients} />
-                    <h1>
+                    <h6>
                         Once you add ingredients, you can click to delete them or click Get Recipes to start cooking!
-                    </h1>
+                    </h6>
                     <Pantry
                         items={includeIngredients}
                         onClickHandler={deleteFromIncludeIngredients}
