@@ -7,10 +7,16 @@ import FlexContainer from "./FlexContainer";
 import InputForm from "./InputForm";
 import Pantry from "./Pantry";
 import CheckBox from "./CheckBox";
+import { set } from "mongoose";
 
-export default () => {
-    const { excludeIngredients } = useContext(AppContext);
-    const intolerances = [
+export default ({ dispatch }) => {
+    const {
+        excludeIngredients,
+        excludeCuisine,
+        intolerances,
+        diet,
+    } = useContext(AppContext);
+    const intolerancesList = [
         "Dairy",
         "Egg",
         "Gluten",
@@ -25,7 +31,7 @@ export default () => {
         "Wheat",
     ];
 
-    const diet = [
+    const dietList = [
         "Gluten Free",
         "Ketogenic",
         "Vegetarian",
@@ -38,7 +44,7 @@ export default () => {
         "Whole30",
     ];
 
-    const cuisine = [
+    const cuisineList = [
         "African",
         "American",
         "British",
@@ -66,6 +72,68 @@ export default () => {
         "Thai",
         "Vietnamese",
     ];
+
+    // InputForm handler
+    const addToExcludeIngredients = (event) => {
+        event.preventDefault();
+        dispatch({
+            excludeIngredients: [
+                ...new Set([
+                    ...excludeIngredients,
+                    ...event.target.firstChild.value
+                        .split(",")
+                        .map((item) => item.trim())
+                        .filter((item) => item !== ""),
+                ]),
+            ],
+        });
+    };
+
+    // Pantry item tags handler
+    const deleteFromExcludeIngredients = (event) => {
+        dispatch({
+            excludeIngredients: excludeIngredients.filter(
+                (item) => item !== event.target.innerText
+            ),
+        });
+    };
+
+    // Intolerances checkbox handler
+    const setIntolerances = (event) => {
+        if (event.target.checked)
+            dispatch({ intolerances: [...intolerances, event.target.value] });
+        else
+            dispatch({
+                intolerances: intolerances.filter(
+                    (item) => item !== event.target.value
+                ),
+            });
+    };
+
+    // Diet checkbox handler
+    const setDiet = (event) => {
+        if (event.target.checked)
+            dispatch({ diet: [...diet, event.target.value] });
+        else
+            dispatch({
+                diet: diet.filter((item) => item !== event.target.value),
+            });
+    };
+
+    // Excluded cuisines checkbox handler
+    const setExcludeCuisine = (event) => {
+        if (event.target.checked)
+            dispatch({
+                excludeCuisine: [...excludeCuisine, event.target.value],
+            });
+        else
+            dispatch({
+                excludeCuisine: excludeCuisine.filter(
+                    (item) => item !== event.target.value
+                ),
+            });
+    };
+
     return (
         <>
             <h2>
@@ -76,11 +144,12 @@ export default () => {
             </h2>
             <label className="label has-text-centered">Food Intolerances</label>
             <FlexContainer>
-                {intolerances.map((item) => (
+                {intolerancesList.map((item) => (
                     <CheckBox
                         key={uuid()}
                         text={item}
-                        // need to add event handlers
+                        onChangeHandler={setIntolerances}
+                        checked={intolerances.includes(item) ? true : false}
                     />
                 ))}
             </FlexContainer>{" "}
@@ -88,20 +157,24 @@ export default () => {
                 Must Fit These Diets
             </label>
             <FlexContainer>
-                {diet.map((item) => (
+                {dietList.map((item) => (
                     <CheckBox
                         key={uuid()}
                         text={item}
+                        onChangeHandler={setDiet}
+                        checked={diet.includes(item) ? true : false}
                         // need to add event handlers
                     />
                 ))}
             </FlexContainer>{" "}
             <label className="label has-text-centered">exclude Cuisine</label>
             <FlexContainer>
-                {cuisine.map((item) => (
+                {cuisineList.map((item) => (
                     <CheckBox
                         key={uuid()}
                         text={item}
+                        onChangeHandler={setExcludeCuisine}
+                        checked={excludeCuisine.includes(item) ? true : false}
                         // need to add event handlers
                     />
                 ))}
@@ -109,8 +182,11 @@ export default () => {
             <label className="label has-text-centered">
                 exclude Ingredients
             </label>
-            <InputForm />
-            <Pantry items={excludeIngredients} />
+            <InputForm submitHandler={addToExcludeIngredients} />
+            <Pantry
+                items={excludeIngredients}
+                onClickHandler={deleteFromExcludeIngredients}
+            />
         </>
     );
 };
