@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import AppContext from "./utils/AppContext";
 import { useAuth0 } from "@auth0/auth0-react";
-// import { v4 as uuid } from "uuid";
 import localforage from "localforage";
 import "./App.css";
 
@@ -38,7 +37,7 @@ export default () => {
     useEffect(() => {
         if (isAuthenticated) {
             dispatch({ id: user.email });
-            fetch("db/get", { id: user.email })
+            fetch("/db/get", { id: user.email })
                 .then((state) => dispatch(state))
                 .then(() => console.log("data loaded from server storage"))
                 .catch((err) => console.log(err));
@@ -55,7 +54,7 @@ export default () => {
     useEffect(() => {
         console.log(state);
         if (isAuthenticated) {
-            fetch("db/set", {
+            fetch("/db/set", {
                 method: "POST",
                 headers: { "Content-Type": "application.json" },
                 body: JSON.stringify(state),
