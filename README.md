@@ -5,12 +5,17 @@
 [![GitHub commits](https://img.shields.io/github/commits-since/mathcodes/Project3/v1.0.0.svg)](https://GitHub.com/mathcodes/employeedirectory/commit/)
 
 ## Table of Contents
+  - [Video](#video)   
   - [Link](#link) 
   - [Licenses](#licenses)
   - [Context](#context)
   - [Usage](#usage)
   - [Contributers](#contributers)
   - [Contact](#contact)
+  
+## Video
+<a href="https://youtu.be/E5xU8wh3sA0">
+Super Pantry Buddy YouTube Video</a>
 
 ## Link
 <a href="https://superpantrybuddy.herokuapp.com/">
