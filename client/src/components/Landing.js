@@ -13,7 +13,7 @@ export default () => {
             <h2 className="landingtext">
                 To get started, click the <i
                             className="fas fa-sign-in-alt tabicon"
-                            aria-hidden="true"></i> on the bottom right of the screen above to login and get started!!!
+                            aria-hidden="true"></i> on the bottom right of the screen to login and get started!!!
             </h2>
         </>
     );
