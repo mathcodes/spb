@@ -1,8 +1,9 @@
 # Super Pantry Buddy
 
-![badge](https://img.shields.io/badge/MERN-FULLSTACK-orange)   
+![badge](https://img.shields.io/badge/Tech-Mongo-green)  ![badge](https://img.shields.io/badge/Tech-Express-blue)  ![badge](https://img.shields.io/badge/Tech-React-teal)   ![badge](https://img.shields.io/badge/Tech-Node-olive)   
 
-[![GitHub commits](https://img.shields.io/github/commits-since/mathcodes/Project3/v1.0.0.svg)](https://GitHub.com/mathcodes/employeedirectory/commit/)
+![badge](https://img.shields.io/badge/Tech-Mongo-green) 
+
 
 ## Table of Contents
   - [Video](#video)     
