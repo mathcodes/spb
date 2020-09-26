@@ -16,6 +16,8 @@
 ## Video
 <a href="https://youtu.be/E5xU8wh3sA0">
 Super Pantry Buddy YouTube Video</a>
+<img src ="https://github.com/Super-Pantry-Buddy/spb/blob/master/client/src/assets/img/SuperPAntryBuddyGif.gif" alt="Super Pantry Buddy" width="670px" height="517px" />
+
 
 ## Link
 <a href="https://superpantrybuddy.herokuapp.com/">
