@@ -5,7 +5,8 @@
 [![GitHub commits](https://img.shields.io/github/commits-since/mathcodes/Project3/v1.0.0.svg)](https://GitHub.com/mathcodes/employeedirectory/commit/)
 
 ## Table of Contents
-  - [Video](#video)   
+  - [Video](#video)     
+  - [GIF](#gif)   
   - [Link](#link) 
   - [Licenses](#licenses)
   - [Context](#context)
@@ -16,6 +17,8 @@
 ## Video
 <a href="https://youtu.be/E5xU8wh3sA0">
 Super Pantry Buddy YouTube Video</a>
+
+## GIF
 <img src ="https://github.com/Super-Pantry-Buddy/spb/blob/master/client/src/assets/img/SuperPAntryBuddyGif.gif" alt="Super Pantry Buddy" width="670px" height="517px" />
 
 
@@ -30,9 +33,8 @@ Super Pantry Buddy</a>
 ## Context
 Tell SPB your dietary restrictions and what is inside your pantry and you will be given a list of concise, no-fluff recipes.  Gone are the days of reading through a chef’s life story, only to find later on that the dish uses a cream sauce when you clearly googled vegan pasta. Say goodbye to google and let SPB plan tonight’s meal.
 
-
 ## Usage
-In order to run this app, install the dependencies found in package.json, then run ```npm start```.
+In order to run this app, install the dependencies found in package.json, then run ```npm start```. Once the app is running, login using AuthO with the opions of using Facbook og 
 
 ## Contact
 This project was created by [Michael](https://github.com/mpn0823), [Elliot](https://github.com/rodgersea), and [Jon](https://github.com/mathcodes).
