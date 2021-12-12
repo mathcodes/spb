@@ -13,43 +13,33 @@ export default () => {
 
     return (
         <>
-            <LogoSmall />
+            <h1>REcipe Details</h1>
 
             <div className="tile is-ancestor">
                 <div className="tile is-vertical is-8">
                     <div className="tile">
+                        
                         <div className="tile is-parent is-vertical">
+                            
                             <article className="tile is-child notification tileStyles">
                                 <p className="title">
-                                    <tbody>
-                                        <tr>
-                                            <th className="is-6">Name</th>
-                                            <th className="is-6">Amount</th>
-                                        </tr>
-                                        {recipe.nutrients.slice(0, 8).map((item) => (
-                                            <tr key={uuid()}>
-                                                <td>{item.name}</td>
-                                                <td>
-                                                    {item.amount} {item.unit}
-                                                </td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </p>
+                                    Nutrition Facts:
+                                        {recipe.nutrients.map((item) => (
+                                            <span key={uuid()} class="tags has-addons"><span class="tag is-dark">{item.name}</span><span class="tag is-info">{item.amount} {item.unit}</span></span>
+                                        ))} 
+                                </p> 
+                            </article>
 
-                            </article>
                             <article className="tile is-child notification">
-                            <div class="field is-grouped is-grouped-multiline">
-                                <div class="control">
-                                    {recipe.usedIngredients.map((item) => (
-                                        <div key={uuid()} class="tags has-addons">
-                                            <span class="tag is-dark">{item.name}</span>
-                                            <span class="tag is-info">{item.amount} {item.unit}</span>
-                                        </div>
-                                    ))}
+                                <div class="field is-grouped is-grouped-multiline">
+                                    <div class="control">
+                                        {recipe.usedIngredients.map((item) => (
+                                            <span key={uuid()} class="tags has-addons"><span class="tag is-dark">{item.name}</span><span class="tag is-info">{item.amount} {item.unit}</span></span>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
                             </article>
+
                         </div>
                         <div className="tile is-parent">
                             <article className="tile is-child notification">
@@ -82,35 +72,7 @@ export default () => {
                 </div>
             </div>
 
-            {recipe.nutrients.length > 0 ? (
-                <FlexContainer>
-                    {/* ******************************Nutrition table****************************** */}
-                    <table className="table is-fullwidth is-striped is-hoverable">
-                        <thead className="is-12 is-fullwidth ">
-                            <tr>
-                                <th colSpan="3" className="is-12">
-                                    Nutrition
-                                </th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <th className="is-6">Name</th>
-                                <th className="is-6">Amount</th>
-                            </tr>
-                            {recipe.nutrients.slice(0, 8).map((item) => (
-                                <tr key={uuid()}>
-                                    <td>{item.name}</td>
-                                    <td>
-                                        {item.amount} {item.unit}
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </FlexContainer>
-            ) : null}
+            {recipe.nutrients.length > 0 ? () : null}
 
             <br />
             {recipe.usedIngredients.length > 0 ? (
@@ -199,6 +161,6 @@ export default () => {
                     </div>
                 </FlexContainer>
             ) : null}
-        </>
+        </h1>
     );
 };
