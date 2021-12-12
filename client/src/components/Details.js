@@ -19,8 +19,23 @@ export default () => {
         <div className="tile is-vertical is-8">
           <div className="tile">
             <div className="tile is-parent is-vertical">
-              <article className="tile is-child notification is-primary">
-                <p className="title">Vertical...</p>
+              <article className="tile is-child notification is-primary tileStyles">
+                <p className="title">
+                    <tbody>
+                        <tr>
+                            <th className="is-6">Name</th>
+                            <th className="is-6">Amount</th>
+                        </tr>
+                        {recipe.nutrients.slice(0, 8).map((item) => (
+                            <tr key={uuid()}>
+                                <td>{item.name}</td>
+                                <td>
+                                    {item.amount} {item.unit}
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </p>
                 <p className="subtitle">Top tile</p>
               </article>
               <article className="tile is-child notification is-warning">
