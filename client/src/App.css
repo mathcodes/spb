@@ -15,7 +15,6 @@
 /* ------------- *Breakpoints----------- */
 /* ------------------------------------- */
 
-
 /* ------------------------------------- */
 /* ------------- *Global Variables------ */
 /* ------------------------------------- */
@@ -23,89 +22,85 @@
 @import url("bulma.min.css");
 
 :root {
-    --lgreen: #7EB09B;
-    --dgreen: #476A6F;
-    --lorange: #EFB34C;
-    --dorange: #a94012;
-    --yellow: #C5C9A4;
-    --light: #f5f5f5;
+  --lgreen: #7eb09b;
+  --dgreen: #476a6f;
+  --lorange: #efb34c;
+  --dorange: #a94012;
+  --yellow: #c5c9a4;
+  --light: #f5f5f5;
 }
-
 
 /* ------------------------------------- */
 /* ------------- *Main ----------------- */
 /* ------------------------------------- */
 
 html {
-    background-color: var(--lgreen);
-    font-size: 16px;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    min-width: 300px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    text-rendering: optimizeLegibility;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+  background-color: var(--lgreen);
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 body {
-    margin-bottom: 5rem;
-        background-color: var(--lgreen);
+  margin-bottom: 5rem;
+  background-color: var(--lgreen);
 }
 
 /* ------------------------------------- */
 /* ------------     App     ------------ */
 /* ------------------------------------- */
 .App {
-    text-align: center;
+  text-align: center;
 }
 .App-logo {
-    height: 40vmin;
-    pointer-events: none;
+  height: 40vmin;
+  pointer-events: none;
 }
 @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 .App-header {
-        background-color: var(--lgreen);
+  background-color: var(--lgreen);
 
-    min-height: ppvh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: var(--lgreen);
+  min-height: ppvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--lgreen);
 }
 .App-link {
-    color: #61dafb;
+  color: #61dafb;
 }
 /* ------------------------------------- */
 /* ------------     Hero     ----------- */
 /* ------------------------------------- */
 .hero.is-success .tabs.is-boxed a:hover,
 .hero.is-success .tabs.is-toggle a:hover {
-    background-color: rgba(10, 10, 10, 0.5);
+  background-color: rgba(10, 10, 10, 0.5);
 }
 .hero-body,
 .hero-foot,
 .hero-head {
-        background-color: var(--lgreen);
-
+  background-color: var(--lgreen);
 }
 .hero-body {
-    flex-grow: 6;
-    flex-shrink: 1;
-    padding: 2.25rem;
+  flex-grow: 6;
+  flex-shrink: 1;
+  padding: 2.25rem;
 }
 .hero.is-success {
-        background-color: var(--lgreen);
-
-
+  background-color: var(--lgreen);
 }
 /* .hero-head {
     /* padding: 1%; */
@@ -113,190 +108,187 @@ body {
 /* ------------------------------------- */
 /* -------    Header + NavBar     ------ */
 /* ------------------------------------- */
-.hero.is-success, .container {
-        background-color: var(--lgreen);
+.hero.is-success,
+.container {
+  background-color: var(--lgreen);
 }
 
-.img{
-    height:200px;
-    width:50%;
+.img {
+  height: 200px;
+  width: 50%;
 }
 
 .headerImage {
-    height: 50%;
-    width: 50%;
-    padding: 2.25rem;
+  height: 50%;
+  width: 50%;
+  padding: 2.25rem;
 }
 .navbar,
 .navbar-end,
 .navbar-menu,
 .navbar-start {
-    align-items: stretch;
-    display: unset;
+  align-items: stretch;
+  display: unset;
 }
 .navbar {
-    min-height: 2.25rem;
+  min-height: 2.25rem;
 }
 /* ------------------------------------- */
 /* ------------- *Cards ---------------- */
 /* ------------------------------------- */
 .card-content {
-    background-color: transparent;
-    padding: 0.2rem;
-    color: var(--light);
-    text-align: center;
-    margin-top: 3%;
+  background-color: transparent;
+  padding: 0.2rem;
+  color: var(--light);
+  text-align: center;
+  margin-top: 3%;
 }
 
-.card-image{
-    border-radius: 4px;
-    padding: 4px;
+.card-image {
+  border-radius: 4px;
+  padding: 4px;
 }
 
 .card-foot {
-    background-color: transparent;
-    align-items: stretch;
-    display: flex;
-    border-radius:3px;
-    position:absolute;
-    bottom:0;
-    width: 100%;
+  background-color: transparent;
+  align-items: stretch;
+  display: flex;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .card-instructions {
-    background-color: #fff;
-    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
-        0 0 0 1px rgba(10, 10, 10, 0.02);
-    color: #4a4a4a;
-    max-width: 100%;
-    position: relative;
-    margin-top: 4%;
-    overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+    0 0 0 1px rgba(10, 10, 10, 0.02);
+  color: #4a4a4a;
+  max-width: 100%;
+  position: relative;
+  margin-top: 4%;
+  overflow: hidden;
 }
 
 .card-content {
-    color: white;
-    border: none;
-    height: 70px;
-    margin-bottom:60px;
+  color: white;
+  border: none;
+  height: 70px;
+  margin-bottom: 60px;
 }
 .card-header {
-    background-color: var(--lorange);
-    color: var(--light);
-    display: flex;
-    flex-grow: 1;
-    font-size: 16px;
-    font-weight: bolder;
-    margin: 2px 4px; 
-    border-color: white;
+  background-color: var(--lorange);
+  color: var(--light);
+  display: flex;
+  flex-grow: 1;
+  font-size: 16px;
+  font-weight: bolder;
+  margin: 2px 4px;
+  border-color: white;
 }
 .card {
-    overflow: hidden;
-    content: "\f70e";
-    width:320px;
-    height:430px;
-   
-    /* position:relative; */
+  overflow: hidden;
+  content: "\f70e";
+  width: 320px;
+  height: 430px;
+
+  /* position:relative; */
 }
 /* ------------------------------------- */
 /* -------    Buttons + Tabs      ------ */
 /* ------------------------------------- */
 
-.button{
-    border-color: black;
+.button {
+  border-color: black;
 }
 .button.is-warning {
-    background-color: var(--yellow);
-    color: rgba(0, 0, 0);
-    font-weight: bolder;
-}
- 
-.save-button {
-    background-color: var(--dgreen);
-    color: var(--light);
-    font-weight: bolder;
-}
-.delete-button {
-    background-color: var(--lorange);
-    color: var(--light);
-    font-weight: bolder;
-}
-.details-button {
-    background-color: var(--lorange);
-    color: black;
-    font-weight: bolder;
+  background-color: var(--yellow);
+  color: rgba(0, 0, 0);
+  font-weight: bolder;
 }
 
-.li.a{
-    height:15%;
+.save-button {
+  background-color: var(--dgreen);
+  color: var(--light);
+  font-weight: bolder;
+}
+.delete-button {
+  background-color: var(--lorange);
+  color: var(--light);
+  font-weight: bolder;
+}
+.details-button {
+  background-color: var(--lorange);
+  color: black;
+  font-weight: bolder;
+}
+
+.li.a {
+  height: 15%;
 }
 
 .navtabs {
-    height: 50px;
-    font-size: large;
+  height: 50px;
+  font-size: large;
 }
 
-
-.tile{
-    background: #C5C9A4;
+.tile {
+  background: #c5c9a4;
 }
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
 /* ------------------------------------- */
 .has-text-centered {
-    text-align: left;
+  text-align: left;
 }
 /* ------------------------------------- */
 /* -------       Keyframes        ------ */
 /* ------------------------------------- */
 @keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 /* ------------------------------------- */
 /* -------         Font           ------ */
 /* ------------------------------------- */
 .caption {
-    background-color: var(--lgreen);
-    font-weight: bold;
-    border: var(-lgreen);
-    border-style: none;
-    padding: 0 5%;
-    color: #444444;
+  background-color: var(--lgreen);
+  font-weight: bold;
+  border: var(-lgreen);
+  border-style: none;
+  padding: 0 5%;
+  color: #444444;
 }
 h1 {
-    font-size: 24px;
-    color: var(--dgreen);
-    font-weight: 700;
+  font-size: 24px;
+  color: var(--dgreen);
+  font-weight: 700;
 }
-
 
 h2 {
-    font-size: 16px;
-    color: var(--dgreen);
-    font-weight: 700;
-
+  font-size: 16px;
+  color: var(--dgreen);
+  font-weight: 700;
 }
 .has-text-centered {
-    text-align: 478843;
+  text-align: 478843;
 }
 .input,
 .select select,
 .textarea {
-    background-color: #fff;
-    border-color: #ee662e;
-    border-width: 3px;
-    color: black;
-    -webkit-text-stroke-width: medium;
+  background-color: #fff;
+  border-color: #ee662e;
+  border-width: 3px;
+  color: black;
+  -webkit-text-stroke-width: medium;
 }
 .content {
-    border-color: var(--dgreen);
+  border-color: var(--dgreen);
 }
-
 
 /* ------------------------------------- */
 /* ------------- *Tables---------------- */
@@ -310,62 +302,61 @@ h2 {
 .ingredientsTable,
 .nutritionTable,
 .card-header-title .card.details {
-    margin-bottom: 3%;
-    margin-top: 3%;
+  margin-bottom: 3%;
+  margin-top: 3%;
 }
 .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
-    background-color: var(--dgreen);
-    color: var(--light);
+  background-color: var(--dgreen);
+  color: var(--light);
 }
 .table.is-striped:hover tbody tr:not(.is-selected):nth-child(even):hover {
-    background-color: var(--lorange);
-    color: black;
+  background-color: var(--lorange);
+  color: black;
 }
 .table.is-striped tbody tr:not(.is-selected):nth-child(odd) {
-        background-color: white;
-    color: black;
-
+  background-color: white;
+  color: black;
 }
 .table.is-striped:hover tbody tr:not(.is-selected):nth-child(odd):hover {
-    background-color: var(--lorange);
-    color: black;
+  background-color: var(--lorange);
+  color: black;
 }
 
-tr:hover{
-background-color: var(--yellow);
-color: black;
+tr:hover {
+  background-color: var(--yellow);
+  color: black;
 }
 
 .table thead {
-    background-color: var(--lorange);
-    color: black;
-    font-weight: bold;
-    border-color: black;
-    text-align: center;
-    font-size: 20px;
+  background-color: var(--lorange);
+  color: black;
+  font-weight: bold;
+  border-color: black;
+  text-align: center;
+  font-size: 20px;
 }
 .Inst-table {
-    border: none;
+  border: none;
 }
 .table {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 .table.is-striped tbody tr:not(.is-selected):nth-child(odd) {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 .td {
-    font-weight: bold;
-    width: 50%;
+  font-weight: bold;
+  width: 50%;
 }
 
 /* .table th:not([align]) {
     text-align: unset;
 } */
 
-.inclTD{
-    text-align: center;
+.inclTD {
+  text-align: center;
 }
 
 /* ------------------------------------- */
@@ -373,14 +364,12 @@ color: black;
 /* ------------------------------------- */
 
 .instructions {
-    padding: 0 2%;
-    font-size: large;
+  padding: 0 2%;
+  font-size: large;
 }
 
-
-.backgroundimage{
-        background-color: var(--lgreen);
-
+.backgroundimage {
+  background-color: var(--lgreen);
 }
 
 /* ------------------------------------- */
@@ -396,729 +385,744 @@ color: black;
 /* --------------------------------------------------- fullhd: from 1408px --------------------------------------------------- */
 /* --------------------------------------------------- fullhd: from 1408px --------------------------------------------------- */
 /* --------------------------------------------------- fullhd: from 1408px --------------------------------------------------- */
-@media screen and (min-width:1409px){
-    .image, .img{
-        display:block;
-        align: center;
-        height:auto;
-        width:60%;
-        margin: 0 15%;
-        }
-    .landingtext {
+@media screen and (min-width: 1409px) {
+  .image,
+  .img {
+    display: block;
+    align: center;
+    height: auto;
+    width: 60%;
+    margin: 0 15%;
+  }
+  .landingtext {
     font-size: 60px;
     color: var(--dgreen);
-    font-weight: 800
-    }
-    .landingtexth1{
-        font-size: 70px;
-    }
-    .navbar{
-        height:auto;
-    }
-    .tabs {
-        font-size:x-large;
-        padding: 45px 0;
-    }
-    .h1Library{
-        font-size:60px;
-    }
-    .h3Library{
-        font-size:40px;
-        color: var(--dgreen);
-    }
-/* -------- fullhd: from 1408px ---------*/    
-    .hero.is-fullheight .hero-body, 
-    .hero.is-fullheight-with-navbar .hero-body, 
-    .hero.is-halfheight .hero-body {
+    font-weight: 800;
+  }
+  .landingtexth1 {
+    font-size: 70px;
+  }
+  .navbar {
+    height: auto;
+  }
+  .tabs {
+    font-size: x-large;
+    padding: 45px 0;
+  }
+  .h1Library {
+    font-size: 60px;
+  }
+  .h3Library {
+    font-size: 40px;
+    color: var(--dgreen);
+  }
+  /* -------- fullhd: from 1408px ---------*/
+  .hero.is-fullheight .hero-body,
+  .hero.is-fullheight-with-navbar .hero-body,
+  .hero.is-halfheight .hero-body {
     align-items: flex-start;
-    display: flex;}
-      .tabicon{
-        color: white;
-    }
-    .tagicon{
-        background-color: var(--dgreen);
-    }
-    .label{
-        font-size:45px;
-    }
-    .checkbox{
-        font-size:20px;
-    }
-    .h2Settings{
-        font-size:27px;
-    }
-    .inputSettings, .input{
-        width: 100%;
-        height: auto;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        font-size:25px;
-    }
-/* -------- fullhd: from 1408px ---------*/
-    .details-button {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        width: 50%;
-    }
-    .save-button:hover {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bolder;
-    }
-    .save-button {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bold;
-        width: 50%;
-    }
-    
-    .details-button:hover {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bolder;
-    }
-        .moreButton {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        width: 100%;
+    display: flex;
+  }
+  .tabicon {
+    color: white;
+  }
+  .tagicon {
+    background-color: var(--dgreen);
+  }
+  .label {
+    font-size: 45px;
+  }
+  .checkbox {
+    font-size: 20px;
+  }
+  .h2Settings {
+    font-size: 27px;
+  }
+  .inputSettings,
+  .input {
+    width: 100%;
+    height: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+  }
+  /* -------- fullhd: from 1408px ---------*/
+  .details-button {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bold;
+    width: 50%;
+  }
+  .save-button:hover {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bolder;
+  }
+  .save-button {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bold;
+    width: 50%;
+  }
 
-    }
-    .moreButton:hover {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bolder;
-    }
-    .add-button:hover {
+  .details-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bolder;
+  }
+  .moreButton {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bold;
+    width: 100%;
+  }
+  .moreButton:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bolder;
+  }
+  .add-button:hover {
     background-color: var(--dgreen);
     color: var(--yellow);
     width: 25%;
     font-size: large;
-    }
-    .add-button {
+  }
+  .add-button {
     background-color: var(--yellow);
     color: var(--dgreen);
     font-size: large;
     width: 25%;
-    }
-    .buttonPantry{
-        font-size: 25px;
-        font-weight: bold;
-    }
+  }
+  .buttonPantry {
+    font-size: 25px;
+    font-weight: bold;
+  }
 
-.headearImageSPB{
-    width:100%;
+  .headearImageSPB {
+    width: 100%;
+  }
 }
-}
 /* --------------------------------------------------- widescreen: from 1216px --------------------------------------------------- */
 /* --------------------------------------------------- widescreen: from 1216px --------------------------------------------------- */
 /* --------------------------------------------------- widescreen: from 1216px --------------------------------------------------- */
 /* --------------------------------------------------- widescreen: from 1216px --------------------------------------------------- */
-@media screen and (max-width:1407px){
-    .image, .img{
-        display:block;
-        align: center;
-        height:auto;
-        width:60%;
-        margin: 0 15%;
-        }
-    .landingtext {
+@media screen and (max-width: 1407px) {
+  .image,
+  .img {
+    display: block;
+    align: center;
+    height: auto;
+    width: 60%;
+    margin: 0 15%;
+  }
+  .landingtext {
     font-size: 60px;
     color: var(--dgreen);
-    }
-    .landingtexth1{
-        font-size: 70px;
-    }
-    .navbar{
-        height:auto;
-    }
-    .tabs {
-        font-size:x-large;
-        padding: 45px 0;
-    }
-    .h1Library{
-        font-size:60px;
-    }
-    .h3Library{
-        font-size:40px;
-        color: var(--dgreen);
-    }
-/* -------- widescreen: from 1216px -----*/
-    .hero.is-fullheight .hero-body, 
-    .hero.is-fullheight-with-navbar .hero-body, 
-    .hero.is-halfheight .hero-body {
+  }
+  .landingtexth1 {
+    font-size: 70px;
+  }
+  .navbar {
+    height: auto;
+  }
+  .tabs {
+    font-size: x-large;
+    padding: 45px 0;
+  }
+  .h1Library {
+    font-size: 60px;
+  }
+  .h3Library {
+    font-size: 40px;
+    color: var(--dgreen);
+  }
+  /* -------- widescreen: from 1216px -----*/
+  .hero.is-fullheight .hero-body,
+  .hero.is-fullheight-with-navbar .hero-body,
+  .hero.is-halfheight .hero-body {
     align-items: flex-start;
-    display: flex;}
-      .tabicon{
-        color: white;
-    }
-    .tagicon{
-        background-color: hsl(106, 45%, 21%);
-    }
-    .label{
-        font-size:35px;
-    }
-    .checkbox{
-        font-size:26px;
-    }
-    .h2Settings{
-        font-size:27px;
-    }
-    .inputSettings, .input{
-        width: 100%;
-        height: auto;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        font-size:25px;
-    }
-/* -------- widescreen: from 1216px -----*/
-    .details-button {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        width: 50%;
-    }
-    .save-button:hover {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bolder;
-    }
-    .save-button {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bold;
-        width: 50%;
-    }
-    .details-button:hover {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bolder;
-        width: 50%;
-    }
-    .moreButton {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        width: 100%;
-    }
-    .moreButton:hover {
+    display: flex;
+  }
+  .tabicon {
+    color: white;
+  }
+  .tagicon {
+    background-color: hsl(106, 45%, 21%);
+  }
+  .label {
+    font-size: 35px;
+  }
+  .checkbox {
+    font-size: 26px;
+  }
+  .h2Settings {
+    font-size: 27px;
+  }
+  .inputSettings,
+  .input {
+    width: 100%;
+    height: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+  }
+  /* -------- widescreen: from 1216px -----*/
+  .details-button {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bold;
+    width: 50%;
+  }
+  .save-button:hover {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bolder;
+  }
+  .save-button {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bold;
+    width: 50%;
+  }
+  .details-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bolder;
+    width: 50%;
+  }
+  .moreButton {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bold;
+    width: 100%;
+  }
+  .moreButton:hover {
     background-color: var(--dgreen);
     color: var(--yellow);
     font-weight: bolder;
     width: 100%;
-    }
-    .add-button:hover {
+  }
+  .add-button:hover {
     background-color: var(--dgreen);
     color: var(--yellow);
     font-size: large;
     width: 25%;
-    }
-    .add-button {
+  }
+  .add-button {
     background-color: var(--yellow);
     color: var(--dgreen);
     font-size: large;
-        width: 25%;
-
-    }
-    .buttonPantry{
+    width: 25%;
+  }
+  .buttonPantry {
     font-size: 25px;
     font-weight: bold;
-    }
+  }
 }
 
 /* --------------------------------------------------- desktop: from 1024px ---------------------------------------------------*/
 /* --------------------------------------------------- desktop: from 1024px ---------------------------------------------------*/
 /* --------------------------------------------------- desktop: from 1024px ---------------------------------------------------*/
 /* --------------------------------------------------- desktop: from 1024px ---------------------------------------------------*/
-@media screen and (max-width:1215px){
-    .image, .img{
-    display:block;
+@media screen and (max-width: 1215px) {
+  .image,
+  .img {
+    display: block;
     align: center;
-    height:auto;
-    width:60%;
+    height: auto;
+    width: 60%;
     margin: 0 15%;
-    }
-    .landingtext {
+  }
+  .landingtext {
     font-size: 46px;
     color: var(--dgreen);
-    font-weight: 700
-    }
-    .landingtexth1{
-        font-size: 60px;
-    }
-    .navbar{
-        height:auto;
-    }
-    .tabs {
-        font-size:x-large;
-        padding: 45px 0;
-    }
-    .h1Library{
-        font-size:50px;
-    }
-    .h3Library{
-        font-size:35px;
-        color: var(--dgreen);
-    }
-/* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
-/* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
-/* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
-/* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
-    .hero.is-fullheight .hero-body, 
-    .hero.is-fullheight-with-navbar .hero-body, 
-    .hero.is-halfheight .hero-body {
+    font-weight: 700;
+  }
+  .landingtexth1 {
+    font-size: 60px;
+  }
+  .navbar {
+    height: auto;
+  }
+  .tabs {
+    font-size: x-large;
+    padding: 45px 0;
+  }
+  .h1Library {
+    font-size: 50px;
+  }
+  .h3Library {
+    font-size: 35px;
+    color: var(--dgreen);
+  }
+  /* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
+  /* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
+  /* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
+  /* --------------------------------------------------- desktop: from 1024px --------------------------------------------------- */
+  .hero.is-fullheight .hero-body,
+  .hero.is-fullheight-with-navbar .hero-body,
+  .hero.is-halfheight .hero-body {
     align-items: flex-start;
-    display: flex;}
-    .tabicon{
-        color: white;
-    }
-    .tagicon{
-        background-color: var(--dgreen);
-    }
-     .label{
-        font-size:33px;
-    }
-    .checkbox{
-        font-size:22px;
-    }
-    .h2Settings{
-        font-size:27px;
-    }
-    .inputSettings, .input{
-        width: 100%;
-        height: auto;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        font-size:25px;
-    }
-/* -------- desktop: from 1024px --------*/
-    .details-button {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        width: 50%;
-    }
-    .save-button:hover {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bolder;
-    }
-    .save-button {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bold;
-        width: 50%;
-    }
-    
-    .details-button:hover {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bolder;
-        width: 50%;
-    }
-        .moreButton {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        width: 100%;
-
-    }
-    .moreButton:hover {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bolder;
-        width: 100%;
-    }
-    .add-button:hover {
+    display: flex;
+  }
+  .tabicon {
+    color: white;
+  }
+  .tagicon {
     background-color: var(--dgreen);
-    color: var(--yellow);
-    font-size: large;
-    width: 25%;
-    }
-    .add-button {
+  }
+  .label {
+    font-size: 33px;
+  }
+  .checkbox {
+    font-size: 22px;
+  }
+  .h2Settings {
+    font-size: 27px;
+  }
+  .inputSettings,
+  .input {
+    width: 100%;
+    height: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+  }
+  /* -------- desktop: from 1024px --------*/
+  .details-button {
     background-color: var(--yellow);
     color: var(--dgreen);
-    width: 25%;
-    font-size: large;
-    }
-    .buttonPantry{
-        font-size: 25px;
-        font-weight: bold;
-    }
-}
-/* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
-/* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
-/* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
-/* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
-@media screen and (max-width:1023px){
-    .image, .img{
-        display:block;
-        height:auto;
-        width:75%
-    }
-    .landingtext {
-    font-size: 34px;
-    color: var(--dgreen);
-    font-weight: 750
-    }
-    .label{
-        font-size:30px;
-    }
-    .checkbox{
-        font-size:20px;
-    }
-    .tabs {
-        font-size:medium;
-        padding: 30px 0;
-    }
-/* -------- tablet: from 769px ----------*/
-    .navbar{
-        height:auto;
-    }
-    .tabs {
-        font-size:x-large;
-        padding: 45px 0;
-    }
-    .h1Library{
-        font-size:50px;
-    }
-    .h3Library{
-        font-size:35px;
-        color: var(--dgreen);
-    }
-/* -------- tablet: from 769px ----------*/
-    .hero.is-fullheight .hero-body, 
-    .hero.is-fullheight-with-navbar .hero-body, 
-    .hero.is-halfheight .hero-body {
-    align-items: flex-start;
-    display: flex;}
-
-    .tabicon{
-        color: white;
-    }
-    .tagicon{
-        background-color: hsl(106, 45%, 21%);
-    }
-    .label{
-        font-size:27px;
-    }
-    .checkbox{
-        font-size:20px;
-    }
-    .h2Settings{
-        font-size:27px;
-    }
-/* -------- tablet: from 769px ----------*/
-    .inputSettings, .input{
-        width: 100%;
-        height: auto;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        font-size:25px;
-    }
-    .details-button {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        width: 50%;
-    }
-    .save-button:hover {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bolder;
-    }
-    .save-button {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bold;
-        width: 50%;
-    }
-    .details-button:hover {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bolder;
-        width: 50%;
-    }
-        .moreButton {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        width: 100%;
-    }
-    .moreButton:hover {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bolder;
-        width: 100%;
-    }
-     .add-button:hover {
-    background-color: var(--dgreen);
-    color: var(--yellow);
-    font-size: large;
-    width: 25%;
-    }
-    .add-button {
+    font-weight: bold;
+    width: 50%;
+  }
+  .save-button:hover {
     background-color: var(--yellow);
     color: var(--dgreen);
-    width: 25%;
-    font-size: large;
-    }
-    .buttonPantry{
-        font-size: 25px;
-        font-weight: bold;
-    }
-}
-/* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
-/* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
-/* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
-/* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
-@media screen and (max-width:768px){    
-    .image, .img{
-        display:block;
-        height:auto;
-        width:75%
-        }
-    .landingtext {
-    font-size: 30px;
-    color: var(--dgreen);
-    font-weight: 700
-    }
-    .label{
-        font-size:30px;
-    }
-    .checkbox{
-        font-size:20px;
-    }
-    .tabs {
-        font-size:large;
-        padding: 35px 0;
-    }
-     .navbar{
-        height:auto;
-    }
-    .tabs {
-        font-size:x-large;
-        padding: 45px 0;
-    }
-    .h1Library{
-        font-size:50px;
-    }
-    .h3Library{
-        font-size:35px;
-        color: var(--dgreen);
-    }
-/* -------- mobile: up to 768px ---------*/
-    .hero.is-fullheight .hero-body, 
-    .hero.is-fullheight-with-navbar .hero-body, 
-    .hero.is-halfheight .hero-body {
-    align-items: flex-start;
-    display: flex;}
-    
-    .tabicon{
-        color: white;
-    }
-    .tagicon{
-        background-color: hsl(106, 45%, 21%);
-    }
-    .label{
-        font-size:25px;
-    }
-    .checkbox{
-        font-size:15px;
-    }
-    .h2Settings{
-        font-size:27px;
-    }
-    .inputSettings, .input{
-        width: 100%;
-        height: 70px;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        font-size:25px;
-        font-weight: bold;
-    }
-/* -------- mobile: up to 768px ---------*/
-    .details-button {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        width: 50%;
-    }
-    .save-button:hover {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bolder;
-    }
-    .save-button {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bold;
-        width: 50%;
-    }
-    
-    .details-button:hover {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bolder;
-        width: 50%;
-    }
-    .moreButton {
+    font-weight: bolder;
+  }
+  .save-button {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bold;
+    width: 50%;
+  }
+
+  .details-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bolder;
+    width: 50%;
+  }
+  .moreButton {
     background-color: var(--yellow);
     color: var(--dgreen);
     font-weight: bold;
     width: 100%;
-    }
-    .moreButton:hover {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bolder;
-        width: 100%;
-    }
-     .add-button:hover {
+  }
+  .moreButton:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bolder;
+    width: 100%;
+  }
+  .add-button:hover {
     background-color: var(--dgreen);
     color: var(--yellow);
     font-size: large;
     width: 25%;
-    }
-    .add-button {
+  }
+  .add-button {
     background-color: var(--yellow);
     color: var(--dgreen);
     width: 25%;
     font-size: large;
-    }
-    .buttonPantry{
-        font-size: 25px;
-        font-weight: bold;
-    }
+  }
+  .buttonPantry {
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+/* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
+/* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
+/* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
+/* --------------------------------------------------- tablet: from 769px ---------------------------------------------------*/
+@media screen and (max-width: 1023px) {
+  .image,
+  .img {
+    display: block;
+    height: auto;
+    width: 75%;
+  }
+  .landingtext {
+    font-size: 34px;
+    color: var(--dgreen);
+    font-weight: 750;
+  }
+  .label {
+    font-size: 30px;
+  }
+  .checkbox {
+    font-size: 20px;
+  }
+  .tabs {
+    font-size: medium;
+    padding: 30px 0;
+  }
+  /* -------- tablet: from 769px ----------*/
+  .navbar {
+    height: auto;
+  }
+  .tabs {
+    font-size: x-large;
+    padding: 45px 0;
+  }
+  .h1Library {
+    font-size: 50px;
+  }
+  .h3Library {
+    font-size: 35px;
+    color: var(--dgreen);
+  }
+  /* -------- tablet: from 769px ----------*/
+  .hero.is-fullheight .hero-body,
+  .hero.is-fullheight-with-navbar .hero-body,
+  .hero.is-halfheight .hero-body {
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .tabicon {
+    color: white;
+  }
+  .tagicon {
+    background-color: hsl(106, 45%, 21%);
+  }
+  .label {
+    font-size: 27px;
+  }
+  .checkbox {
+    font-size: 20px;
+  }
+  .h2Settings {
+    font-size: 27px;
+  }
+  /* -------- tablet: from 769px ----------*/
+  .inputSettings,
+  .input {
+    width: 100%;
+    height: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+  }
+  .details-button {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bold;
+    width: 50%;
+  }
+  .save-button:hover {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bolder;
+  }
+  .save-button {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bold;
+    width: 50%;
+  }
+  .details-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bolder;
+    width: 50%;
+  }
+  .moreButton {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bold;
+    width: 100%;
+  }
+  .moreButton:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bolder;
+    width: 100%;
+  }
+  .add-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-size: large;
+    width: 25%;
+  }
+  .add-button {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    width: 25%;
+    font-size: large;
+  }
+  .buttonPantry {
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+/* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
+/* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
+/* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
+/* --------------------------------------------------- mobile: up to 768px --------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .image,
+  .img {
+    display: block;
+    height: auto;
+    width: 75%;
+  }
+  .landingtext {
+    font-size: 30px;
+    color: var(--dgreen);
+    font-weight: 700;
+  }
+  .label {
+    font-size: 30px;
+  }
+  .checkbox {
+    font-size: 20px;
+  }
+  .tabs {
+    font-size: large;
+    padding: 35px 0;
+  }
+  .navbar {
+    height: auto;
+  }
+  .tabs {
+    font-size: x-large;
+    padding: 45px 0;
+  }
+  .h1Library {
+    font-size: 50px;
+  }
+  .h3Library {
+    font-size: 35px;
+    color: var(--dgreen);
+  }
+  /* -------- mobile: up to 768px ---------*/
+  .hero.is-fullheight .hero-body,
+  .hero.is-fullheight-with-navbar .hero-body,
+  .hero.is-halfheight .hero-body {
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .tabicon {
+    color: white;
+  }
+  .tagicon {
+    background-color: hsl(106, 45%, 21%);
+  }
+  .label {
+    font-size: 25px;
+  }
+  .checkbox {
+    font-size: 15px;
+  }
+  .h2Settings {
+    font-size: 27px;
+  }
+  .inputSettings,
+  .input {
+    width: 100%;
+    height: 70px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  /* -------- mobile: up to 768px ---------*/
+  .details-button {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bold;
+    width: 50%;
+  }
+  .save-button:hover {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bolder;
+  }
+  .save-button {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bold;
+    width: 50%;
+  }
+
+  .details-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bolder;
+    width: 50%;
+  }
+  .moreButton {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bold;
+    width: 100%;
+  }
+  .moreButton:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bolder;
+    width: 100%;
+  }
+  .add-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-size: large;
+    width: 25%;
+  }
+  .add-button {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    width: 25%;
+    font-size: large;
+  }
+  .buttonPantry {
+    font-size: 25px;
+    font-weight: bold;
+  }
 }
 /* --------------------------------------------------- mobile: up to 367px --------------------------------------------------- */
 /* --------------------------------------------------- mobile: up to 367px --------------------------------------------------- */
 /* --------------------------------------------------- mobile: up to 367px --------------------------------------------------- */
 /* --------------------------------------------------- mobile: up to 367px --------------------------------------------------- */
 /* --------------------------------------------------- mobile: up to 367px --------------------------------------------------- */
-@media screen and (max-width:376px){    
-    .image, .img{
-        display:block;
-        height:auto;
-        }
-    .landingtext {
+@media screen and (max-width: 376px) {
+  .image,
+  .img {
+    display: block;
+    height: auto;
+  }
+  .landingtext {
     font-size: 26px;
     color: var(--dgreen);
     font-weight: 700;
-    }
-    .landingtexth1{
-        font-size: 50px;
-    }
-    .label{
-        font-size:30px;
-    }
-    .checkbox{
-        font-size:20px;
-    }
-    .tabs {
-        font-size:medium;
-        padding: 30px 0;
-    }
-      
-    .navbar{
-        height:auto;
-    }
-    .tabs {
-        font-size:x-large;
-        padding: 45px 0;
-    }
-/* -------- mobile: up to 367px ---------*/
-    .h1Library{
-        font-size:20px;
-    }
-    .h3Library{
-        font-size:17px;
-        color: var(--dgreen);
-    }
-    .npm, .hero-body, 
-    .hero.is-fullheight-with-navbar, .hero-body, 
-    .hero.is-halfheight, .hero-body {
+  }
+  .landingtexth1 {
+    font-size: 50px;
+  }
+  .label {
+    font-size: 30px;
+  }
+  .checkbox {
+    font-size: 20px;
+  }
+  .tabs {
+    font-size: medium;
+    padding: 30px 0;
+  }
+
+  .navbar {
+    height: auto;
+  }
+  .tabs {
+    font-size: x-large;
+    padding: 45px 0;
+  }
+  /* -------- mobile: up to 367px ---------*/
+  .h1Library {
+    font-size: 20px;
+  }
+  .h3Library {
+    font-size: 17px;
+    color: var(--dgreen);
+  }
+  .npm,
+  .hero-body,
+  .hero.is-fullheight-with-navbar,
+  .hero-body,
+  .hero.is-halfheight,
+  .hero-body {
     align-items: flex-start;
     display: flex;
-    width:100%;
-    }
+    width: 100%;
+  }
 
-    .tabicon{
-        color: white;
-    }
-    .tagicon{
-        background-color: #294e1d;
-    }
-    .label{
-        font-size:20px;
-    }
-    .checkbox{
-        font-size:12px;
-    }
-    .h2Settings{
-        font-size:17px;
-    }
-/* -------- mobile: up to 367px ---------*/
-    .inputSettings, .input{
-        width: 100%;
-        height: 45px;
-        padding: 6px 12px;
-        box-sizing: border-box;
-        font-size:18px;
-    }
-    .details-button {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        font-size: auto;
-        width: 50%;
-    }
-    .save-button {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bold;
-        font-size: auto;
-    }
-    
-    .details-button:hover {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bolder;
+  .tabicon {
+    color: white;
+  }
+  .tagicon {
+    background-color: #294e1d;
+  }
+  .label {
+    font-size: 20px;
+  }
+  .checkbox {
+    font-size: 12px;
+  }
+  .h2Settings {
+    font-size: 17px;
+  }
+  /* -------- mobile: up to 367px ---------*/
+  .inputSettings,
+  .input {
+    width: 100%;
+    height: 45px;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    font-size: 18px;
+  }
+  .details-button {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bold;
+    font-size: auto;
+    width: 50%;
+  }
+  .save-button {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bold;
+    font-size: auto;
+  }
 
-    }
-    .moreButton {
-        background-color: var(--yellow);
-        color: var(--dgreen);
-        font-weight: bold;
-        width: 100%;
-
-    }
-    .moreButton:hover {
-        background-color: var(--dgreen);
-        color: var(--yellow);
-        font-weight: bolder;
-        width: 100%;
-    }
-     .add-button:hover {
+  .details-button:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bolder;
+  }
+  .moreButton {
+    background-color: var(--yellow);
+    color: var(--dgreen);
+    font-weight: bold;
+    width: 100%;
+  }
+  .moreButton:hover {
+    background-color: var(--dgreen);
+    color: var(--yellow);
+    font-weight: bolder;
+    width: 100%;
+  }
+  .add-button:hover {
     background-color: var(--dgreen);
     color: var(--yellow);
     font-size: large;
     width: 25%;
-    }
-    .add-button {
+  }
+  .add-button {
     background-color: var(--yellow);
     color: var(--dgreen);
     width: 25%;
     font-size: large;
-    }
-    .buttonPantry{ 
-        font-size: 25px;
-        font-weight: bold;
-    }
+  }
+  .buttonPantry {
+    font-size: 25px;
+    font-weight: bold;
+  }
 }
 
 .tabs {
-    background: var(--lgreen);
-    padding: 0;
+  background: var(--lgreen);
+  padding: 0;
 }
