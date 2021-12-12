@@ -29,9 +29,10 @@ export default () => {
                                         ))} 
                                 </p> 
                             </article>
-
+                                    
                             <article className="tile is-child notification">
-                                <div class="field is-grouped is-grouped-multiline">
+                                <div class="title field is-grouped is-grouped-multiline">
+                                    Missing Ingredients:
                                     <div class="control">
                                         {recipe.usedIngredients.map((item) => (
                                             <span key={uuid()} class="tags has-addons"><span class="tag is-dark">{item.name}</span><span class="tag is-info">{item.amount} {item.unit}</span></span>
