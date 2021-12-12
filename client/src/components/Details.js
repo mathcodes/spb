@@ -73,8 +73,6 @@ export default () => {
                 </div>
             </div>
 
-//             {recipe.nutrients.length > 0 ? () : null}
-
             <br />
             {recipe.usedIngredients.length > 0 ? (
                 <FlexContainer>
