@@ -39,7 +39,16 @@ export default () => {
 
                             </article>
                             <article className="tile is-child notification is-warning">
-
+                            <div class="field is-grouped is-grouped-multiline">
+                                <div class="control">
+                                    {recipe.usedIngredients.map((item) => (
+                                        <div key={uuid()} class="tags has-addons">
+                                            <span class="tag is-dark">{item.name}</span>
+                                            <span class="tag is-info">{item.amount} {item.unit}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                             </article>
                         </div>
                         <div className="tile is-parent">
