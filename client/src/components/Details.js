@@ -13,67 +13,66 @@ export default () => {
 
     return (
         <>
-        <LogoSmall/>
-        
-        <div className="tile is-ancestor">
-        <div className="tile is-vertical is-8">
-          <div className="tile">
-            <div className="tile is-parent is-vertical">
-              <article className="tile is-child notification is-primary tileStyles">
-                <p className="title">
-                    <tbody>
-                        <tr>
-                            <th className="is-6">Name</th>
-                            <th className="is-6">Amount</th>
-                        </tr>
-                        {recipe.nutrients.slice(0, 8).map((item) => (
-                            <tr key={uuid()}>
-                                <td>{item.name}</td>
-                                <td>
-                                    {item.amount} {item.unit}
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </p>
-                <p className="subtitle">Top tile</p>
-              </article>
-              <article className="tile is-child notification is-warning">
-                <p className="title">...tiles</p>
-                <p className="subtitle">Bottom tile</p>
-              </article>
+            <LogoSmall />
+
+            <div className="tile is-ancestor">
+                <div className="tile is-vertical is-8">
+                    <div className="tile">
+                        <div className="tile is-parent is-vertical">
+                            <article className="tile is-child notification is-primary tileStyles">
+                                <p className="title">
+                                    <tbody>
+                                        <tr>
+                                            <th className="is-6">Name</th>
+                                            <th className="is-6">Amount</th>
+                                        </tr>
+                                        {recipe.nutrients.slice(0, 8).map((item) => (
+                                            <tr key={uuid()}>
+                                                <td>{item.name}</td>
+                                                <td>
+                                                    {item.amount} {item.unit}
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </p>
+
+                            </article>
+                            <article className="tile is-child notification is-warning">
+
+                            </article>
+                        </div>
+                        <div className="tile is-parent">
+                            <article className="tile is-child notification is-info">
+                                <p className="title">Middle tile</p>
+                                <p className="subtitle">With an image</p>
+                                <figure className="image is-4by3">
+                                    <img src="https://bulma.io/images/placeholders/640x480.png" />
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+                    <div className="tile is-parent">
+                        <article className="tile is-child notification is-danger">
+                            <p className="title">Wide tile</p>
+                            <p className="subtitle">Aligned with the right tile</p>
+                            <div className="content">
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div className="tile is-parent">
+                    <article className="tile is-child notification is-success">
+                        <div className="content">
+                            <p className="title">Tall tile</p>
+                            <p className="subtitle">With even more content</p>
+                            <div className="content">
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <div className="tile is-parent">
-              <article className="tile is-child notification is-info">
-                <p className="title">Middle tile</p>
-                <p className="subtitle">With an image</p>
-                <figure className="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/640x480.png" />
-                </figure>
-              </article>
-            </div>
-          </div>
-          <div className="tile is-parent">
-            <article className="tile is-child notification is-danger">
-              <p className="title">Wide tile</p>
-              <p className="subtitle">Aligned with the right tile</p>
-              <div className="content">
-              </div>
-            </article>
-          </div>
-        </div>
-        <div className="tile is-parent">
-          <article className="tile is-child notification is-success">
-            <div className="content">
-              <p className="title">Tall tile</p>
-              <p className="subtitle">With even more content</p>
-              <div className="content">
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-        
+
             {recipe.nutrients.length > 0 ? (
                 <FlexContainer>
                     {/* ******************************Nutrition table****************************** */}
@@ -121,14 +120,16 @@ export default () => {
                                 <th>Name</th>
                                 <th>Amount</th>
                             </tr>
-                            {recipe.usedIngredients.map((item) => (
-                                <tr key={uuid()}>
-                                    <td>{item.name}</td>
-                                    <td>
-                                        {item.amount} {item.unit}
-                                    </td>
-                                </tr>
-                            ))}
+                            <div class="field is-grouped is-grouped-multiline">
+                                <div class="control">
+                                    {recipe.usedIngredients.map((item) => (
+                                        <div key={uuid()} class="tags has-addons">
+                                            <span class="tag is-dark">{item.name}</span>
+                                            <span class="tag is-info">{item.amount} {item.unit}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </tbody>
                     </table>
                 </FlexContainer>
