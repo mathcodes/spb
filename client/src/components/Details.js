@@ -19,7 +19,7 @@ export default () => {
                 <div className="tile is-vertical is-8">
                     <div className="tile">
                         <div className="tile is-parent is-vertical">
-                            <article className="tile is-child notification is-primary tileStyles">
+                            <article className="tile is-child notification tileStyles">
                                 <p className="title">
                                     <tbody>
                                         <tr>
@@ -38,7 +38,7 @@ export default () => {
                                 </p>
 
                             </article>
-                            <article className="tile is-child notification is-warning">
+                            <article className="tile is-child notification">
                             <div class="field is-grouped is-grouped-multiline">
                                 <div class="control">
                                     {recipe.usedIngredients.map((item) => (
@@ -52,7 +52,7 @@ export default () => {
                             </article>
                         </div>
                         <div className="tile is-parent">
-                            <article className="tile is-child notification is-info">
+                            <article className="tile is-child notification">
                                 <p className="title">Middle tile</p>
                                 <p className="subtitle">With an image</p>
                                 <figure className="image is-4by3">
@@ -62,7 +62,7 @@ export default () => {
                         </div>
                     </div>
                     <div className="tile is-parent">
-                        <article className="tile is-child notification is-danger">
+                        <article className="tile is-child notification">
                             <p className="title">Wide tile</p>
                             <p className="subtitle">Aligned with the right tile</p>
                             <div className="content">
@@ -71,7 +71,7 @@ export default () => {
                     </div>
                 </div>
                 <div className="tile is-parent">
-                    <article className="tile is-child notification is-success">
+                    <article className="tile is-child notification">
                         <div className="content">
                             <p className="title">Tall tile</p>
                             <p className="subtitle">With even more content</p>
