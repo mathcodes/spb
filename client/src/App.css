@@ -355,6 +355,10 @@ color: black;
     width: 50%;
 }
 
+.tbody{
+    font-size: large;
+    text-align: justify;
+}
 /* .table th:not([align]) {
     text-align: unset;
 } */
