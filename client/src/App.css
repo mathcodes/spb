@@ -217,12 +217,12 @@ body {
     font-weight: bolder;
 }
 .delete-button {
-    background-color: red;
+    background-color: var(--lorange);
     color: var(--light);
     font-weight: bolder;
 }
 .details-button {
-    background-color: var(--yellow);
+    background-color: var(--lorange);
     color: black;
     font-weight: bolder;
 }
@@ -234,6 +234,11 @@ body {
 .navtabs {
     height: 50px;
     font-size: large;
+}
+
+
+.tile{
+    background: #C5C9A4;
 }
 /* ------------------------------------- */
 /* -------    Misc Components     ------ */
@@ -355,10 +360,6 @@ color: black;
     width: 50%;
 }
 
-.tbody{
-    font-size: large;
-    text-align: justify;
-}
 /* .table th:not([align]) {
     text-align: unset;
 } */
