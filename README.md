@@ -2,8 +2,7 @@
 
 ![badge](https://img.shields.io/badge/Tech-Mongo-green)  ![badge](https://img.shields.io/badge/Tech-Express-blue)  ![badge](https://img.shields.io/badge/Tech-React-teal)   ![badge](https://img.shields.io/badge/Tech-Node-olive)   
 
-![badge](https://img.shields.io/badge/Tech-Mongo-green) 
-
+ 
 
 ## Table of Contents
   - [Video](#video)     
