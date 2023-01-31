@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const fetch = require("node-fetch");
 const User = require("./Models/user");
+const bodyParser = require("body-parser");
 require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -25,7 +26,7 @@ mongoose.connect(
 app.post("/api/search", (req, res) => {
     let url = new URL("https://api.spoonacular.com/recipes/complexSearch");
     const params = { ...req.body, apiKey: process.env.apiKey };
-    console.log(key, params[key])
+    console.log("key:",key, params[key])
     Object.keys(params).forEach((key) =>console.log(key, params[key]),
         url.searchParams.append(key, params[key])
         

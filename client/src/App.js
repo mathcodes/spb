@@ -56,7 +56,7 @@ export default () => {
         if (isAuthenticated) {
             fetch("/db/set", {
                 method: "POST",
-                headers: { "Content-Type": "application.json" },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(state),
             })
                 .then(() => console.log("data saved to server storage"))

@@ -81,13 +81,12 @@ export default ({ dispatch }) => {
 
             .then((response) => {
                 console.log(response)
-                response.json()
-                console.log(response)
+                return response.json()
             })
-            .then(( {results} ) =>{
+            .then((results) =>{
+                let recipes = results.map((recipe) => pruneRecipe(recipe))
                 dispatch({
-                    recipes: results.map((recipe) => pruneRecipe(recipe)),
-                })}
+                    recipes: recipes})}
             )
 
             .catch((err) => console.log(err));
