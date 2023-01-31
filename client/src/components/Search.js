@@ -55,7 +55,7 @@ export default ({ dispatch }) => {
     const getRecipes = () => {
 
         console.log("getRecipes")
-        console.log(data)
+         
         fetch("api/search", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
