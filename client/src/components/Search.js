@@ -52,7 +52,7 @@ export default ({ dispatch }) => {
     };
 
     // Get recipes button handler
-    const getRecipes = () => {
+    const getRecipes = (req, res) => {
 
         console.log("getRecipes")
          
@@ -79,16 +79,10 @@ export default ({ dispatch }) => {
             }),
         })  
 
-            .then((response) => {
-                console.log(response)
-                return response.json()
-            })
-            .then((results) =>{
-                const recipes = results.map((recipe) => pruneRecipe(recipe))
-                console.log(recipes)
-                dispatch({
-                    recipes: recipes})}
-            )
+        .then((response) => response.json())
+        .then((results) => res.json(results))
+ 
+
 
             .catch((err) => console.log(err));
     };
