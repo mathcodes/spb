@@ -6,8 +6,8 @@ import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
     <Auth0Provider
-        domain="dev-t7jawcee.us.auth0.com"
-        clientId="4Sj3xSG8lGxCi51BzJhhsY88dG0QNAis"
+        domain={process.env.AUTH0_DOMAIN}
+        clientId={process.env.AUTH0_CLIENT_ID}
         redirectUri="https://saveeatrepeat.vercel.app/">
         <App />
     </Auth0Provider>,
