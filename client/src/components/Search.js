@@ -58,7 +58,10 @@ export default ({ dispatch }) => {
          
         fetch("api/search", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
             body: JSON.stringify({
                 cuisine: cuisine.join(),
                 excludeCuisine: excludeCuisine.join(),
