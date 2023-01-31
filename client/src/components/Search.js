@@ -52,7 +52,11 @@ export default ({ dispatch }) => {
     };
 
     // Get recipes button handler
-    const getRecipes = () => {
+    const getRecipes = async () => {
+
+        console.log("getRecipes")
+        console.log("cuisine", cuisine)
+        await
         fetch("api/search", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -71,13 +75,24 @@ export default ({ dispatch }) => {
                 addRecipeNutrition: true,
                 ignorePantry: true,
             }),
-        })
-            .then((response) => response.json())
-            .then(({ results }) =>
+        })  
+
+            .then((response) => {
+                console.log(response)
+                response.json()
+            })
+
+            .then((data) => {
+                console.log(data)
+                return data
+            })
+            .then(({ results }) =>{
+                console.log(results)
                 dispatch({
                     recipes: results.map((recipe) => pruneRecipe(recipe)),
-                })
+                })}
             )
+
             .catch((err) => console.log(err));
     };
 
