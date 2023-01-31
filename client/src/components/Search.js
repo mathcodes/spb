@@ -52,11 +52,10 @@ export default ({ dispatch }) => {
     };
 
     // Get recipes button handler
-    const getRecipes = async () => {
+    const getRecipes = () => {
 
         console.log("getRecipes")
         console.log(data)
-        await
         fetch("api/search", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -82,13 +81,12 @@ export default ({ dispatch }) => {
                 response.json()
                 console.log(response)
             })
-            .then(( data ) =>{
+            .then(( {data} ) =>{
                 console.log(data)
                 dispatch({
                     recipes: data.map((recipe) => pruneRecipe(recipe)),
                 })}
             )
-
             .catch((err) => console.log(err));
     };
 
