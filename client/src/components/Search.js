@@ -56,7 +56,7 @@ export default ({ dispatch }) => {
 
         console.log("getRecipes")
          
-        fetch("/api/search", {
+        fetch("api/search", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -153,7 +153,7 @@ export default ({ dispatch }) => {
                     
                     <RecipeContainer dispatch={dispatch} recipes={recipes} />
                     {recipes.length > 0 ? (
-                        <button
+                        <button 
                             className="moreButton button is-fullwidth"
                             onClick={moreRecipes}>
                             Get More Recipes
