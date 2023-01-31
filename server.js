@@ -34,7 +34,7 @@ app.post("/api/search", (req, res) => {
     // fetch ('https://api.spoonacular.com/recipes/complexSearch?apiKey=30f3274cbfe143059c9b4053147fba68&includeNutrition=true')
     fetch(url)
         .then((response) => response.json())
-        .then((results) => res.json(results));
+        .then(({results}) => res.json(results));
 });
 
 // This route isn't working on deployed app

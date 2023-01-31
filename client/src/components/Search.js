@@ -52,16 +52,10 @@ export default ({ dispatch }) => {
     };
 
     // Get recipes button handler
-    const getRecipes = (req, res) => {
-
-        console.log("getRecipes")
-         
-        fetch("/api/search", {
+    const getRecipes = () => {
+        fetch("api/search", {
             method: "POST",
-            headers: { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 cuisine: cuisine.join(),
                 excludeCuisine: excludeCuisine.join(),
@@ -77,13 +71,13 @@ export default ({ dispatch }) => {
                 addRecipeNutrition: true,
                 ignorePantry: true,
             }),
-        })  
-
-        .then((response) => response.json())
-        .then((results) => res.json(results))
- 
-
-
+        })
+            .then((response) => response.json())
+            .then(({ results }) =>
+                dispatch({
+                    recipes: results.map((recipe) => pruneRecipe(recipe)),
+                })
+            )
             .catch((err) => console.log(err));
     };
 
@@ -144,7 +138,6 @@ export default ({ dispatch }) => {
                     <button
                         className="moreButton button is-fullwidth"
                         onClick={getRecipes}>
-                        {/* this button needs an event handler */}
                         Get Recipes
                     </button>
                     
