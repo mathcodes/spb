@@ -85,6 +85,7 @@ export default ({ dispatch }) => {
             })
             .then((results) =>{
                 const recipes = results.map((recipe) => pruneRecipe(recipe))
+                console.log(recipes)
                 dispatch({
                     recipes: recipes})}
             )
