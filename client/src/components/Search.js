@@ -56,7 +56,7 @@ export default ({ dispatch }) => {
 
         console.log("getRecipes")
          
-        fetch("api/search", {
+        fetch("/api/search", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -81,7 +81,7 @@ export default ({ dispatch }) => {
                 response.json()
                 console.log(response)
             })
-            .then(( results ) =>{
+            .then(( {results} ) =>{
                 dispatch({
                     recipes: results.map((recipe) => pruneRecipe(recipe)),
                 })}
