@@ -81,9 +81,9 @@ export default ({ dispatch }) => {
                 response.json()
                 console.log(response)
             })
-            .then(( {data} ) =>{
+            .then(( results ) =>{
                 dispatch({
-                    recipes: data.map((recipe) => pruneRecipe(recipe)),
+                    recipes: results.map((recipe) => pruneRecipe(recipe)),
                 })}
             )
 

@@ -30,7 +30,7 @@ app.post("/api/search", (req, res) => {
         url.searchParams.append(key, params[key])
         
     );
-    fetch(url)
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=30f3274cbfe143059c9b4053147fba68&includeNutrition=true')
         .then((response) => response.json())
         .then((data) => res.json(data));
 });
