@@ -82,7 +82,6 @@ export default ({ dispatch }) => {
                 console.log(response)
             })
             .then(( {data} ) =>{
-                console.log(data)
                 dispatch({
                     recipes: data.map((recipe) => pruneRecipe(recipe)),
                 })}
