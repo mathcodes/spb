@@ -23,7 +23,7 @@ mongoose.connect(
 );
 
 // Routes
-app.post("/api/search", (req, res) => {
+app.post("api/search", (req, res) => {
     let url = new URL("https://api.spoonacular.com/recipes/complexSearch");
     const params = { ...req.body, apiKey: process.env.apiKey };
     console.log("key:",key, params[key])
