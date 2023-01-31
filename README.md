@@ -23,7 +23,7 @@ Super Pantry Buddy YouTube Video</a>
 
 
 ## Link
-<a href="https://superpantrybuddy.herokuapp.com/">
+<a href="https://saveeatrepeat.vercel.app/">
 Super Pantry Buddy</a>
  
 ## Licenses
