@@ -23,7 +23,7 @@ mongoose.connect(
 );
 
 // Routes
-app.post("/api/search", (req, res) => {
+app.post("/api/search", async (req, res) => {
     let url = new URL("https://api.spoonacular.com/recipes/complexSearch");
     const params = { ...req.body, apiKey: process.env.apiKey };
 
@@ -31,10 +31,17 @@ app.post("/api/search", (req, res) => {
         url.searchParams.append(key, params[key])
         
     );
+    await 
     // fetch ('https://api.spoonacular.com/recipes/complexSearch?apiKey=30f3274cbfe143059c9b4053147fba68&includeNutrition=true')
     fetch(url)
         .then((response) => response.json())
-        .then(({results}) => res.json(results));
+        .then((results) => (
+            console.log(results),
+            res.json(results))
+        )
+        .catch((err) => console.log(err));
+
+res.json({ results: "test" });
 });
 
 // This route isn't working on deployed app
