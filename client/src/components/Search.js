@@ -81,15 +81,10 @@ export default ({ dispatch }) => {
                 console.log(response)
                 response.json()
             })
-
-            .then((data) => {
-                console.log(data)
-                return data
-            })
-            .then(({ results }) =>{
-                console.log(results)
+            .then(({ data }) =>{
+                // console.log(results)
                 dispatch({
-                    recipes: results.map((recipe) => pruneRecipe(recipe)),
+                    recipes: data.map((recipe) => pruneRecipe(recipe)),
                 })}
             )
 
