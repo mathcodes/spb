@@ -55,7 +55,7 @@ export default ({ dispatch }) => {
     const getRecipes = async () => {
 
         console.log("getRecipes")
-        console.log("cuisine", cuisine)
+        console.log(data)
         await
         fetch("api/search", {
             method: "POST",
@@ -80,9 +80,10 @@ export default ({ dispatch }) => {
             .then((response) => {
                 console.log(response)
                 response.json()
+                console.log(response)
             })
-            .then(({ data }) =>{
-                // console.log(results)
+            .then(( data ) =>{
+                console.log(data)
                 dispatch({
                     recipes: data.map((recipe) => pruneRecipe(recipe)),
                 })}
