@@ -18,7 +18,8 @@ if (process.env.NODE_ENV === "production") {
 // Connect to DB
 mongoose.connect(
     process.env.MONGODB_URI || "mongodb+srv://user:user@devconnection.xzy3k.mongodb.net/?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useUnifiedTopology: true }
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    console.log("connected to db")
 );
 
 // Routes
