@@ -56,7 +56,7 @@ export default ({ dispatch }) => {
 
         console.log("getRecipes")
          
-        fetch("api/search", {
+        fetch("/api/search", {
             method: "POST",
             headers: { 
                 'Content-Type': 'application/json',
