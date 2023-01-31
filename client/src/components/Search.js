@@ -87,6 +87,7 @@ export default ({ dispatch }) => {
                     recipes: data.map((recipe) => pruneRecipe(recipe)),
                 })}
             )
+
             .catch((err) => console.log(err));
     };
 

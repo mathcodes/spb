@@ -18,8 +18,7 @@ if (process.env.NODE_ENV === "production") {
 // Connect to DB
 mongoose.connect(
     process.env.MONGODB_URI || "mongodb+srv://user:user@devconnection.xzy3k.mongodb.net/?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useUnifiedTopology: true },
-    console.log("connected to db")
+    { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
 // Routes
@@ -28,7 +27,7 @@ app.post("api/search", (req, res) => {
     const params = { ...req.body, apiKey: process.env.apiKey };
     console.log(key, params[key])
     console.log(url)
-    Object.keys(params).forEach((key) =>console.log(key, params[key]),
+    Object.keys(params).forEach((key) =>
         url.searchParams.append(key, params[key])
         
     );
